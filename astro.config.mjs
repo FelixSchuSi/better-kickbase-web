@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config();
+const { KB_EMAIL, KB_PW } = process.env;
+
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -11,9 +15,12 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
 	// Enable the lit renderer to support LitHTML components and templates.
 	renderers: ['@astrojs/renderer-lit'],
 	vite: {
+		define: {
+			'KB_PW': `'${KB_PW}'`,
+			'KB_EMAIL': `'${KB_EMAIL}'`,
+		},
 		server: {
 			proxy: {
-				// '/api': 'https://api.kickbase.com'
 				'^/api/.*': {
 					target: 'https://api.kickbase.com',
 					changeOrigin: true,
