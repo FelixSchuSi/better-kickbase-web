@@ -1,13 +1,16 @@
 ---
-import { playerDataService } from '../services/playerdata/playerdata.service.ts';
-const x = await playerDataService.getAllPlayerData();
+// const playerID: number = 1794;
+
+import { playerPointsService } from '../services/playerdata/player-points.service.ts';
+const x = await playerPointsService.getData();
+const {playerID} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>Demo</title>
+		<title>Player {playerID}</title>
 	</head>
 	<body>
 		<h1>Test app</h1>
