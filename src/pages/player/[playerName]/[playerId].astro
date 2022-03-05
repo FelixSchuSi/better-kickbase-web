@@ -2,26 +2,25 @@
 import playerData from '../../../data/players.json';
 import { playerDataService } from '../../../services/playerdata/playerdata.service.ts';
 const { params } = Astro.request;
-const {playerInfo, playerPoints} = await playerDataService.getData(params.playerId);
+const { playerInfo, playerPoints } = await playerDataService.getData(params.playerId);
 export function getStaticPaths() {
-	return playerData.data;
+  return playerData.data;
 }
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{params.playerName} - better-kickbase</title>
-	</head>
-	<body>
-		<h1>{params.playerName}</h1>
-        <h2>season {playerPoints.seasons[0].year}</h2>
-       {JSON.stringify(playerPoints.seasons[0])}
-        <h2>season {playerPoints.seasons[1].year}</h2>
-       {JSON.stringify(playerPoints.seasons[1])}
-        <h2>season {playerPoints.seasons[2].year}</h2>
-       {JSON.stringify(playerPoints.seasons[2])}
-	</body>
+  <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{params.playerName} - better-kickbase</title>
+  </head>
+  <body>
+    <h1>{params.playerName}</h1>
+    <h2>season {playerPoints.seasons[0].year}</h2>
+    {JSON.stringify(playerPoints.seasons[0])}
+    <h2>season {playerPoints.seasons[1].year}</h2>
+    {JSON.stringify(playerPoints.seasons[1])}
+    <h2>season {playerPoints.seasons[2].year}</h2>
+    {JSON.stringify(playerPoints.seasons[2])}
+  </body>
 </html>
