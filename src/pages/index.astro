@@ -1,17 +1,38 @@
 ---
-import '../components/Test.ts';
-import '../components/Counter.ts';
+import playerData from '../data/players.json';
+const playersGroupedByTeam = {};
+playerData.data.forEach(player => {
+    if (player.metadata.team in playersGroupedByTeam){
+        playersGroupedByTeam[player.metadata.team].push(player)
+    } else {
+        playersGroupedByTeam[player.metadata.team] = [player]
+    }
+});
+// console.log(playersGroupedByTeam)
+let sitecontent: string ='';
+Object.entries(playersGroupedByTeam).forEach(([team, players])=>{
+    let playersString = '';
+    players.forEach(player => playersString+=`<li><a href="/player/${encodeURIComponent(player.params.playerName)}/${encodeURIComponent(player.params.playerId)}">${player.params.playerName}</a></li>`);
+    sitecontent += `
+        <h2>${team}</h2>
+        <ul>
+        ${playersString}
+        </ul>
+    `
+})
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>Demo</title>
+		<title>Startseite better-kickbase</title>
 	</head>
 	<body>
-		<h1>Test app</h1>
-		<my-counter client:load></my-counter>
-		<calc-add num={33}></calc-add>
+		<h1>better-kickbase</h1>
+        <p>Schau dir die Profile dieser Spieler an:</p>
+        
+        <Fragment set:html={sitecontent}></Fragment>
+        
 	</body>
 </html>

@@ -26,12 +26,13 @@ export interface PlayerMatch {
   awayTeamGoals: number;
 }
 
-class PlayerPointsService extends BasePlayerService<PlayerPoints> {
-  protected async getData(): Promise<PlayerPoints> {
+export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
+  public async getData(playerId: string): Promise<PlayerPoints> {
     await this.ensureLogin();
-    const points: any = await fetch('https://api.kickbase.com/players/1794/points', this.default_opts).then(res =>
-      res.json()
+    const points: any = await fetch(`https://api.kickbase.com/players/${playerId}/points`, this.default_opts).then(
+      res => res.json()
     );
+
     const seasonMappings = {
       p: 'points',
       mp: 'appearances',

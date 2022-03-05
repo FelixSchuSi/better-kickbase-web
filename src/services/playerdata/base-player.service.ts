@@ -2,10 +2,11 @@ declare const KB_PW: string;
 declare const KB_EMAIL: string;
 
 export abstract class BasePlayerService<T> {
-  public token: string = '';
+  protected token: string = '';
+  protected leagueId: string = '';
   protected default_opts = {};
 
-  protected abstract getData(): Promise<T>;
+  public abstract getData(playerId: string): Promise<T>;
 
   protected async ensureLogin(): Promise<void> {
     if (this.token === '') {
@@ -31,7 +32,9 @@ export abstract class BasePlayerService<T> {
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ email: KB_EMAIL, password: KB_PW })
     });
-    const { token } = await response.json();
+    const responseJson = await response.json();
+    this.leagueId = responseJson.leagues[0].id;
+    const { token } = responseJson;
     this.token = token;
     this.default_opts = {
       headers: {
