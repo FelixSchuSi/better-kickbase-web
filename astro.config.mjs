@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
-const { KB_EMAIL, KB_PW } = process.env;
+const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -12,22 +12,26 @@ const { KB_EMAIL, KB_PW } = process.env;
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
-	// Enable the lit renderer to support LitHTML components and templates.
-	renderers: ['@astrojs/renderer-lit'],
-	vite: {
-		define: {
-			'KB_PW': `'${KB_PW}'`,
-			'KB_EMAIL': `'${KB_EMAIL}'`,
-		},
-		server: {
-			proxy: {
-				'^/api/.*': {
-					target: 'https://api.kickbase.com',
-					changeOrigin: true,
-					rewrite: (path) => path.replace(/^\/api/, '')
-				},
-			}
-
-		}
-	}
+  // Enable the lit renderer to support LitHTML components and templates.
+  renderers: ['@astrojs/renderer-lit'],
+  vite: {
+    define: {
+      KB_PW: `'${KB_PW}'`,
+      KB_EMAIL: `'${KB_EMAIL}'`,
+      KB_TOKEN: `'${KB_TOKEN}'`,
+      KB_LEAGUE_ID: `'${KB_LEAGUE_ID}'`
+    },
+    server: {
+      proxy: {
+        '^/api/.*': {
+          target: 'https://api.kickbase.com',
+          changeOrigin: true,
+          rewrite: path => path.replace(/^\/api/, '')
+        }
+      }
+    }
+  },
+  buildOptions: {
+    site: 'https://felixschusi.github.io/better-kickbase-web/'
+  }
 });

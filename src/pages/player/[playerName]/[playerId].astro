@@ -1,11 +1,18 @@
 ---
+import '../../../components/player.page.ts';
 import playerData from '../../../data/players.json';
 import { playerDataService } from '../../../services/playerdata/playerdata.service.ts';
 const { params } = Astro.request;
-const { playerInfo, playerPoints } = await playerDataService.getData(params.playerId);
+const serverJsonData = await playerDataService.getData(params.playerId);
 export function getStaticPaths() {
   return playerData.data;
 }
+
+const props = {
+  'player-name': params.playerName,
+  'player-id': params.playerId,
+  'server-json-data': JSON.stringify(serverJsonData)
+};
 ---
 
 <!DOCTYPE html>
@@ -15,12 +22,6 @@ export function getStaticPaths() {
     <title>{params.playerName} - better-kickbase</title>
   </head>
   <body>
-    <h1>{params.playerName}</h1>
-    <h2>season {playerPoints.seasons[0].year}</h2>
-    {JSON.stringify(playerPoints.seasons[0])}
-    <h2>season {playerPoints.seasons[1].year}</h2>
-    {JSON.stringify(playerPoints.seasons[1])}
-    <h2>season {playerPoints.seasons[2].year}</h2>
-    {JSON.stringify(playerPoints.seasons[2])}
+    <bkb-player {...props} client:load></bkb-player>
   </body>
 </html>

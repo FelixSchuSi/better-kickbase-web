@@ -29,10 +29,13 @@ export interface PlayerMatch {
 export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
   public async getData(playerId: string): Promise<PlayerPoints> {
     await this.ensureLogin();
-    const points: any = await fetch(`https://api.kickbase.com/players/${playerId}/points`, this.default_opts).then(
-      res => res.json()
-    );
-
+    const url: string = import.meta.env.SSR
+      ? `https://api.kickbase.com/players/${playerId}/points`
+      : `/api/players/${playerId}/points`;
+    const response: Response = await fetch(url, this.default_opts);
+    console.log(response, this.token);
+    const points: any = await response.json();
+    // console.log(response, points);
     const seasonMappings = {
       p: 'points',
       mp: 'appearances',

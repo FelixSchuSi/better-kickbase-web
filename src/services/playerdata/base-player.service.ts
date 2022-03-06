@@ -1,14 +1,23 @@
 declare const KB_PW: string;
 declare const KB_EMAIL: string;
+declare const KB_TOKEN: string;
+declare const KB_LEAGUE_ID: string;
+globalThis.KB_EMAIL = KB_EMAIL;
+globalThis.KB_PW = KB_PW;
+// globalThis.KB_TOKEN = KB_TOKEN;
+globalThis.KB_LEAGUE_ID = KB_LEAGUE_ID;
 
 export abstract class BasePlayerService<T> {
+  // protected token: string = globalThis.KB_TOKEN ?? '';
   protected token: string = '';
-  protected leagueId: string = '';
+  protected leagueId: string = globalThis.KB_LEAGUE_ID;
   protected default_opts = {};
 
   public abstract getData(playerId: string): Promise<T>;
 
   protected async ensureLogin(): Promise<void> {
+    // TODO: Check how to reduce number of login calls
+    // TODO: Check if token is valid
     if (this.token === '') {
       await this.login();
     }
@@ -27,6 +36,7 @@ export abstract class BasePlayerService<T> {
   }
 
   protected async login(): Promise<string> {
+    console.log('login');
     const response: Response = await fetch('https://api.kickbase.com/user/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -36,11 +46,13 @@ export abstract class BasePlayerService<T> {
     this.leagueId = responseJson.leagues[0].id;
     const { token } = responseJson;
     this.token = token;
+    globalThis.KB_TOKEN = token;
     this.default_opts = {
       headers: {
         cookie: `kkstrauth=${this.token}`
       }
     };
+
     return this.token;
   }
 }

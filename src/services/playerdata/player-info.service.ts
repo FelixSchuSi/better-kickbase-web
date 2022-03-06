@@ -30,7 +30,7 @@ export class PlayerInfoService extends BasePlayerService<PlayerInfo> {
       `https://api.kickbase.com/leagues/${this.leagueId}/players/${playerId}/`,
       this.default_opts
     ).then(res => res.json());
-    console.log(info);
+    // console.log(info);
     return;
   }
 }

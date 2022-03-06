@@ -14,9 +14,9 @@ Object.entries(playersGroupedByTeam).forEach(([team, players]) => {
   let playersString = '';
   players.forEach(
     player =>
-      (playersString += `<li><a href="/player/${encodeURIComponent(player.params.playerName)}/${encodeURIComponent(
-        player.params.playerId
-      )}">${player.params.playerName}</a></li>`)
+      (playersString += `<li><a href="/better-kickbase-web/player/${encodeURIComponent(
+        player.params.playerName
+      )}/${encodeURIComponent(player.params.playerId)}">${player.params.playerName}</a></li>`)
   );
   sitecontent += `
         <h2>${team}</h2>
