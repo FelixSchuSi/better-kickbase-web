@@ -36,7 +36,7 @@ export abstract class BasePlayerService<T> {
   }
 
   protected async login(): Promise<string> {
-    console.log('login');
+    // console.log('login');
     const response: Response = await fetch('https://api.kickbase.com/user/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
