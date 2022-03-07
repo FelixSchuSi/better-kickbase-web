@@ -33,7 +33,7 @@ export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
       ? `https://api.kickbase.com/players/${playerId}/points`
       : `/api/players/${playerId}/points`;
     const response: Response = await fetch(url, this.default_opts);
-    console.log(response, this.token);
+    // console.log(response, this.token);
     const points: any = await response.json();
     // console.log(response, points);
     const seasonMappings = {

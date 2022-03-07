@@ -9,8 +9,8 @@ export interface PlayerData {
 class PlayerDataService {
   public async getData(playerId: string): Promise<PlayerData> {
     return {
-      // playerInfo: await playerInfoService.getData(playerId),
-      playerInfo: 'nodata' as any,
+      playerInfo: await playerInfoService.getData(playerId),
+      // playerInfo: 'nodata' as any,
       playerPoints: await playerPointsService.getData(playerId)
     };
   }

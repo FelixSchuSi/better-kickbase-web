@@ -41,17 +41,13 @@ export class PlayerPage extends LitElement {
   render() {
     return html`
       <h1>${this.playerName} ${this.playerId}</h1>
-
-      ${this.playerPoints
-        ? html`
-            <h2>season ${this.playerPoints?.seasons[0]?.year}</h2>
-            ${JSON.stringify(this.playerPoints?.seasons[0])}
-            <h2>season ${this.playerPoints?.seasons[1]?.year}</h2>
-            ${JSON.stringify(this.playerPoints?.seasons[1])}
-            <h2>season ${this.playerPoints?.seasons[2]?.year}</h2>
-            ${JSON.stringify(this.playerPoints?.seasons[2])}
-          `
-        : ''}
+      ${JSON.stringify(this.playerInfo)}
+      ${this.playerPoints.seasons.map(
+        season => html`
+          <h2>season ${season.year}</h2>
+          ${JSON.stringify(season)}
+        `
+      )}
     `;
   }
 }
