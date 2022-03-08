@@ -2,23 +2,23 @@ declare const KB_PW: string;
 declare const KB_EMAIL: string;
 declare const KB_TOKEN: string;
 declare const KB_LEAGUE_ID: string;
-globalThis.KB_EMAIL = KB_EMAIL;
-globalThis.KB_PW = KB_PW;
-// globalThis.KB_TOKEN = KB_TOKEN;
-globalThis.KB_LEAGUE_ID = KB_LEAGUE_ID;
 
 export abstract class BasePlayerService<T> {
-  // protected token: string = globalThis.KB_TOKEN ?? '';
-  protected token: string = '';
+  protected token: string = KB_TOKEN;
   protected leagueId: string = '2335868';
-  protected default_opts = {};
+  protected get default_opts() {
+    return {
+      headers: {
+        cookie: `kkstrauth=${this.token}`
+      }
+    };
+  }
 
   public abstract getData(playerId: string): Promise<T>;
 
   protected async ensureLogin(): Promise<void> {
-    // TODO: Check how to reduce number of login calls
-    // TODO: Check if token is valid
-    if (this.token === '') {
+    if (this.token === '' || !this.isJwtValid(this.token)) {
+      console.log(`JWT from env var is expired, gernerate a new one and write it into .env file!`);
       await this.login();
     }
   }
@@ -46,16 +46,16 @@ export abstract class BasePlayerService<T> {
     this.leagueId = responseJson.leagues[0].id;
     const { token } = responseJson;
     this.token = token;
-    globalThis.KB_TOKEN = token;
-    this.default_opts = {
-      headers: {
-        cookie: `kkstrauth=${this.token}`
-      }
-    };
-    // if (document?.cookie) {
-    document.cookie = `kkstrauth=${this.token}`;
-    // }
 
     return this.token;
+  }
+
+  private isJwtValid(token) {
+    try {
+      const jwt = JSON.parse(atob(token.split('.')[1]));
+      return new Date(jwt.exp * 1000) >= new Date();
+    } catch (e) {
+      return false;
+    }
   }
 }

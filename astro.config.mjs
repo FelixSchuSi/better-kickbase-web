@@ -26,7 +26,10 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
         '^/api/.*': {
           target: 'https://api.kickbase.com',
           changeOrigin: true,
-          rewrite: path => path.replace(/^\/api/, '')
+          rewrite: path => path.replace(/^\/api/, ''),
+          headers: {
+            cookie: `kkstrauth=${KB_TOKEN}`
+          }
         }
       }
     }

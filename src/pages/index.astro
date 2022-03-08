@@ -8,7 +8,7 @@ playerData.data.forEach(player => {
     playersGroupedByTeam[player.metadata.team] = [player];
   }
 });
-// console.log(playersGroupedByTeam)
+
 let sitecontent: string = '';
 Object.entries(playersGroupedByTeam).forEach(([team, players]) => {
   let playersString = '';

@@ -44,22 +44,20 @@ export class PlayerInfoService extends BasePlayerService<PlayerInfo> {
   public async getData(playerId: string): Promise<PlayerInfo> {
     await this.ensureLogin();
 
-    // const url: string = import.meta.env.SSR
-    //   ? `https://api.kickbase.com/leagues/${this.leagueId}/players/${playerId}/`
-    //   : `/api/leagues/${this.leagueId}/players/${playerId}/`;
+    const url: string = import.meta.env.SSR
+      ? `https://api.kickbase.com/leagues/${this.leagueId}/players/${playerId}/`
+      : `/api/leagues/${this.leagueId}/players/${playerId}/`;
 
-    // const response: Response = await fetch(url, this.default_opts);
-    // debugger;
-    // const info: any = await response.json();
+    const response: Response = await fetch(url, this.default_opts);
+    const info: any = await response.json();
 
-    // const mappings = { ...info };
-    // // No mapping required since all keys are human-readable
-    // for (const key of Object.keys(mappings)) {
-    //   mappings[key] = key;
-    // }
+    const mappings = { ...info };
+    // No mapping required since all keys are human-readable
+    for (const key of Object.keys(mappings)) {
+      mappings[key] = key;
+    }
 
-    // return this.mapAndTransform(info, mappings);
-    return;
+    return this.mapAndTransform(info, mappings);
   }
 }
 
