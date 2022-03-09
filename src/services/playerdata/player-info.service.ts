@@ -1,4 +1,3 @@
-// https://api.kickbase.com/leagues/[league_id]/players/[player_id]/
 import { BasePlayerService } from './base-player.service';
 
 export interface PlayerInfo {

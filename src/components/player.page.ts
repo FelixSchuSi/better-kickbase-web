@@ -2,7 +2,8 @@ import { LitElement, html, PropertyValueMap } from 'lit';
 import { property, customElement, state } from 'lit/decorators.js';
 import { PlayerInfo } from '../services/playerdata/player-info.service';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
-import { playerDataService } from '../services/playerdata/playerdata.service';
+import { PlayerStats } from '../services/playerdata/player-stats.service';
+import { PlayerData, playerDataService } from '../services/playerdata/playerdata.service';
 
 export const tagName: string = 'bkb-player';
 @customElement(tagName)
@@ -22,20 +23,26 @@ export class PlayerPage extends LitElement {
   @state()
   public playerPoints: PlayerPoints;
 
+  @state()
+  public playerStats: PlayerStats;
+
   protected async willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): Promise<void> {
     const isFirstUpdate: boolean = !this.playerPoints;
 
     if (isFirstUpdate) {
-      const { playerInfo, playerPoints } = JSON.parse(this.serverJsonData);
+      const { playerInfo, playerPoints, playerStats }: PlayerData = JSON.parse(this.serverJsonData);
       this.playerInfo = playerInfo;
       this.playerPoints = playerPoints;
+      this.playerStats = playerStats;
     }
 
     if (import.meta.env.SSR === false && isFirstUpdate) {
-      const { playerInfo, playerPoints } = await playerDataService.getData(this.playerId);
+      const { playerInfo, playerPoints, playerStats }: PlayerData = await playerDataService.getData(this.playerId);
       this.playerInfo = playerInfo;
       this.playerPoints = playerPoints;
+      this.playerStats = playerStats;
     }
+    console.log(this.playerStats);
   }
 
   render() {
