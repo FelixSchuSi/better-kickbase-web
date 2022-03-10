@@ -1,0 +1,13 @@
+export enum PlayerStatus {
+  NONE = 0,
+  INJURED = 1,
+  STRICKEN = 2,
+  REHAB = 4,
+  RED_CARD = 8,
+  YELLOW_RED_CARD = 16,
+  FIFTH_YELLOW_CARD = 32,
+  NOT_IN_TEAM = 64,
+  NOT_IN_LEAGUE = 128,
+  ABSENT = 256,
+  UNKNOWN = 9999999999
+}

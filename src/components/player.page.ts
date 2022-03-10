@@ -42,12 +42,12 @@ export class PlayerPage extends LitElement {
       this.playerPoints = playerPoints;
       this.playerStats = playerStats;
     }
-    console.log(this.playerStats);
   }
 
   render() {
     return html`
       <h1>${this.playerName} ${this.playerId}</h1>
+      <h2>playerInfo</h2>
       ${this.playerInfo
         ? html`${Object.entries(this.playerInfo ?? {}).map(([key, value]) => html` <p>${key}: ${value}</p> `)}
             <img src=${this.playerInfo?.profile} />
@@ -55,9 +55,12 @@ export class PlayerPage extends LitElement {
             <img src=${this.playerInfo?.team} />
             <img src=${this.playerInfo?.teamCover} />`
         : ''}
+      <h2>playerStats</h2>
+      ${JSON.stringify(this.playerStats)}
+      <h2>playerPoints</h2>
       ${this.playerPoints?.seasons.map(
         season => html`
-          <h2>season ${season.year}</h2>
+          <h3>season ${season.year}</h3>
           ${JSON.stringify(season)}
         `
       )}
