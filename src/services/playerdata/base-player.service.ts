@@ -18,8 +18,12 @@ export abstract class BasePlayerService<T> {
 
   protected async ensureLogin(): Promise<void> {
     if (this.token === '' || !this.isJwtValid(this.token)) {
-      console.log(`JWT from env var is expired, gernerate a new one and write it into .env file!`);
-      await this.login();
+      if (this.isJwtValid(globalThis.token)) {
+        this.token = globalThis.token;
+      } else {
+        console.log(`JWT from env var is expired, gernerate a new one and write it into .env file!`);
+        await this.login();
+      }
     }
   }
 
@@ -45,7 +49,7 @@ export abstract class BasePlayerService<T> {
 
     this.leagueId = responseJson.leagues[0].id;
     const { token } = responseJson;
-    console.log(token);
+    globalThis.token = token;
     this.token = token;
 
     return this.token;
