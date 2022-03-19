@@ -20,6 +20,29 @@ const props = {
   <head>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{params.playerName} - better-kickbase</title>
+    <style>
+      body {
+        max-width: 768px;
+        width: 768px;
+        height: 100%;
+        border: 1px solid black;
+        margin: 0;
+      }
+
+      @media screen and (max-width: 769px) {
+        body {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      html {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <bkb-player {...props} client:load></bkb-player>

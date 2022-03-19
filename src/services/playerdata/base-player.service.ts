@@ -45,6 +45,7 @@ export abstract class BasePlayerService<T> {
 
     this.leagueId = responseJson.leagues[0].id;
     const { token } = responseJson;
+    console.log(token);
     this.token = token;
 
     return this.token;
