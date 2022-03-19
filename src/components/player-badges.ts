@@ -1,5 +1,6 @@
 import { LitElement, html, CSSResultGroup, css, TemplateResult, svg } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
+import { getPlayerPositionLabel, PlayerPosition } from '../models/player-position';
 
 export const tagName: string = 'bkb-player-badges';
 @customElement(tagName)
@@ -28,7 +29,9 @@ export class PlayerPage extends LitElement {
   render() {
     return html`
       <div class="badges-container">
-        ${this.singleBadge(String(this.number))} ${this.singleBadge(this.position)} ${this.singleBadge(this.status)}
+        ${this.singleBadge(String(this.number))}
+        ${this.singleBadge(getPlayerPositionLabel(this.position as unknown as PlayerPosition))}
+        ${this.singleBadge(this.status)}
       </div>
     `;
   }

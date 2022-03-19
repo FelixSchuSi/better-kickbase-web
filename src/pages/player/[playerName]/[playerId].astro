@@ -1,9 +1,10 @@
 ---
 import '../../../components/player.page.ts';
 import playerData from '../../../data/players.json';
-import { playerDataService } from '../../../services/playerdata/playerdata.service.ts';
+import { playerDataService, PlayerData } from '../../../services/playerdata/playerdata.service.ts';
+
 const { params } = Astro.request;
-const serverJsonData = await playerDataService.getData(params.playerId);
+const serverJsonData: PlayerData = await playerDataService.getData(params.playerId);
 export function getStaticPaths() {
   return playerData.data;
 }
@@ -11,6 +12,7 @@ export function getStaticPaths() {
 const props = {
   'player-name': params.playerName,
   'player-id': params.playerId,
+  'team-id': serverJsonData.playerInfo.teamId,
   'server-json-data': JSON.stringify(serverJsonData)
 };
 ---
@@ -25,7 +27,9 @@ const props = {
         max-width: 768px;
         width: 768px;
         height: 100%;
-        border: 1px solid black;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        min-height: 100vh;
         margin: 0;
       }
 
@@ -41,6 +45,7 @@ const props = {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #f6f6f6;
       }
     </style>
   </head>
