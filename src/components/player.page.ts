@@ -98,7 +98,7 @@ export class PlayerPage extends LitElement {
   render() {
     return html`
       <div class="upper-half" style=${styleMap(this.upperHalfStyles)}>
-        <img class="player-image" src=${this.playerInfo?.profileBig} />
+        <img class="player-image" src=${this.playerInfo?.profileBig} alt="picture of ${this.playerName}" />
         <div class="player-color-fade" style=${styleMap(this.colorFadeStyles)}></div>
         <div class="player-summary">
           <div class="player-name">${this.playerName}</div>
