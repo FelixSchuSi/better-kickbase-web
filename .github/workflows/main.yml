@@ -32,6 +32,10 @@ jobs:
 
       # Build the project and add .nojekyll file to supress default behaviour
       - name: Build
+        env:
+          KB_EMAIL: ${{ secrets.KB_EMAIL }}
+          KB_PW: ${{ secrets.KB_PW }}
+          KB_LEAGUE_ID: ${{ secrets.KB_LEAGUE_ID }}
         run: |
           npm run build
           touch ./dist/.nojekyll
