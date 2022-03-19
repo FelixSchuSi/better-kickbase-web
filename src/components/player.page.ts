@@ -31,57 +31,57 @@ export class PlayerPage extends LitElement {
   @state()
   public playerStats: PlayerStats;
 
-  // static styles: CSSResultGroup = css`
-  //   :root,
-  //   * {
-  //     --team-primary-color-15: #28a144;
-  //     --team-primary-color-11: #51a600;
-  //     --team-primary-color-7: #fe0000;
-  //     --team-primary-color-40: #d3011c;
-  //     --team-primary-color-43: #001f46;
-  //     --team-primary-color-3: #fde101;
-  //     --team-primary-color-20: #001f46;
-  //     --team-primary-color-24: #0a5ca5;
-  //     --team-primary-color-13: #ce1719;
-  //     --team-primary-color-14: #1c62b7;
-  //     --team-primary-color-5: #d11b1a;
-  //     --team-primary-color-2: #dc052e;
-  //     --team-primary-color-22: #0090d7;
-  //     --team-primary-color-19: #fde101;
-  //     --team-primary-color-28: #e20612;
-  //     --team-primary-color-9: #e32219;
-  //     --team-primary-color-18: #e30713;
-  //   }
-  //   .upper-half {
-  //     width: 100%;
-  //     display: grid;
-  //     grid-template-columns: auto;
-  //     grid-template-rows: auto;
-  //     grid-template-areas: 'main';
-  //   }
+  static styles: CSSResultGroup = css`
+    :root,
+    * {
+      --team-primary-color-15: #28a144;
+      --team-primary-color-11: #51a600;
+      --team-primary-color-7: #fe0000;
+      --team-primary-color-40: #d3011c;
+      --team-primary-color-43: #001f46;
+      --team-primary-color-3: #fde101;
+      --team-primary-color-20: #001f46;
+      --team-primary-color-24: #0a5ca5;
+      --team-primary-color-13: #ce1719;
+      --team-primary-color-14: #1c62b7;
+      --team-primary-color-5: #d11b1a;
+      --team-primary-color-2: #dc052e;
+      --team-primary-color-22: #0090d7;
+      --team-primary-color-19: #fde101;
+      --team-primary-color-28: #e20612;
+      --team-primary-color-9: #e32219;
+      --team-primary-color-18: #e30713;
+    }
+    .upper-half {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas: 'main';
+    }
 
-  //   img.player-image {
-  //     grid-area: main;
-  //     width: 100%;
-  //     z-index: 0;
-  //   }
+    img.player-image {
+      grid-area: main;
+      width: 100%;
+      z-index: 0;
+    }
 
-  //   .player-color-fade {
-  //     grid-area: main;
-  //     width: 100%;
-  //     height: 60%;
-  //     align-self: end;
-  //     z-index: 1;
-  //   }
+    .player-color-fade {
+      grid-area: main;
+      width: 100%;
+      height: 60%;
+      align-self: end;
+      z-index: 1;
+    }
 
-  //   .player-summary {
-  //     grid-area: main;
-  //     z-index: 2;
-  //     display: flex;
-  //     flex-direction: column-reverse;
-  //     align-items: center;
-  //   }
-  // `;
+    .player-summary {
+      grid-area: main;
+      z-index: 2;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  `;
 
   protected async willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): Promise<void> {
     const isFirstUpdate: boolean = !this.playerPoints;
