@@ -13,7 +13,7 @@ export const teamPrimaryColor: Record<number, string> = {
   5: '#d11b1a', // Freiburg
   2: '#dc052e', // FCB
   22: '#0090d7', // Bielefeld
-  19: '#fde101', // Führt -> Farbe muss noch überprüft werden
+  19: '#019a32', // Führt
   28: '#e20612', // Köln -> Farbe muss noch überprüft werden
   9: '#e32219', // Stuttgart
   18: '#e30713' // Mainz
@@ -35,7 +35,7 @@ export const teamColors = css`
     --team-primary-color-5: #d11b1a;
     --team-primary-color-2: #dc052e;
     --team-primary-color-22: #0090d7;
-    --team-primary-color-19: #fde101;
+    --team-primary-color-19: #019a32;
     --team-primary-color-28: #e20612;
     --team-primary-color-9: #e32219;
     --team-primary-color-18: #e30713;

@@ -6,6 +6,7 @@ export interface PlayerUpcomingMatch {
   awayTeamId: string;
   awayTeamName: string;
   awayTeamNameShort: string;
+  points: number;
 }
 
 export function playerUpcomingMatchFromApiResponse(upcomingMatch: any): PlayerUpcomingMatch {
@@ -16,6 +17,7 @@ export function playerUpcomingMatchFromApiResponse(upcomingMatch: any): PlayerUp
     homeTeamNameShort: upcomingMatch.t1y,
     awayTeamId: upcomingMatch.t2i,
     awayTeamName: upcomingMatch.t2n,
-    awayTeamNameShort: upcomingMatch.t2y
+    awayTeamNameShort: upcomingMatch.t2y,
+    points: 0
   };
 }
