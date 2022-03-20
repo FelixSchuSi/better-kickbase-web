@@ -6,6 +6,7 @@ import { PlayerPoints } from '../services/playerdata/player-points.service';
 import { PlayerStats } from '../services/playerdata/player-stats.service';
 import { PlayerData } from '../services/playerdata/playerdata.service';
 import './player-badges.ts';
+import './player-points';
 
 export const tagName: string = 'bkb-player';
 @customElement(tagName)
@@ -125,6 +126,10 @@ export class PlayerPage extends LitElement {
           ></bkb-player-badges>
         </div>
       </div>
+      <bkb-player-points
+        .points=${this.playerPoints}
+        .upcomingMatches=${this.playerStats.upcomingMatches}
+      ></bkb-player-points>
     `;
   }
 }
