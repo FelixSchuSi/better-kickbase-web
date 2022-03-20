@@ -1,3 +1,4 @@
+import { defineConfig } from 'astro/config';
 import dotenv from 'dotenv';
 dotenv.config();
 const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
@@ -10,8 +11,8 @@ const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
 // helpful tooltips, and warnings if your exported object is invalid.
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
-// @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
+// https://astro.build/config
+export default defineConfig({
   // Enable the lit renderer to support LitHTML components and templates.
   renderers: ['@astrojs/renderer-lit'],
   vite: {

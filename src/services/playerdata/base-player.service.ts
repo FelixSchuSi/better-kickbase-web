@@ -2,9 +2,15 @@ declare const KB_PW: string;
 declare const KB_EMAIL: string;
 declare const KB_TOKEN: string;
 declare const KB_LEAGUE_ID: string;
+if (KB_TOKEN) {
+  globalThis.KB_TOKEN = KB_TOKEN;
+  globalThis.KB_PW = KB_PW;
+  globalThis.KB_EMAIL = KB_EMAIL;
+  globalThis.KB_LEAGUE_ID = KB_LEAGUE_ID;
+}
 
 export abstract class BasePlayerService<T> {
-  protected token: string = KB_TOKEN;
+  protected token: string = globalThis.KB_TOKEN;
   protected leagueId: string = '2335868';
   protected get default_opts() {
     return {
@@ -43,7 +49,7 @@ export abstract class BasePlayerService<T> {
     const response: Response = await fetch('https://api.kickbase.com/user/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ email: KB_EMAIL, password: KB_PW })
+      body: JSON.stringify({ email: globalThis.KB_EMAIL, password: globalThis.KB_PW })
     });
     const responseJson = await response.json();
 
