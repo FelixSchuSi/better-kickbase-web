@@ -1,4 +1,4 @@
-import{r as v,e as n,s as $,$ as o,y as f,n as b,t as d,a as x,b as w,i as u}from"./client-shim.28b7eaa6.js";function P(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}var S=Object.defineProperty,C=Object.getOwnPropertyDescriptor,h=(e,r,a,s)=>{for(var t=s>1?void 0:s?C(r,a):r,i=e.length-1,l;i>=0;i--)(l=e[i])&&(t=(s?l(r,a,t):l(t))||t);return s&&t&&S(r,a,t),t};const L="bkb-player-badges";let c=class extends ${render(){return o`
+import{r as v,e as n,s as $,$ as o,y as f,n as b,t as d,a as x,b as w,i as u}from"./client-shim.158a9d44.js";function P(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}var S=Object.defineProperty,C=Object.getOwnPropertyDescriptor,h=(e,r,a,s)=>{for(var t=s>1?void 0:s?C(r,a):r,i=e.length-1,l;i>=0;i--)(l=e[i])&&(t=(s?l(r,a,t):l(t))||t);return s&&t&&S(r,a,t),t};const L="bkb-player-badges";let c=class extends ${render(){return o`
       <div class="badges-container">
         ${this.singleBadge(String(this.number))}
         ${this.singleBadge(P(this.position))}
@@ -24,12 +24,12 @@ import{r as v,e as n,s as $,$ as o,y as f,n as b,t as d,a as x,b as w,i as u}fro
       height: 25px;
       width: 54px;
     }
-  `;h([n({type:Number})],c.prototype,"number",2);h([n({type:String})],c.prototype,"position",2);h([n({type:String})],c.prototype,"status",2);c=h([b(L)],c);var _=Object.defineProperty,M=Object.getOwnPropertyDescriptor,g=(e,r,a,s)=>{for(var t=s>1?void 0:s?M(r,a):r,i=e.length-1,l;i>=0;i--)(l=e[i])&&(t=(s?l(r,a,t):l(t))||t);return s&&t&&_(r,a,t),t};const O="bkb-player-points";let y=class extends ${constructor(){super(...arguments);this.maxPoints=0,this.rootRef=x()}willUpdate(e){e.has("points")&&!!this.points?.seasons&&(this.maxPoints=Math.max(...this.points.seasons.flatMap(r=>r.matches).map(r=>r.points)))}render(){return this.points?o`
+  `;h([n({type:Number})],c.prototype,"number",2);h([n({type:String})],c.prototype,"position",2);h([n({type:String})],c.prototype,"status",2);c=h([b(L)],c);var _=Object.defineProperty,M=Object.getOwnPropertyDescriptor,g=(e,r,a,s)=>{for(var t=s>1?void 0:s?M(r,a):r,i=e.length-1,l;i>=0;i--)(l=e[i])&&(t=(s?l(r,a,t):l(t))||t);return s&&t&&_(r,a,t),t};const O="bkb-player-points";let y=class extends ${constructor(){super(...arguments);this.maxPoints=0,this.rootRef=x()}willUpdate(e){e.has("points")&&!!this.points?.seasons&&(this.maxPoints=Math.max(...this.points.seasons.flatMap(r=>r.matches).map(r=>r.points)))}render(){return o`
       <div class="root" ${w(this.rootRef)}>
         ${this.points.seasons.map(e=>this.seasonTemplate(e))}
         ${this.upcomingMatches.map(e=>this.matchTemplate(e))}
       </div>
-    `:o``}firstUpdated(e){this.rootRef.value?.scrollTo({left:99999999})}seasonTemplate(e){return o`
+    `}firstUpdated(e){this.rootRef.value?.scrollTo({left:99999999})}seasonTemplate(e){return o`
       <div class="season">
         ${e.matches.map(r=>this.matchTemplate(r))}
         <div class="season-summary">
