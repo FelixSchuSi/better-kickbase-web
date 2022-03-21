@@ -75,6 +75,7 @@ export class PlayerPage extends LitElement {
   }
 
   protected render(): TemplateResult {
+    if (!this.points) return html``;
     return html`
       <div class="root" ${ref(this.rootRef)}>
         ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season))}
