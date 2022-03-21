@@ -16,7 +16,8 @@ export const teamPrimaryColor: Record<number, string> = {
   19: '#019a32', // Führt
   28: '#e20612', // Köln -> Farbe muss noch überprüft werden
   9: '#e32219', // Stuttgart
-  18: '#e30713' // Mainz
+  18: '#e30713', // Mainz
+  4: '#e10010' // Frankfurt
 };
 
 export const teamColors = css`
@@ -39,6 +40,10 @@ export const teamColors = css`
     --team-primary-color-28: #e20612;
     --team-primary-color-9: #e32219;
     --team-primary-color-18: #e30713;
+    --team-primary-color-4: #e10010;
+  }
+  .team-primary-color-4 {
+    background-color: var(--team-primary-color-4);
   }
   .team-primary-color-15 {
     background-color: var(--team-primary-color-15);

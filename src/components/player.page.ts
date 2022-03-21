@@ -52,6 +52,7 @@ export class PlayerPage extends LitElement {
       --team-primary-color-28: #e20612;
       --team-primary-color-9: #e32219;
       --team-primary-color-18: #e30713;
+      --team-primary-color-4: #e10010;
     }
     .upper-half {
       width: 100%;

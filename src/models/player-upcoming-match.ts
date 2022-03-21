@@ -6,10 +6,15 @@ export interface PlayerUpcomingMatch {
   awayTeamId: string;
   awayTeamName: string;
   awayTeamNameShort: string;
+  match: number;
   points: number;
+  playtimeSeconds: number;
+  homeTeamGoals: number;
+  awayTeamGoals: number;
 }
 
 export function playerUpcomingMatchFromApiResponse(upcomingMatch: any): PlayerUpcomingMatch {
+  console.log(upcomingMatch);
   return {
     day: new Date(upcomingMatch.d),
     homeTeamId: upcomingMatch.t1i,
@@ -18,6 +23,10 @@ export function playerUpcomingMatchFromApiResponse(upcomingMatch: any): PlayerUp
     awayTeamId: upcomingMatch.t2i,
     awayTeamName: upcomingMatch.t2n,
     awayTeamNameShort: upcomingMatch.t2y,
-    points: 0
+    match: upcomingMatch.md,
+    points: 0,
+    playtimeSeconds: 0,
+    homeTeamGoals: -1,
+    awayTeamGoals: -1
   };
 }

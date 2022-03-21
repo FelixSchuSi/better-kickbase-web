@@ -31,8 +31,9 @@ export class PlayerPage extends LitElement {
     .match {
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin-right: 10px;
-      min-width: 20px;
+      min-width: 48px;
     }
     .match > small {
       display: inline-flex;
@@ -42,10 +43,28 @@ export class PlayerPage extends LitElement {
     .match-bar {
       height: 200px;
       background-color: #f5f7f6;
-      width: 100%;
+      width: 24px;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+    }
+
+    .home-team-logo,
+    .away-team-logo {
+      /* width: 16px; */
+      width: 40%;
+    }
+
+    .match-team-logos {
+      display: flex;
+      /* flex */
+      justify-content: space-evenly;
+    }
+
+    svg.score-badge {
+      transform: skew(-10deg);
+      width: 80%;
+      height: 25px;
     }
   `;
 
@@ -59,7 +78,6 @@ export class PlayerPage extends LitElement {
    * The highest points the player has ever scored.
    * Is used to determine how to render the bars.
    */
-  @state()
   private maxPoints: number = 0;
 
   private rootRef: Ref<HTMLDivElement> = createRef();
@@ -114,6 +132,7 @@ export class PlayerPage extends LitElement {
 
     return html`
       <div class="match">
+        <small>${match.match}. Spieltag</small>
         <div
           class="match-bar"
           style=${styleMap({
@@ -124,7 +143,36 @@ export class PlayerPage extends LitElement {
           ${Array.from({ length: (match as PlayerMatch).goals }).map(() => html`<div>${this.goalSvg}</div>`)}
         </div>
         <small>${match.points}</small>
+        <div class="match-team-logos">
+          <img class="home-team-logo" src="/teams/small/${match.homeTeamId}.png" />
+          <img class="away-team-logo" src="/teams/small/${match.awayTeamId}.png" />
+        </div>
+        ${this.matchResultBadgeSvg(match.homeTeamGoals, match.awayTeamGoals, match.match, match.points)}
+        <small>${Math.round(match.playtimeSeconds / 60)}'</small>
       </div>
+    `;
+  }
+
+  private matchResultBadgeSvg(
+    homeTeamScore: number,
+    awayTeamScore: number,
+    matchday: number,
+    season: number
+  ): TemplateResult {
+    const home: string = homeTeamScore > 0 ? String(homeTeamScore) : '-';
+    const away: string = awayTeamScore > 0 ? String(awayTeamScore) : '-';
+    return html`
+      <svg class="score-badge">
+        ${svg`
+      <defs>
+        <mask id="mask-${matchday}-${season}" x="0" y="0" >
+          <rect x="0" y="0" width="50" height="25" fill="#fff" />
+          <text text-anchor="middle" x="18" y="18" dy="1">${home} : ${away}</text>
+        </mask>
+      </defs>
+      <rect x="0" y="0" width="50" height="25" mask="url(#mask-${matchday}-${season})" fill-opacity="1" />
+  `}
+      </svg>
     `;
   }
 
