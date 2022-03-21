@@ -14,7 +14,6 @@ export interface PlayerUpcomingMatch {
 }
 
 export function playerUpcomingMatchFromApiResponse(upcomingMatch: any): PlayerUpcomingMatch {
-  console.log(upcomingMatch);
   return {
     day: new Date(upcomingMatch.d),
     homeTeamId: upcomingMatch.t1i,
