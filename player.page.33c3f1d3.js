@@ -1,4 +1,4 @@
-import{r as f,e as n,s as u,$ as o,y,n as v,a as x,b as w,i as h,t as $}from"./client-shim.158a9d44.js";function P(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}var S=Object.defineProperty,C=Object.getOwnPropertyDescriptor,g=(e,t,r,s)=>{for(var a=s>1?void 0:s?C(t,r):t,i=e.length-1,l;i>=0;i--)(l=e[i])&&(a=(s?l(t,r,a):l(a))||a);return s&&a&&S(t,r,a),a};const L="bkb-player-badges";let c=class extends u{render(){return o`
+import{r as f,e as n,s as u,$ as o,y,n as v,a as x,b as w,i as h,t as $}from"./client-shim.158a9d44.js";function P(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}var S=Object.defineProperty,C=Object.getOwnPropertyDescriptor,g=(e,a,s,r)=>{for(var t=r>1?void 0:r?C(a,s):a,l=e.length-1,i;l>=0;l--)(i=e[l])&&(t=(r?i(a,s,t):i(t))||t);return r&&t&&S(a,s,t),t};const L="bkb-player-badges";let c=class extends u{render(){return o`
       <div class="badges-container">
         ${this.singleBadge(String(this.number))}
         ${this.singleBadge(P(this.position))}
@@ -24,14 +24,14 @@ import{r as f,e as n,s as u,$ as o,y,n as v,a as x,b as w,i as h,t as $}from"./c
       height: 25px;
       width: 54px;
     }
-  `;g([n({type:Number})],c.prototype,"number",2);g([n({type:String})],c.prototype,"position",2);g([n({type:String})],c.prototype,"status",2);c=g([v(L)],c);var _=Object.defineProperty,M=Object.getOwnPropertyDescriptor,b=(e,t,r,s)=>{for(var a=s>1?void 0:s?M(t,r):t,i=e.length-1,l;i>=0;i--)(l=e[i])&&(a=(s?l(t,r,a):l(a))||a);return s&&a&&_(t,r,a),a};const O="bkb-player-points";let d=class extends u{constructor(){super(...arguments);this.maxPoints=0,this.rootRef=x()}willUpdate(e){e.has("points")&&!!this.points?.seasons&&(this.maxPoints=Math.max(...this.points.seasons.flatMap(t=>t.matches).map(t=>t.points)))}render(){return o`
+  `;g([n({type:Number})],c.prototype,"number",2);g([n({type:String})],c.prototype,"position",2);g([n({type:String})],c.prototype,"status",2);c=g([v(L)],c);var _=Object.defineProperty,M=Object.getOwnPropertyDescriptor,b=(e,a,s,r)=>{for(var t=r>1?void 0:r?M(a,s):a,l=e.length-1,i;l>=0;l--)(i=e[l])&&(t=(r?i(a,s,t):i(t))||t);return r&&t&&_(a,s,t),t};const O="bkb-player-points";let d=class extends u{constructor(){super(...arguments);this.maxPoints=0,this.rootRef=x()}willUpdate(e){e.has("points")&&!!this.points?.seasons&&(this.maxPoints=Math.max(...this.points.seasons.flatMap(a=>a.matches).map(a=>a.points)))}render(){return o`
       <div class="root" ${w(this.rootRef)}>
-        ${this.points.seasons.map(e=>this.seasonTemplate(e))}
+        ${this.points.seasons.map(e=>this.seasonTemplate(e,e.year))}
         ${this.upcomingMatches.map(e=>this.matchTemplate(e))}
       </div>
-    `}firstUpdated(e){this.rootRef.value?.scrollTo({left:99999999})}seasonTemplate(e){return o`
+    `}firstUpdated(e){this.rootRef.value?.scrollTo({left:99999999})}seasonTemplate(e,a){return o`
       <div class="season">
-        ${e.matches.map(t=>this.matchTemplate(t))}
+        ${e.matches.map(s=>this.matchTemplate(s,a))}
         <div class="season-summary">
           ${e.year}</br>
           <small>Saison Auswertung</small>
@@ -45,12 +45,12 @@ import{r as f,e as n,s as u,$ as o,y,n as v,a as x,b as w,i as h,t as $}from"./c
           <small>Startelf</small>
         </div>
       </div>
-    `}matchTemplate(e){const t=e.points>=100?"#25c28b":"#ea5f42",r=`${Math.round(e.points/this.maxPoints*100)}%`;return o`
+    `}matchTemplate(e,a){const s=e.points>=100?"#25c28b":"#ea5f42",r=`${Math.round(e.points/this.maxPoints*100)}%`;return o`
       <div class="match">
         <small>${e.match}. Spieltag</small>
         <div
           class="match-bar"
-          style=${h({background:`linear-gradient(to top, ${t}, ${t}, ${r}, #f5f7f6, ${r}, #f5f7f6);`})}
+          style=${h({background:`linear-gradient(to top, ${s}, ${s}, ${r}, #f5f7f6, ${r}, #f5f7f6);`})}
         >
           ${Array.from({length:e.assists}).map(()=>o`<div>${this.assistSvg}</div>`)}
           ${Array.from({length:e.goals}).map(()=>o`<div>${this.goalSvg}</div>`)}
@@ -60,19 +60,14 @@ import{r as f,e as n,s as u,$ as o,y,n as v,a as x,b as w,i as h,t as $}from"./c
           <img class="home-team-logo" src="/teams/small/${e.homeTeamId}.png" />
           <img class="away-team-logo" src="/teams/small/${e.awayTeamId}.png" />
         </div>
-        ${this.matchResultBadgeSvg(e.homeTeamGoals,e.awayTeamGoals,e.match,e.points)}
+        ${this.matchResultBadgeSvg(e.homeTeamGoals,e.awayTeamGoals,e.match,a)}
         <small>${Math.round(e.playtimeSeconds/60)}'</small>
       </div>
-    `}matchResultBadgeSvg(e,t,r,s){const a=e>0?String(e):"-",i=t>0?String(t):"-";return o`
+    `}matchResultBadgeSvg(e,a,s,r){const t=e===-1?"-":String(e??0),l=a===-1?"-":String(a??0);return o`
       <svg class="score-badge">
         ${y`
-      <defs>
-        <mask id="mask-${r}-${s}" x="0" y="0" >
-          <rect x="0" y="0" width="50" height="25" fill="#fff" />
-          <text text-anchor="middle" x="18" y="18" dy="1">${a} : ${i}</text>
-        </mask>
-      </defs>
-      <rect x="0" y="0" width="50" height="25" mask="url(#mask-${r}-${s})" fill-opacity="1" />
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1">${t} : ${l}</text>
   `}
       </svg>
     `}get assistSvg(){return o` <svg width="14" height="14" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +137,11 @@ import{r as f,e as n,s as u,$ as o,y,n as v,a as x,b as w,i as h,t as $}from"./c
       width: 80%;
       height: 25px;
     }
-  `;b([n({type:Object})],d.prototype,"points",2);b([n({type:Array})],d.prototype,"upcomingMatches",2);d=b([v(O)],d);var I=Object.defineProperty,T=Object.getOwnPropertyDescriptor,m=(e,t,r,s)=>{for(var a=s>1?void 0:s?T(t,r):t,i=e.length-1,l;i>=0;i--)(l=e[i])&&(a=(s?l(t,r,a):l(a))||a);return s&&a&&I(t,r,a),a};const j="bkb-player";let p=class extends u{async willUpdate(e){if(!this.playerPoints){const{playerInfo:r,playerPoints:s,playerStats:a}=JSON.parse(this.serverJsonData);this.playerInfo=r,this.playerPoints=s,this.playerStats=a}}get upperHalfStyles(){return{"background-color":`var(--team-primary-color-${this.teamId})`}}get colorFadeStyles(){return{background:`linear-gradient(to bottom, transparent, var(--team-primary-color-${this.teamId}));`}}render(){return o`
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
+  `;b([n({type:Object})],d.prototype,"points",2);b([n({type:Array})],d.prototype,"upcomingMatches",2);d=b([v(O)],d);var I=Object.defineProperty,T=Object.getOwnPropertyDescriptor,m=(e,a,s,r)=>{for(var t=r>1?void 0:r?T(a,s):a,l=e.length-1,i;l>=0;l--)(i=e[l])&&(t=(r?i(a,s,t):i(t))||t);return r&&t&&I(a,s,t),t};const j="bkb-player";let p=class extends u{async willUpdate(e){if(!this.playerPoints){const{playerInfo:s,playerPoints:r,playerStats:t}=JSON.parse(this.serverJsonData);this.playerInfo=s,this.playerPoints=r,this.playerStats=t}}get upperHalfStyles(){return{"background-color":`var(--team-primary-color-${this.teamId})`}}get colorFadeStyles(){return{background:`linear-gradient(to bottom, transparent, var(--team-primary-color-${this.teamId}));`}}render(){return o`
       <div class="upper-half" style=${h(this.upperHalfStyles)}>
         <img class="player-image" src=${this.playerInfo?.profileBig} alt="picture of ${this.playerName}" />
         <div class="player-color-fade" style=${h(this.colorFadeStyles)}></div>
