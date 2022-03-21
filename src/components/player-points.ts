@@ -66,6 +66,10 @@ export class PlayerPage extends LitElement {
       width: 80%;
       height: 25px;
     }
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
   `;
 
   @property({ type: Object })
@@ -95,7 +99,7 @@ export class PlayerPage extends LitElement {
   protected render(): TemplateResult {
     return html`
       <div class="root" ${ref(this.rootRef)}>
-        ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season))}
+        ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season, season.year))}
         ${this.upcomingMatches.map((upcomingMatch: PlayerUpcomingMatch) => this.matchTemplate(upcomingMatch))}
       </div>
     `;
@@ -105,11 +109,11 @@ export class PlayerPage extends LitElement {
     this.rootRef.value?.scrollTo({ left: 99999999 });
   }
 
-  private seasonTemplate(season: PlayerSeason): TemplateResult {
+  private seasonTemplate(season: PlayerSeason, year: string): TemplateResult {
     // debugger;
     return html`
       <div class="season">
-        ${season.matches.map((match: PlayerMatch) => this.matchTemplate(match))}
+        ${season.matches.map((match: PlayerMatch) => this.matchTemplate(match, year))}
         <div class="season-summary">
           ${season.year}</br>
           <small>Saison Auswertung</small>
@@ -126,7 +130,7 @@ export class PlayerPage extends LitElement {
     `;
   }
 
-  private matchTemplate(match: PlayerMatch | PlayerUpcomingMatch): TemplateResult {
+  private matchTemplate(match: PlayerMatch | PlayerUpcomingMatch, year: string): TemplateResult {
     const color: string = match.points >= 100 ? '#25c28b' : '#ea5f42';
     const percentage: string = `${Math.round((match.points / this.maxPoints) * 100)}%`;
 
@@ -147,7 +151,7 @@ export class PlayerPage extends LitElement {
           <img class="home-team-logo" src="/teams/small/${match.homeTeamId}.png" />
           <img class="away-team-logo" src="/teams/small/${match.awayTeamId}.png" />
         </div>
-        ${this.matchResultBadgeSvg(match.homeTeamGoals, match.awayTeamGoals, match.match, match.points)}
+        ${this.matchResultBadgeSvg(match.homeTeamGoals, match.awayTeamGoals, match.match, year)}
         <small>${Math.round(match.playtimeSeconds / 60)}'</small>
       </div>
     `;
@@ -157,20 +161,15 @@ export class PlayerPage extends LitElement {
     homeTeamScore: number,
     awayTeamScore: number,
     matchday: number,
-    season: number
+    year: string
   ): TemplateResult {
-    const home: string = homeTeamScore > 0 ? String(homeTeamScore) : '-';
-    const away: string = awayTeamScore > 0 ? String(awayTeamScore) : '-';
+    const home: string = homeTeamScore === -1 ? '-' : String(homeTeamScore ?? 0);
+    const away: string = awayTeamScore === -1 ? '-' : String(awayTeamScore ?? 0);
     return html`
       <svg class="score-badge">
         ${svg`
-      <defs>
-        <mask id="mask-${matchday}-${season}" x="0" y="0" >
-          <rect x="0" y="0" width="50" height="25" fill="#fff" />
-          <text text-anchor="middle" x="18" y="18" dy="1">${home} : ${away}</text>
-        </mask>
-      </defs>
-      <rect x="0" y="0" width="50" height="25" mask="url(#mask-${matchday}-${season})" fill-opacity="1" />
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1">${home} : ${away}</text>
   `}
       </svg>
     `;
