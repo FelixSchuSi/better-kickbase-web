@@ -6,44 +6,7 @@ import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
-import team_2 from './teams/small/2.png';
-import team_3 from './teams/small/3.png';
-import team_4 from './teams/small/4.png';
-import team_5 from './teams/small/5.png';
-import team_7 from './teams/small/7.png';
-import team_9 from './teams/small/9.png';
-import team_11 from './teams/small/11.png';
-import team_13 from './teams/small/13.png';
-import team_14 from './teams/small/14.png';
-import team_15 from './teams/small/15.png';
-import team_18 from './teams/small/18.png';
-import team_19 from './teams/small/19.png';
-import team_20 from './teams/small/20.png';
-import team_22 from './teams/small/22.png';
-import team_24 from './teams/small/24.png';
-import team_28 from './teams/small/28.png';
-import team_40 from './teams/small/40.png';
-import team_43 from './teams/small/43.png';
-const teamlogos = {
-  team_2,
-  team_3,
-  team_4,
-  team_5,
-  team_7,
-  team_9,
-  team_11,
-  team_13,
-  team_14,
-  team_15,
-  team_18,
-  team_19,
-  team_20,
-  team_22,
-  team_24,
-  team_28,
-  team_40,
-  team_43
-};
+import { teamLogosSmall } from '../../images/teams/small';
 
 export const tagName: string = 'bkb-player-points';
 @customElement(tagName)
@@ -186,8 +149,8 @@ export class PlayerPage extends LitElement {
         </div>
         <small>${match.points}</small>
         <div class="match-team-logos">
-          <img class="home-team-logo" src="${teamlogos[`team_${match.homeTeamId}`]}" />
-          <img class="away-team-logo" src="${teamlogos[`team_${match.awayTeamId}`]}" />
+          <img class="home-team-logo" src="${teamLogosSmall[`team_${match.homeTeamId}`]}" />
+          <img class="away-team-logo" src="${teamLogosSmall[`team_${match.awayTeamId}`]}" />
         </div>
         ${this.matchResultBadgeSvg(match.homeTeamGoals, match.awayTeamGoals, match.match, year)}
         <small>${Math.round(match.playtimeSeconds / 60)}'</small>

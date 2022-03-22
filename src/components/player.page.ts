@@ -119,7 +119,7 @@ export class PlayerPage extends LitElement {
         <img class="player-image" src=${this.playerInfo?.profileBig} alt="picture of ${this.playerName}" />
         <div class="player-color-fade" style=${styleMap(this.colorFadeStyles)}></div>
         <div class="player-summary">
-          <div class="player-name">${this.playerName}</div>
+          <h1 class="player-name">${this.playerName}</h1>
 
           <bkb-player-badges
             .number=${this.playerInfo.number}
