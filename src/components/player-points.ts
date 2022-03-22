@@ -15,9 +15,21 @@ export class PlayerPage extends LitElement {
     .root {
       width: 100%;
       display: flex;
-      flex-wrap: no-wrap;
       overflow-x: scroll;
-      scroll-snap-align: end;
+    }
+
+    .root {
+      scrollbar-width: thin;
+    }
+
+    .root::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: #f1f1f1;
+    }
+
+    .root::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
     }
 
     .season {
