@@ -1,7 +1,7 @@
-import{r as y,e as p,s as b,$ as o,y as g,n as v,a as w,b as R,i as h,t as u}from"./client-shim.158a9d44.js";function x(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}var k=Object.defineProperty,I=Object.getOwnPropertyDescriptor,A=(e,a,s,i)=>{for(var t=i>1?void 0:i?I(a,s):a,r=e.length-1,l;r>=0;r--)(l=e[r])&&(t=(i?l(a,s,t):l(t))||t);return i&&t&&k(a,s,t),t};const M="bkb-player-badges";let m=class extends b{render(){return o`
+import{r as y,e as p,s as b,$ as o,y as g,n as v,a as w,b as R,i as h,t as u}from"./client-shim.158a9d44.js";function k(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}var x=Object.defineProperty,I=Object.getOwnPropertyDescriptor,A=(e,a,s,i)=>{for(var t=i>1?void 0:i?I(a,s):a,r=e.length-1,l;r>=0;r--)(l=e[r])&&(t=(i?l(a,s,t):l(t))||t);return i&&t&&x(a,s,t),t};const M="bkb-player-badges";let m=class extends b{render(){return o`
       <div class="badges-container">
         ${this.singleBadge(String(this.number))}
-        ${this.singleBadge(x(this.position))}
+        ${this.singleBadge(k(this.position))}
         ${this.singleBadge(this.status)}
       </div>
     `}singleBadge(e){return e===void 0?"":o`
@@ -89,9 +89,21 @@ import{r as y,e as p,s as b,$ as o,y as g,n as v,a as w,b as R,i as h,t as u}fro
     .root {
       width: 100%;
       display: flex;
-      flex-wrap: no-wrap;
       overflow-x: scroll;
-      scroll-snap-align: end;
+    }
+
+    .root {
+      scrollbar-width: thin;
+    }
+
+    .root::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: #f1f1f1;
+    }
+
+    .root::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
     }
 
     .season {
