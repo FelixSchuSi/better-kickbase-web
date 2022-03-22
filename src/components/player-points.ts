@@ -27,6 +27,42 @@ export class PlayerPage extends LitElement {
     .season-summary {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-left: 1px solid #d3d7d8;
+      border-right: 1px solid #d3d7d8;
+      margin-right: 10px;
+    }
+
+    .season-summary-year {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .season-summary > .season-summary-details-key {
+      padding-bottom: 0.4rem;
+    }
+
+    .season-summary * {
+      text-align: center;
+    }
+
+    .season-summary-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .season-summary-details-value {
+      padding-top: 1rem;
+      font-weight: 600;
+      opacity: 87%;
+    }
+
+    .season-summary-details-key {
+      font-size: smaller;
+      opacity: 60%;
     }
 
     .match {
@@ -35,10 +71,32 @@ export class PlayerPage extends LitElement {
       align-items: center;
       margin-right: 10px;
       min-width: 48px;
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
+
+    .match > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
     .match > small {
       display: inline-flex;
       justify-content: center;
+    }
+
+    .match-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .match-value {
+      opacity: 87%;
+    }
+
+    .match-label {
+      opacity: 60%;
+      font-size: smaller;
     }
 
     .match-bar {
@@ -52,24 +110,28 @@ export class PlayerPage extends LitElement {
 
     .home-team-logo,
     .away-team-logo {
-      /* width: 16px; */
       width: 40%;
     }
 
     .match-team-logos {
       display: flex;
-      /* flex */
       justify-content: space-evenly;
     }
 
     svg.score-badge {
       transform: skew(-10deg);
       width: 80%;
-      height: 25px;
+      height: 16px;
     }
 
     svg.score-badge rect {
       fill: #f4f6f5;
+    }
+
+    svg.score-badge text {
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 80%;
     }
   `;
 
@@ -114,30 +176,35 @@ export class PlayerPage extends LitElement {
     // debugger;
     return html`
       <div class="season">
-        ${season.matches.map((match: PlayerMatch) => this.matchTemplate(match, year))}
+        ${season.matches.map((match: PlayerMatch) => this.matchTemplate(match))}
         <div class="season-summary">
-          ${season.year}</br>
-          <small>Saison Auswertung</small>
-          ${season.points}</br>
-          <small>Punkte</small>
-          ${Math.round(season.points / season.appearances)}</br>
-          <small>∅ Punkte</small>
-          ${season.appearances}</br>
-          <small>Einsätze</small>
-          ${season.startingEleven}</br>
-          <small>Startelf</small>
+          <h3 class="season-summary-year">${season.year}</h3>
+          <div class="season-summary-details-key">Saison Auswertung</div>
+          <div class="season-summary-details">
+            <div class="season-summary-details-value">${season.points}</div>
+            <div class="season-summary-details-key">Punkte</div>
+            <div class="season-summary-details-value">${Math.round(season.points / season.appearances)}</div>
+            <div class="season-summary-details-key">∅ Punkte</div>
+            <div class="season-summary-details-value">${season.appearances}</div>
+            <div class="season-summary-details-key">Einsätze</div>
+            <div class="season-summary-details-value">${season.startingEleven}</div>
+            <div class="season-summary-details-key">Startelf</div>
+          </div>
         </div>
       </div>
     `;
   }
 
-  private matchTemplate(match: PlayerMatch | PlayerUpcomingMatch, year: string): TemplateResult {
+  private matchTemplate(match: PlayerMatch | PlayerUpcomingMatch): TemplateResult {
     const color: string = match.points >= 100 ? '#25c28b' : '#ea5f42';
     const percentage: string = `${Math.round((match.points / this.maxPoints) * 100)}%`;
 
     return html`
       <div class="match">
-        <small>${match.match}. Spieltag</small>
+        <div class="match-day">
+          <small class="match-value">${match.match}.</small>
+          <small class="match-label">Spieltag</small>
+        </div>
         <div
           class="match-bar"
           style=${styleMap({
@@ -147,23 +214,18 @@ export class PlayerPage extends LitElement {
           ${Array.from({ length: (match as PlayerMatch).assists }).map(() => html`<div>${this.assistSvg}</div>`)}
           ${Array.from({ length: (match as PlayerMatch).goals }).map(() => html`<div>${this.goalSvg}</div>`)}
         </div>
-        <small>${match.points}</small>
+        <small class="match-value">${match.points}</small>
         <div class="match-team-logos">
           <img class="home-team-logo" src="${teamLogosSmall[`team_${match.homeTeamId}`]}" />
           <img class="away-team-logo" src="${teamLogosSmall[`team_${match.awayTeamId}`]}" />
         </div>
-        ${this.matchResultBadgeSvg(match.homeTeamGoals, match.awayTeamGoals, match.match, year)}
-        <small>${Math.round(match.playtimeSeconds / 60)}'</small>
+        ${this.matchResultBadgeSvg(match.homeTeamGoals, match.awayTeamGoals)}
+        <small class="match-value">${Math.round(match.playtimeSeconds / 60)}'</small>
       </div>
     `;
   }
 
-  private matchResultBadgeSvg(
-    homeTeamScore: number,
-    awayTeamScore: number,
-    matchday: number,
-    year: string
-  ): TemplateResult {
+  private matchResultBadgeSvg(homeTeamScore: number, awayTeamScore: number): TemplateResult {
     const home: string = homeTeamScore === -1 ? '-' : String(homeTeamScore ?? 0);
     const away: string = awayTeamScore === -1 ? '-' : String(awayTeamScore ?? 0);
     return html`

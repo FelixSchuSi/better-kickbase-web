@@ -32,6 +32,13 @@ export class PlayerPage extends LitElement {
   @state()
   public playerStats: PlayerStats;
 
+  private priceFormatter: Intl.NumberFormat = new Intl.NumberFormat('de', {
+    currency: 'EUR',
+    style: 'currency',
+    maximumFractionDigits: 0
+    // currencySign: 'standard'
+  });
+
   static styles: CSSResultGroup = css`
     :root,
     * {
@@ -83,6 +90,22 @@ export class PlayerPage extends LitElement {
       flex-direction: column-reverse;
       align-items: center;
     }
+
+    .player-summary > h1 {
+      margin-bottom: 0;
+      color: white;
+    }
+    .bottom-container {
+      align-self: stretch;
+      padding: 1rem;
+      color: white;
+    }
+    .price-container {
+      display: flex;
+    }
+    .price-value {
+      margin: 0;
+    }
   `;
 
   protected async willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): Promise<void> {
@@ -119,6 +142,12 @@ export class PlayerPage extends LitElement {
         <img class="player-image" src=${this.playerInfo?.profileBig} alt="picture of ${this.playerName}" />
         <div class="player-color-fade" style=${styleMap(this.colorFadeStyles)}></div>
         <div class="player-summary">
+          <div class="bottom-container">
+            <div class="price-container">
+              <h3 class="price-value">${this.priceFormatter.format(this.playerInfo.marketValue)}</h3>
+              <div class="price-trend">&nbsp${this.playerInfo.marketValueTrend === 1 ? '⬆️' : '⬇️'}</div>
+            </div>
+          </div>
           <h1 class="player-name">${this.playerName}</h1>
 
           <bkb-player-badges

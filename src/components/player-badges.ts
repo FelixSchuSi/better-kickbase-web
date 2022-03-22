@@ -15,6 +15,9 @@ export class PlayerPage extends LitElement {
       height: 25px;
       width: 54px;
     }
+    svg text {
+      font-weight: 600;
+    }
   `;
 
   @property({ type: Number })
@@ -41,13 +44,9 @@ export class PlayerPage extends LitElement {
 
     return html`
       ${svg`
-        <defs>
-          <mask id="mask-${text}" x="0" y="0" >
-            <rect x="0" y="0" width="50" height="25" fill="#fff" />
-            <text text-anchor="middle" x="25" y="18" dy="1">${text}</text>
-          </mask>
-        </defs>
-        <rect x="0" y="0" width="50" height="25" mask="url(#mask-${text})" fill-opacity="1" />
+      
+        <rect x="0" y="0" width="50" height="25" fill="white" />
+        <text text-anchor="middle" x="25" y="18" dy="1">${text}</text>
     `}
     `;
   }
