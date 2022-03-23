@@ -1,4 +1,4 @@
-import { LitElement, html, PropertyValueMap, CSSResultGroup, css } from 'lit';
+import { LitElement, html, PropertyValueMap, CSSResultGroup, css, TemplateResult } from 'lit';
 import { styleMap } from 'lit/directives/style-map.js';
 import { property, customElement, state } from 'lit/decorators.js';
 import { PlayerInfo } from '../services/playerdata/player-info.service';
@@ -136,7 +136,7 @@ export class PlayerPage extends LitElement {
     };
   }
 
-  render() {
+  render(): TemplateResult {
     return html`
       <div class="upper-half" style=${styleMap(this.upperHalfStyles)}>
         <img class="player-image" src=${this.playerInfo?.profileBig} alt="picture of ${this.playerName}" />
@@ -144,8 +144,11 @@ export class PlayerPage extends LitElement {
         <div class="player-summary">
           <div class="bottom-container">
             <div class="price-container">
-              <h3 class="price-value">${this.priceFormatter.format(this.playerInfo.marketValue)}</h3>
-              <div class="price-trend">&nbsp${this.playerInfo.marketValueTrend === 1 ? '⬆️' : '⬇️'}</div>
+              <h3 class="price-value">
+                ${this.priceFormatter.format(this.playerInfo.marketValue)}&nbsp${this.priceTrendTemplate(
+                  this.playerInfo.marketValueTrend
+                )}
+              </h3>
             </div>
           </div>
           <h1 class="player-name">${this.playerName}</h1>
@@ -161,5 +164,17 @@ export class PlayerPage extends LitElement {
         .upcomingMatches=${this.playerStats.upcomingMatches}
       ></bkb-player-points>
     `;
+  }
+
+  private priceTrendTemplate(trend: number): TemplateResult {
+    switch (trend) {
+      case 1:
+        return html`&#129045;`;
+      case 2:
+        return html` &#129047;`;
+      default:
+      case 0:
+        return html`-`;
+    }
   }
 }
