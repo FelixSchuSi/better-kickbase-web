@@ -1,5 +1,7 @@
 ---
 import playerData from '../data/players.json';
+import favIcon from '../../images/favicon-16.png';
+
 const playersGroupedByTeam = {};
 playerData.data.forEach(player => {
   if (player.metadata.team in playersGroupedByTeam) {
@@ -30,7 +32,7 @@ Object.entries(playersGroupedByTeam).forEach(([team, players]) => {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href={favIcon} />
     <title>Startseite better-kickbase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="better-kickbase-web Startseite" />
