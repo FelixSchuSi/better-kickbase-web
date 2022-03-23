@@ -44,6 +44,8 @@ export class PlayerPage extends LitElement {
       border-left: 1px solid #d3d7d8;
       border-right: 1px solid #d3d7d8;
       margin-right: 10px;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     .season-summary-year {
@@ -70,6 +72,7 @@ export class PlayerPage extends LitElement {
       padding-top: 1rem;
       font-weight: 600;
       opacity: 87%;
+      font-size: medium;
     }
 
     .season-summary-details-key {
@@ -104,6 +107,10 @@ export class PlayerPage extends LitElement {
 
     .match-value {
       opacity: 87%;
+      font-weight: 700;
+    }
+    .match-value.points {
+      font-size: medium;
     }
 
     .match-label {
@@ -142,7 +149,6 @@ export class PlayerPage extends LitElement {
 
     svg.score-badge text {
       font-size: 12px;
-      font-weight: 600;
       opacity: 80%;
     }
   `;
@@ -174,7 +180,7 @@ export class PlayerPage extends LitElement {
   protected render(): TemplateResult {
     return html`
       <div class="root" ${ref(this.rootRef)}>
-        ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season, season.year))}
+        ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season))}
         ${this.upcomingMatches.map((upcomingMatch: PlayerUpcomingMatch) => this.matchTemplate(upcomingMatch))}
       </div>
     `;
@@ -184,15 +190,14 @@ export class PlayerPage extends LitElement {
     this.rootRef.value?.scrollTo({ left: 99999999 });
   }
 
-  private seasonTemplate(season: PlayerSeason, year: string): TemplateResult {
-    // debugger;
+  private seasonTemplate(season: PlayerSeason): TemplateResult {
     return html`
       <div class="season">
         ${season.matches.map((match: PlayerMatch) => this.matchTemplate(match))}
         <div class="season-summary">
-          <h3 class="season-summary-year">${season.year}</h3>
-          <div class="season-summary-details-key">Saison Auswertung</div>
           <div class="season-summary-details">
+            <div class="season-summary-details-value">${season.year}</div>
+            <div class="season-summary-details-key">Saison Auswertung</div>
             <div class="season-summary-details-value">${season.points}</div>
             <div class="season-summary-details-key">Punkte</div>
             <div class="season-summary-details-value">${Math.round(season.points / season.appearances)}</div>
@@ -226,7 +231,7 @@ export class PlayerPage extends LitElement {
           ${Array.from({ length: (match as PlayerMatch).assists }).map(() => html`<div>${this.assistSvg}</div>`)}
           ${Array.from({ length: (match as PlayerMatch).goals }).map(() => html`<div>${this.goalSvg}</div>`)}
         </div>
-        <small class="match-value">${match.points}</small>
+        <small class="match-value points">${match.points}</small>
         <div class="match-team-logos">
           <img class="home-team-logo" src="${teamLogosSmall[`team_${match.homeTeamId}`]}" />
           <img class="away-team-logo" src="${teamLogosSmall[`team_${match.awayTeamId}`]}" />

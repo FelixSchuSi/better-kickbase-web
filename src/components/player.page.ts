@@ -92,12 +92,12 @@ export class PlayerPage extends LitElement {
     }
 
     .player-summary > h1 {
-      margin-bottom: 0;
+      margin: 0;
       color: white;
     }
     .bottom-container {
       align-self: stretch;
-      padding: 1rem;
+      padding: 0.5rem 1rem 0.5rem 1rem;
       color: white;
     }
     .price-container {
