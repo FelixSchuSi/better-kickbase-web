@@ -1,7 +1,7 @@
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
 import { svg, LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
 import { styleMap } from 'lit/directives/style-map.js';
-import { property, customElement, state } from 'lit/decorators.js';
+import { property, customElement, query } from 'lit/decorators.js';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
@@ -165,7 +165,8 @@ export class PlayerPage extends LitElement {
    */
   private maxPoints: number = 0;
 
-  private rootRef: Ref<HTMLDivElement> = createRef();
+  @query('.root > .match')
+  private firstUpcomingMatch!: HTMLDivElement;
 
   protected willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
     if (_changedProperties.has('points') && !!this.points?.seasons) {
@@ -179,7 +180,7 @@ export class PlayerPage extends LitElement {
 
   protected render(): TemplateResult {
     return html`
-      <div class="root" ${ref(this.rootRef)}>
+      <div class="root">
         ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season))}
         ${this.upcomingMatches.map((upcomingMatch: PlayerUpcomingMatch) => this.matchTemplate(upcomingMatch))}
       </div>
@@ -187,7 +188,9 @@ export class PlayerPage extends LitElement {
   }
 
   protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    this.rootRef.value?.scrollTo({ left: 99999999 });
+    // this.rootRef.value?.scrollTo({ left: this.rootRef.value?.scrollWidth - 184 });
+    console.log(this.firstUpcomingMatch);
+    this.firstUpcomingMatch.scrollIntoView();
   }
 
   private seasonTemplate(season: PlayerSeason): TemplateResult {

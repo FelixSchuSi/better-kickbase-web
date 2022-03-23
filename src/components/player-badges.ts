@@ -12,11 +12,17 @@ export class PlayerPage extends LitElement {
 
     svg {
       transform: skew(-10deg);
-      height: 25px;
-      width: 54px;
+      height: 16px;
+      width: 32px;
     }
+
+    svg:not(:last-child) {
+      margin-right: 4px;
+    }
+
     svg text {
-      font-weight: 600;
+      font-weight: 700;
+      font-size: smaller;
     }
   `;
 
@@ -45,8 +51,8 @@ export class PlayerPage extends LitElement {
     return html`
       ${svg`
       
-        <rect x="0" y="0" width="50" height="25" fill="white" />
-        <text text-anchor="middle" x="25" y="18" dy="1">${text}</text>
+        <rect x="0" y="0" width="32" height="16" fill="white" />
+        <text text-anchor="middle" x="16" y="12" dy="1">${text}</text>
     `}
     `;
   }
