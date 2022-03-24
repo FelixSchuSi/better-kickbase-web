@@ -21,6 +21,9 @@ const props = {
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preload" as="image" href={serverJsonData.playerInfo.profileBig} />
+    <link rel="preload" as="font" href="/fonts/roboto-condensed-v24-latin-700.woff2" />
+    <link rel="preload" as="font" href="/fonts/roboto-condensed-v24-latin-regular.woff2" />
     <link rel="icon" type="image/x-icon" href={favIcon} />
     <title>{params.playerName} - better-kickbase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,7 +58,7 @@ const props = {
 
       :root,
       * {
-        font-family: 'Roboto Condensed';
+        font-family: 'Roboto Condensed' sans-serif;
       }
 
       /* roboto-condensed-regular - latin */
@@ -63,6 +66,7 @@ const props = {
         font-family: 'Roboto Condensed';
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local(''), url('/fonts/roboto-condensed-v24-latin-regular.woff2') format('woff2'),
           /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/roboto-condensed-v24-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
       }
@@ -71,13 +75,13 @@ const props = {
         font-family: 'Roboto Condensed';
         font-style: normal;
         font-weight: 700;
+        font-display: swap;
         src: local(''), url('/fonts/roboto-condensed-v24-latin-700.woff2') format('woff2'),
           /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/fonts/roboto-condensed-v24-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
       }
     </style>
   </head>
   <body>
-    <link rel="preload" as="image" href={serverJsonData.playerInfo.profileBig} />
     <bkb-player {...props} client:idle></bkb-player>
   </body>
 </html>
