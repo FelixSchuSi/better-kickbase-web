@@ -13,7 +13,7 @@ const serverJsonData: PlayerData = await playerDataService.getData(params.player
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
   const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
-  teamIds.push('INACTIVE_PLAYERS');
+  // teamIds.push('INACTIVE_PLAYERS');
   const deepPlayerData: Player[][] = await Promise.all(
     teamIds.map((teamId: string) => teamPlayerService.getData(teamId))
   );
@@ -54,7 +54,7 @@ export async function getStaticPaths() {
   // console.log('fetched all data, saving now');
   // writeFileSync('no_club_players.json', JSON.stringify(no_club_players));
   // console.log(unkownPlayer);
-  console.log('DONE!');
+  // console.log('DONE!');
 
   return deepPlayerData.flat();
 }

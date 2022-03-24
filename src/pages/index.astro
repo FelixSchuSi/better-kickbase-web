@@ -5,6 +5,7 @@ import { bundesligaTableService } from '../services/bundesliga-table.service';
 import { BundesligaTableEntry, BundesligaTable } from '../models/bundesliga-table';
 const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
 const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
+teamIds.push('INACTIVE_PLAYERS');
 
 const deepPlayerData: Player[][] = await Promise.all(
   teamIds.map((teamId: string) => teamPlayerService.getData(teamId))

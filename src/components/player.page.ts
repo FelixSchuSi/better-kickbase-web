@@ -127,12 +127,12 @@ export class PlayerPage extends LitElement {
   }
 
   private get upperHalfStyles() {
-    return { 'background-color': `var(--team-primary-color-${this.teamId})` };
+    return { 'background-color': `var(--team-primary-color-${this.teamId}, gray)` };
   }
 
   private get colorFadeStyles() {
     return {
-      background: `linear-gradient(to bottom, transparent, var(--team-primary-color-${this.teamId}));`
+      background: `linear-gradient(to bottom, transparent, var(--team-primary-color-${this.teamId}, gray));`
     };
   }
 
