@@ -1,7 +1,7 @@
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
 import { svg, LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
 import { styleMap } from 'lit/directives/style-map.js';
-import { property, customElement, query } from 'lit/decorators.js';
+import { property, customElement, query, state } from 'lit/decorators.js';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
@@ -165,8 +165,14 @@ export class PlayerPage extends LitElement {
    */
   private maxPoints: number = 0;
 
+  @state()
+  private numberOfSeasonsToRender: number = 1;
+
   @query('.root > .match')
   private firstUpcomingMatch!: HTMLDivElement;
+
+  @query('.root > .season > .season-summary')
+  private firstSeasonSummary!: HTMLDivElement;
 
   protected willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
     if (_changedProperties.has('points') && !!this.points?.seasons) {
@@ -179,18 +185,39 @@ export class PlayerPage extends LitElement {
   }
 
   protected render(): TemplateResult {
+    let seasonsToRender: PlayerSeason[] = [];
+    if (this.points?.seasons?.length > 0) {
+      seasonsToRender = this.points.seasons.slice(-this.numberOfSeasonsToRender);
+    }
     return html`
       <div class="root">
-        ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season))}
+        ${this.numberOfSeasonsToRender < this.points.seasons.length
+          ? html`
+              <button
+                @click=${() => {
+                  if (this.numberOfSeasonsToRender < this.points?.seasons.length) {
+                    this.numberOfSeasonsToRender = this.numberOfSeasonsToRender + 1;
+                  }
+                }}
+              >
+                Saison ${this.points.seasons[this.points.seasons.length - this.numberOfSeasonsToRender - 1].year} laden
+              </button>
+            `
+          : ''}
+        ${seasonsToRender.map((season: PlayerSeason) => this.seasonTemplate(season))}
         ${this.upcomingMatches.map((upcomingMatch: PlayerUpcomingMatch) => this.matchTemplate(upcomingMatch))}
       </div>
     `;
   }
 
   protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    // this.rootRef.value?.scrollTo({ left: this.rootRef.value?.scrollWidth - 184 });
-    console.log(this.firstUpcomingMatch);
-    this.firstUpcomingMatch.scrollIntoView();
+    this.firstUpcomingMatch.scrollIntoView(false);
+  }
+
+  protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+    if (_changedProperties.has('numberOfSeasonsToRender')) {
+      this.firstSeasonSummary.scrollIntoView({ inline: 'start' });
+    }
   }
 
   private seasonTemplate(season: PlayerSeason): TemplateResult {
