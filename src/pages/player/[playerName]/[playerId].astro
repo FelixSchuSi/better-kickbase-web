@@ -13,7 +13,7 @@ const serverJsonData: PlayerData = await playerDataService.getData(params.player
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
   const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
-  // teamIds.push('INACTIVE_PLAYERS');
+  teamIds.push('INACTIVE_PLAYERS');
   const deepPlayerData: Player[][] = await Promise.all(
     teamIds.map((teamId: string) => teamPlayerService.getData(teamId))
   );
@@ -59,8 +59,9 @@ export async function getStaticPaths() {
   return deepPlayerData.flat();
 }
 
+const playerName: string = serverJsonData?.playerInfo?.knownName ?? params.playerName;
 const props = {
-  'player-name': params.playerName,
+  'player-name': playerName,
   'player-id': params.playerId,
   'team-id': serverJsonData.playerInfo.teamId,
   'server-json-data': JSON.stringify(serverJsonData)
@@ -74,9 +75,9 @@ const props = {
     <link rel="preload" as="font" href="/better-kickbase-web/fonts/roboto-condensed-v24-latin-700.woff2" />
     <link rel="preload" as="font" href="/better-kickbase-web/fonts/roboto-condensed-v24-latin-regular.woff2" />
     <link rel="icon" type="image/x-icon" href={favIcon} />
-    <title>{params.playerName} - better-kickbase</title>
+    <title>{playerName} - better-kickbase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={`Spielerprofil von ${params.playerName} - better-kickbase-web`} />
+    <meta name="description" content={`Spielerprofil von ${playerName} - better-kickbase-web`} />
     <style>
       body {
         max-width: 768px;

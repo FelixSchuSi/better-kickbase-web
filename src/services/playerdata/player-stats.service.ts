@@ -17,7 +17,7 @@ export interface PlayerStats {
   id: string;
   lastName: string;
   marketValue: number;
-  marketValues: PlayerValueHistoryItem[];
+  marketValues?: PlayerValueHistoryItem[];
   mvHigh: number;
   mvHighDate: Date;
   mvLow: number;
@@ -55,7 +55,8 @@ export class PlayerStatsService extends BasePlayerService<PlayerStats> {
       id: statsFromApi.id,
       lastName: statsFromApi.lastName,
       marketValue: statsFromApi.marketValue,
-      marketValues: statsFromApi.marketValues.map(playerValueHistoryItemFromApiResponse),
+      // TODO: visualize markeit values
+      // marketValues: statsFromApi.marketValues.map(playerValueHistoryItemFromApiResponse),
       mvHigh: statsFromApi.mvHigh,
       mvHighDate: new Date(statsFromApi.mvHighDate),
       mvLow: statsFromApi.mvLow,

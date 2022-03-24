@@ -7,6 +7,7 @@ export interface PlayerInfo {
   teamId: string;
   teamName: string;
   firstName: string;
+  knownName: string;
   lastName: string;
   profile: string;
   profileBig: string;
