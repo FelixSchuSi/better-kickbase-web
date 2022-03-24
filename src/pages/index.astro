@@ -1,9 +1,19 @@
 ---
-import playerData from '../data/players.json';
 import favIcon from '../../images/favicon-16.png';
+import { teamPlayerService, Player } from '../services/team-players.service';
+import { bundesligaTableService } from '../services/bundesliga-table.service';
+import { BundesligaTableEntry, BundesligaTable } from '../models/bundesliga-table';
+const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
+const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
+
+const deepPlayerData: Player[][] = await Promise.all(
+  teamIds.map((teamId: string) => teamPlayerService.getData(teamId))
+);
+
+const playerData = deepPlayerData.flat();
 
 const playersGroupedByTeam = {};
-playerData.data.forEach(player => {
+playerData.forEach(player => {
   if (player.metadata.team in playersGroupedByTeam) {
     playersGroupedByTeam[player.metadata.team].push(player);
   } else {

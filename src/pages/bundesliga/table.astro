@@ -1,0 +1,19 @@
+---
+import favIcon from '../../../images/favicon-16.png';
+import { bundesligaTableService } from '../../services/bundesliga-table.service';
+import '../../components/bundesliga-table.page';
+// const result = bundesligaTableService.getData();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href={favIcon} />
+    <title>Bundesliga Tabelle - better-kickbase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="better-kickbase-web Bundesliga Tabelle" />
+  </head>
+  <body>
+    <bkb-bundesliga-table client:idle></bkb-bundesliga-table>
+  </body>
+</html>

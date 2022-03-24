@@ -6,7 +6,7 @@ export interface PlayerPoints {
 }
 
 export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
-  public async getData(playerId: string): Promise<PlayerPoints> {
+  public override async getData(playerId: string): Promise<PlayerPoints> {
     await this.ensureLogin();
     const url: string = import.meta.env.SSR
       ? `https://api.kickbase.com/players/${playerId}/points`

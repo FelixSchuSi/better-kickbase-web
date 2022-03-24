@@ -22,7 +22,7 @@ export interface PlayerInfo {
 }
 
 export class PlayerInfoService extends BasePlayerService<PlayerInfo> {
-  public async getData(playerId: string): Promise<PlayerInfo> {
+  public override async getData(playerId: string): Promise<PlayerInfo> {
     await this.ensureLogin();
 
     const url: string = import.meta.env.SSR

@@ -1,13 +1,22 @@
 ---
 import '../../../components/player.page.ts';
-import playerData from '../../../data/players.json';
 import { playerDataService, PlayerData } from '../../../services/playerdata/playerdata.service.ts';
+import { teamPlayerService, Player } from '../../../services/team-players.service';
+import { bundesligaTableService } from '../../../services/bundesliga-table.service';
+import { BundesligaTableEntry, BundesligaTable } from '../../../models/bundesliga-table';
 import favIcon from '../../../../images/favicon-16.png';
 
 const { params } = Astro.request;
 const serverJsonData: PlayerData = await playerDataService.getData(params.playerId);
-export function getStaticPaths() {
-  return playerData.data;
+export async function getStaticPaths() {
+  const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
+  const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
+
+  const deepPlayerData: Player[][] = await Promise.all(
+    teamIds.map((teamId: string) => teamPlayerService.getData(teamId))
+  );
+
+  return deepPlayerData.flat();
 }
 
 const props = {

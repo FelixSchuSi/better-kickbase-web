@@ -37,7 +37,7 @@ export interface PlayerStats {
 }
 
 export class PlayerStatsService extends BasePlayerService<PlayerStats> {
-  public async getData(playerId: string): Promise<PlayerStats> {
+  public override async getData(playerId: string): Promise<PlayerStats> {
     await this.ensureLogin();
 
     const url: string = import.meta.env.SSR
