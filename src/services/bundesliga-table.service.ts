@@ -1,4 +1,4 @@
-import { BundesligaTable, bundesligaTableEntryFromApiResponse } from '../models/bundesliga-table';
+import { BundesligaTable, BundesligaTableEntry, bundesligaTableEntryFromApiResponse } from '../models/bundesliga-table';
 import { BaseService } from './base.service';
 
 export class BundesligaTableService extends BaseService<any> {
@@ -7,10 +7,12 @@ export class BundesligaTableService extends BaseService<any> {
     const url: string = import.meta.env.SSR ? `https://api.kickbase.com/competition/table` : `/api/competition/table`;
     const response: Response = await fetch(url, this.default_opts);
     const rawTableData: any = await response.json();
+    const teams: BundesligaTableEntry[] = rawTableData.t.map(bundesligaTableEntryFromApiResponse);
+
     const bundesligaTable: BundesligaTable = {
       matchDay: rawTableData.md,
       currentMatchDay: rawTableData.cmd,
-      teams: rawTableData.t.map(bundesligaTableEntryFromApiResponse)
+      teams
     };
     return bundesligaTable;
   }

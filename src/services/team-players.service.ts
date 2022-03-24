@@ -1,4 +1,5 @@
 import { BaseService } from './base.service';
+import inactivePlayers from '../data/all_inactive_players.json';
 
 export interface Player {
   playerName: string;
@@ -7,6 +8,9 @@ export interface Player {
 
 export class TeamPlayerService extends BaseService<any> {
   public override async getData(team_id: string): Promise<Player[]> {
+    if (team_id === 'INACTIVE_PLAYERS') {
+      return this.getInactivePlayers();
+    }
     await this.ensureLogin();
     const url: string = import.meta.env.SSR
       ? `https://api.kickbase.com/competition/teams/${team_id}/players`
@@ -26,6 +30,10 @@ export class TeamPlayerService extends BaseService<any> {
     });
 
     return players;
+  }
+
+  public getInactivePlayers() {
+    return inactivePlayers as Player[];
   }
 }
 

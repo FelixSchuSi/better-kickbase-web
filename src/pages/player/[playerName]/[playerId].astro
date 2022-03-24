@@ -5,16 +5,56 @@ import { teamPlayerService, Player } from '../../../services/team-players.servic
 import { bundesligaTableService } from '../../../services/bundesliga-table.service';
 import { BundesligaTableEntry, BundesligaTable } from '../../../models/bundesliga-table';
 import favIcon from '../../../../images/favicon-16.png';
+import { writeFileSync } from 'fs';
+import { join } from 'path';
 
 const { params } = Astro.request;
 const serverJsonData: PlayerData = await playerDataService.getData(params.playerId);
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
   const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
-
+  teamIds.push('INACTIVE_PLAYERS');
   const deepPlayerData: Player[][] = await Promise.all(
     teamIds.map((teamId: string) => teamPlayerService.getData(teamId))
   );
+
+  // const player_ids: number[] = deepPlayerData.flat().map(e => Number(e.params.playerId));
+  // flat.sort();
+  // writeFileSync('player_ids.json', JSON.stringify(flat));
+  // console.log('file created');
+
+  // const not_in_ids: number[] = [];
+  // console.log(Math.max(...player_ids));
+
+  // for (let i = 3001; i <= 3500; i++) {
+  //   if (player_ids.indexOf(i) === -1) {
+  //     not_in_ids.push(i);
+  //   }
+  // }
+
+  // const no_club_players: any[] = [];
+  // console.log('starting to fetch...');
+  // const p = not_in_ids.map(async (i: number) => {
+  //   try {
+  //     const unkownPlayer: PlayerData = await playerDataService.getData(i);
+  //     no_club_players.push({
+  //       params: {
+  //         playerName: `${unkownPlayer.playerInfo.firstName} ${unkownPlayer.playerInfo.lastName}`,
+  //         playerId: String(unkownPlayer.playerInfo.id)
+  //       },
+  //       metadata: {
+  //         team: unkownPlayer.playerInfo.teamName
+  //       }
+  //     });
+  //   } catch (e) {}
+  //   // writeFileSync('no_club_players.json', JSON.stringify(no_club_players));
+  //   return;
+  // });
+  // await Promise.all(p);
+  // console.log('fetched all data, saving now');
+  // writeFileSync('no_club_players.json', JSON.stringify(no_club_players));
+  // console.log(unkownPlayer);
+  console.log('DONE!');
 
   return deepPlayerData.flat();
 }
