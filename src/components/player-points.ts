@@ -151,6 +151,20 @@ export class PlayerPage extends LitElement {
       font-size: 12px;
       opacity: 80%;
     }
+
+    button {
+      font-family: 'Roboto Condensed';
+      font-size: medium;
+      background-color: transparent;
+      border: 0px solid black;
+      border-left: 1px solid #d3d7d8;
+      border-right: 1px solid #d3d7d8;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #efefef;
+    }
   `;
 
   @property({ type: Object })
@@ -216,7 +230,7 @@ export class PlayerPage extends LitElement {
 
   protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
     if (_changedProperties.has('numberOfSeasonsToRender')) {
-      this.firstSeasonSummary.scrollIntoView({ inline: 'start' });
+      this.firstSeasonSummary.scrollIntoView({ block: 'end', inline: 'start' });
     }
   }
 
