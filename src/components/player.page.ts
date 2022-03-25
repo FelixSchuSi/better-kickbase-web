@@ -6,9 +6,10 @@ import { PlayerInfo } from '../services/playerdata/player-info.service';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
 import { PlayerStats } from '../services/playerdata/player-stats.service';
 import { PlayerData } from '../services/playerdata/playerdata.service';
+import { teamColors } from '../models/team-colors';
+import noProfilePicFallback from '../../images/no_profile_pic.png';
 import './player-badges.ts';
 import './player-points';
-import { teamColors } from '../models/team-colors';
 
 export const tagName: string = 'bkb-player';
 @customElement(tagName)
@@ -125,10 +126,14 @@ export class PlayerPage extends LitElement {
     };
   }
 
-  render(): TemplateResult {
+  protected render(): TemplateResult {
     return html`
       <div class="upper-half" style=${styleMap(this.upperHalfStyles)}>
-        <img class="player-image" src=${this.playerInfo?.profileBig} alt="Profilbild von ${this.playerName}" />
+        <img
+          class="player-image"
+          src=${this.playerInfo?.profileBig ?? noProfilePicFallback}
+          alt="Profilbild von ${this.playerName}"
+        />
         <div class="player-color-fade" style=${styleMap(this.colorFadeStyles)}></div>
         <div class="player-summary">
           <div

@@ -1,4 +1,5 @@
 import { svg, LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
+import { styleMap, StyleInfo } from 'lit/directives/style-map.js';
 import { property, customElement } from 'lit/decorators.js';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
@@ -94,7 +95,10 @@ export class PlayerPointsMatch extends LitElement {
   protected render(): TemplateResult {
     const color: string = this.match.points >= 100 ? '#25c28b' : '#ea5f42';
     const percentage: string = `${Math.round((this.match.points / this.maxPoints) * 100)}%`;
-    const background: string = `background: linear-gradient(to top, ${color}, ${color}, ${percentage}, #f5f7f6, ${percentage}, #f5f7f6);`;
+
+    const matchBarStyles: StyleInfo = {
+      background: `linear-gradient(to top, ${color}, ${color}, ${percentage}, #f5f7f6, ${percentage}, #f5f7f6)`
+    };
 
     return html`
       <div class="match">
@@ -102,7 +106,7 @@ export class PlayerPointsMatch extends LitElement {
           <small class="match-value">${this.match.match}.</small>
           <small class="match-label">Spieltag</small>
         </div>
-        <div class="match-bar" style=${background}>
+        <div class="match-bar" style=${styleMap(matchBarStyles)}>
           ${Array.from({ length: (this.match as PlayerMatch).assists }).map(() => html`<div>${this.assistSvg}</div>`)}
           ${Array.from({ length: (this.match as PlayerMatch).goals }).map(() => html`<div>${this.goalSvg}</div>`)}
         </div>

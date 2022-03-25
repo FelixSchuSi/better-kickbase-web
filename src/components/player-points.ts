@@ -1,10 +1,9 @@
-import { svg, LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
+import { LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
 import { property, customElement, query, state } from 'lit/decorators.js';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
-
 import './player-points-match';
 
 export const tagName: string = 'bkb-player-points';
@@ -135,21 +134,7 @@ export class PlayerPage extends LitElement {
     }
     return html`
       <div class="root">
-        ${this.numberOfSeasonsToRender < this.points.seasons.length
-          ? html`
-              <button
-                class="load-season"
-                @click=${() => {
-                  if (this.numberOfSeasonsToRender < this.points?.seasons.length) {
-                    this.numberOfSeasonsToRender = this.numberOfSeasonsToRender + 1;
-                  }
-                }}
-              >
-                Saison ${this.points.seasons[this.points.seasons.length - this.numberOfSeasonsToRender - 1].year} laden
-              </button>
-            `
-          : ''}
-        ${seasonsToRender.map((season: PlayerSeason) => this.seasonTemplate(season))}
+        ${this.loadSeasonTemplate} ${seasonsToRender.map((season: PlayerSeason) => this.seasonTemplate(season))}
         ${this.upcomingMatches.map(
           (upcomingMatch: PlayerUpcomingMatch) =>
             html`<bkb-player-points-match
@@ -172,6 +157,7 @@ export class PlayerPage extends LitElement {
   }
 
   private seasonTemplate(season: PlayerSeason): TemplateResult {
+    const avgPoints: number = season.appearances > 0 ? Math.round(season.points / season.appearances) : 0;
     return html`
       <div class="season">
         ${season.matches.map(
@@ -184,7 +170,7 @@ export class PlayerPage extends LitElement {
             <div class="season-summary-details-key">Saison Auswertung</div>
             <div class="season-summary-details-value">${season.points}</div>
             <div class="season-summary-details-key">Punkte</div>
-            <div class="season-summary-details-value">${Math.round(season.points / season.appearances)}</div>
+            <div class="season-summary-details-value">${avgPoints}</div>
             <div class="season-summary-details-key">∅ Punkte</div>
             <div class="season-summary-details-value">${season.appearances}</div>
             <div class="season-summary-details-key">Einsätze</div>
@@ -193,6 +179,23 @@ export class PlayerPage extends LitElement {
           </div>
         </div>
       </div>
+    `;
+  }
+
+  private get loadSeasonTemplate(): TemplateResult {
+    if (this.numberOfSeasonsToRender >= this.points.seasons.length) return html``;
+    const year: string = this.points.seasons[this.points.seasons.length - this.numberOfSeasonsToRender - 1].year;
+    return html`
+      <button
+        class="load-season"
+        @click=${() => {
+          if (this.numberOfSeasonsToRender < this.points?.seasons.length) {
+            this.numberOfSeasonsToRender = this.numberOfSeasonsToRender + 1;
+          }
+        }}
+      >
+        Saison ${year} laden
+      </button>
     `;
   }
 }
