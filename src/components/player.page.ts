@@ -139,13 +139,13 @@ export class PlayerPage extends LitElement {
   render(): TemplateResult {
     return html`
       <div class="upper-half" style=${styleMap(this.upperHalfStyles)}>
-        <img class="player-image" src=${this.playerInfo?.profileBig} alt="picture of ${this.playerName}" />
+        <img class="player-image" src=${this.playerInfo?.profileBig} alt="Profilbild von ${this.playerName}" />
         <div class="player-color-fade" style=${styleMap(this.colorFadeStyles)}></div>
         <div class="player-summary">
           <div class="bottom-container">
             <div class="price-container">
               <h3 class="price-value">
-                ${this.priceFormatter.format(this.playerInfo.marketValue)}&nbsp${this.priceTrendTemplate(
+                ${this.priceFormatter.format(this.playerInfo.marketValue ?? 0)}&nbsp${this.priceTrendTemplate(
                   this.playerInfo.marketValueTrend
                 )}
               </h3>

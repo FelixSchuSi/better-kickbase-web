@@ -85,7 +85,7 @@ export class PlayerPage extends LitElement {
       flex-direction: column;
       align-items: center;
       margin-right: 10px;
-      min-width: 48px;
+      width: 48px;
       padding-top: 8px;
       padding-bottom: 8px;
     }
@@ -152,7 +152,7 @@ export class PlayerPage extends LitElement {
       opacity: 80%;
     }
 
-    button {
+    button.load-season {
       font-family: 'Roboto Condensed';
       font-size: medium;
       background-color: transparent;
@@ -160,6 +160,9 @@ export class PlayerPage extends LitElement {
       border-left: 1px solid #d3d7d8;
       border-right: 1px solid #d3d7d8;
       cursor: pointer;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 128px;
     }
 
     button:hover {
@@ -208,6 +211,7 @@ export class PlayerPage extends LitElement {
         ${this.numberOfSeasonsToRender < this.points.seasons.length
           ? html`
               <button
+                class="load-season"
                 @click=${() => {
                   if (this.numberOfSeasonsToRender < this.points?.seasons.length) {
                     this.numberOfSeasonsToRender = this.numberOfSeasonsToRender + 1;
@@ -225,12 +229,12 @@ export class PlayerPage extends LitElement {
   }
 
   protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    this.firstUpcomingMatch.scrollIntoView(false);
+    this.firstUpcomingMatch?.scrollIntoView(false);
   }
 
   protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
     if (_changedProperties.has('numberOfSeasonsToRender')) {
-      this.firstSeasonSummary.scrollIntoView({ block: 'end', inline: 'start' });
+      this.firstSeasonSummary?.scrollIntoView({ block: 'end', inline: 'start' });
     }
   }
 
