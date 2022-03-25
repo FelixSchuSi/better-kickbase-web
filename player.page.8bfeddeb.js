@@ -1,4 +1,4 @@
-import{r as u,e as p,t as n,s as g,$ as m,a as s,o as d,n as b}from"./client-shim.2b0a8168.js";import"./chunks/player-points.5561950a.js";const v=u`
+import{r as u,e as p,t as y,s as g,$ as m,i as s,o as d,n as b}from"./client-shim.48ed8262.js";import"./chunks/player-points.9962cfa7.js";const v=u`
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -74,9 +74,13 @@ import{r as u,e as p,t as n,s as g,$ as m,a as s,o as d,n as b}from"./client-shi
   .team-primary-color-18 {
     background-color: var(--team-primary-color-18);
   }
-`;var h=Object.defineProperty,f=Object.getOwnPropertyDescriptor,e=(t,i,l,o)=>{for(var a=o>1?void 0:o?f(i,l):i,c=t.length-1,y;c>=0;c--)(y=t[c])&&(a=(o?y(i,l,a):y(a))||a);return o&&a&&h(i,l,a),a};const k="bkb-player";let r=class extends g{constructor(){super(...arguments);this.priceFormatter=new Intl.NumberFormat("de",{currency:"EUR",style:"currency",maximumFractionDigits:0})}async willUpdate(t){if(!this.playerPoints){const{playerInfo:l,playerPoints:o,playerStats:a}=JSON.parse(this.serverJsonData);this.playerInfo=l,this.playerPoints=o,this.playerStats=a}}get upperHalfStyles(){return{"background-color":`var(--team-primary-color-${this.teamId}, gray)`}}get colorFadeStyles(){return{background:`linear-gradient(to bottom, transparent, var(--team-primary-color-${this.teamId}, gray));`}}render(){return m`
+`;var h="/better-kickbase-web/assets/no_profile_pic.89227a2b.png",f=Object.defineProperty,k=Object.getOwnPropertyDescriptor,e=(t,i,l,o)=>{for(var a=o>1?void 0:o?k(i,l):i,c=t.length-1,n;c>=0;c--)(n=t[c])&&(a=(o?n(i,l,a):n(a))||a);return o&&a&&f(i,l,a),a};const $="bkb-player";let r=class extends g{constructor(){super(...arguments);this.priceFormatter=new Intl.NumberFormat("de",{currency:"EUR",style:"currency",maximumFractionDigits:0})}async willUpdate(t){if(!this.playerPoints){const{playerInfo:l,playerPoints:o,playerStats:a}=JSON.parse(this.serverJsonData);this.playerInfo=l,this.playerPoints=o,this.playerStats=a}}get upperHalfStyles(){return{"background-color":`var(--team-primary-color-${this.teamId}, gray)`}}get colorFadeStyles(){return{background:`linear-gradient(to bottom, transparent, var(--team-primary-color-${this.teamId}, gray));`}}render(){return m`
       <div class="upper-half" style=${s(this.upperHalfStyles)}>
-        <img class="player-image" src=${this.playerInfo?.profileBig} alt="Profilbild von ${this.playerName}" />
+        <img
+          class="player-image"
+          src=${this.playerInfo?.profileBig??h}
+          alt="Profilbild von ${this.playerName}"
+        />
         <div class="player-color-fade" style=${s(this.colorFadeStyles)}></div>
         <div class="player-summary">
           <div
@@ -157,4 +161,4 @@ import{r as u,e as p,t as n,s as g,$ as m,a as s,o as d,n as b}from"./client-shi
       .price-value {
         margin: 0;
       }
-    `];e([p({type:String,attribute:"player-name"})],r.prototype,"playerName",2);e([p({type:String,attribute:"player-id"})],r.prototype,"playerId",2);e([p({type:String,attribute:"server-json-data"})],r.prototype,"serverJsonData",2);e([p({type:String,attribute:"team-id"})],r.prototype,"teamId",2);e([n()],r.prototype,"playerInfo",2);e([n()],r.prototype,"playerPoints",2);e([n()],r.prototype,"playerStats",2);r=e([b(k)],r);export{r as PlayerPage,k as tagName};
+    `];e([p({type:String,attribute:"player-name"})],r.prototype,"playerName",2);e([p({type:String,attribute:"player-id"})],r.prototype,"playerId",2);e([p({type:String,attribute:"server-json-data"})],r.prototype,"serverJsonData",2);e([p({type:String,attribute:"team-id"})],r.prototype,"teamId",2);e([y()],r.prototype,"playerInfo",2);e([y()],r.prototype,"playerPoints",2);e([y()],r.prototype,"playerStats",2);r=e([b($)],r);export{r as PlayerPage,$ as tagName};
