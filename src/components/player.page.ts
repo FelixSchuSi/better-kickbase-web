@@ -1,5 +1,6 @@
 import { LitElement, html, PropertyValueMap, CSSResultGroup, css, TemplateResult } from 'lit';
 import { styleMap } from 'lit/directives/style-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { property, customElement, state } from 'lit/decorators.js';
 import { PlayerInfo } from '../services/playerdata/player-info.service';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
@@ -7,6 +8,7 @@ import { PlayerStats } from '../services/playerdata/player-stats.service';
 import { PlayerData } from '../services/playerdata/playerdata.service';
 import './player-badges.ts';
 import './player-points';
+import { teamColors } from '../models/team-colors';
 
 export const tagName: string = 'bkb-player';
 @customElement(tagName)
@@ -36,77 +38,64 @@ export class PlayerPage extends LitElement {
     currency: 'EUR',
     style: 'currency',
     maximumFractionDigits: 0
-    // currencySign: 'standard'
   });
 
-  static styles: CSSResultGroup = css`
-    :root,
-    * {
-      --team-primary-color-15: #28a144;
-      --team-primary-color-11: #51a600;
-      --team-primary-color-7: #fe0000;
-      --team-primary-color-40: #d3011c;
-      --team-primary-color-43: #001f46;
-      --team-primary-color-3: #fde101;
-      --team-primary-color-20: #001f46;
-      --team-primary-color-24: #0a5ca5;
-      --team-primary-color-13: #ce1719;
-      --team-primary-color-14: #1c62b7;
-      --team-primary-color-5: #d11b1a;
-      --team-primary-color-2: #dc052e;
-      --team-primary-color-22: #0090d7;
-      --team-primary-color-19: #fde101;
-      --team-primary-color-28: #e20612;
-      --team-primary-color-9: #e32219;
-      --team-primary-color-18: #e30713;
-      --team-primary-color-4: #e10010;
-    }
-    .upper-half {
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      grid-template-areas: 'main';
-    }
+  static styles: CSSResultGroup = [
+    teamColors,
+    css`
+      .upper-half {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'main';
+      }
 
-    img.player-image {
-      grid-area: main;
-      width: 100%;
-      z-index: 0;
-    }
+      img.player-image {
+        grid-area: main;
+        width: 100%;
+        z-index: 0;
+      }
 
-    .player-color-fade {
-      grid-area: main;
-      width: 100%;
-      height: 60%;
-      align-self: end;
-      z-index: 1;
-    }
+      .player-color-fade {
+        grid-area: main;
+        width: 100%;
+        height: 60%;
+        align-self: end;
+        z-index: 1;
+      }
 
-    .player-summary {
-      grid-area: main;
-      z-index: 2;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
+      .player-summary {
+        grid-area: main;
+        z-index: 2;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
 
-    .player-summary > h1 {
-      margin: 0;
-      color: white;
-    }
-    .bottom-container {
-      align-self: stretch;
-      padding: 0.5rem 1rem 0.5rem 1rem;
-      color: white;
-    }
-    .price-container {
-      display: flex;
-    }
-    .price-value {
-      margin: 0;
-    }
-  `;
+      h1.player-name {
+        margin: 0;
+        color: white;
+      }
+      h1.player-name.inverted {
+        color: black;
+      }
+      .bottom-container {
+        align-self: stretch;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        color: white;
+      }
+      .bottom-container.inverted {
+        color: black;
+      }
+      .price-container {
+        display: flex;
+      }
+      .price-value {
+        margin: 0;
+      }
+    `
+  ];
 
   protected async willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): Promise<void> {
     const isFirstUpdate: boolean = !this.playerPoints;
@@ -142,7 +131,12 @@ export class PlayerPage extends LitElement {
         <img class="player-image" src=${this.playerInfo?.profileBig} alt="Profilbild von ${this.playerName}" />
         <div class="player-color-fade" style=${styleMap(this.colorFadeStyles)}></div>
         <div class="player-summary">
-          <div class="bottom-container">
+          <div
+            class=${classMap({
+              'bottom-container': true,
+              'inverted': this.playerInfo.teamName === 'Dortmund'
+            })}
+          >
             <div class="price-container">
               <h3 class="price-value">
                 ${this.priceFormatter.format(this.playerInfo.marketValue ?? 0)}&nbsp${this.priceTrendTemplate(
@@ -151,11 +145,19 @@ export class PlayerPage extends LitElement {
               </h3>
             </div>
           </div>
-          <h1 class="player-name">${this.playerName}</h1>
+          <h1
+            class=${classMap({
+              'player-name': true,
+              'inverted': this.playerInfo.teamName === 'Dortmund'
+            })}
+          >
+            ${this.playerName}
+          </h1>
 
           <bkb-player-badges
             .number=${this.playerInfo.number}
             .position=${this.playerInfo.position}
+            ?inverted=${this.playerInfo.teamName === 'Dortmund'}
           ></bkb-player-badges>
         </div>
       </div>

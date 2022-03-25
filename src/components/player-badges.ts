@@ -35,6 +35,9 @@ export class PlayerPage extends LitElement {
   @property({ type: String })
   public status?: string;
 
+  @property({ type: Boolean })
+  public inverted: boolean = false;
+
   render() {
     return html`
       <div class="badges-container">
@@ -48,12 +51,25 @@ export class PlayerPage extends LitElement {
   private singleBadge(text: string | undefined): TemplateResult | string {
     if (text === undefined) return '';
 
-    return html`
-      ${svg`
-      
+    if (!this.inverted) {
+      return html`
+        ${svg`
         <rect x="0" y="0" width="32" height="16" fill="white" />
         <text text-anchor="middle" x="16" y="12" dy="1">${text}</text>
     `}
+      `;
+    }
+
+    return html`
+      ${svg`
+      <defs>
+        <mask id="mask-${text}" x="0" y="0" >
+          <rect x="0" y="0" width="32" height="16" fill="#fff" />
+          <text text-anchor="middle" x="16" y="12" dy="1">${text}</text>
+        </mask>
+      </defs>
+      <rect x="0" y="0" width="32" height="16" mask="url(#mask-${text})" fill-opacity="1" />
+      `}
     `;
   }
 }
