@@ -111,11 +111,14 @@ export class PlayerPage extends LitElement {
   @state()
   private numberOfSeasonsToRender: number = 1;
 
-  @query('.root > .match')
+  @query('.root > bkb-player-points-match')
   private firstUpcomingMatch!: HTMLDivElement;
 
   @query('.root > .season > .season-summary')
   private firstSeasonSummary!: HTMLDivElement;
+
+  @query('.season-summary:last-of-type')
+  private lastSeasonSummary!: HTMLDivElement;
 
   protected willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
     if (_changedProperties.has('points') && !!this.points?.seasons) {
@@ -147,7 +150,11 @@ export class PlayerPage extends LitElement {
   }
 
   protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    this.firstUpcomingMatch?.scrollIntoView(false);
+    if (this.firstUpcomingMatch) {
+      this.firstUpcomingMatch?.scrollIntoView(false);
+    } else {
+      this.lastSeasonSummary?.scrollIntoView(false);
+    }
   }
 
   protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
