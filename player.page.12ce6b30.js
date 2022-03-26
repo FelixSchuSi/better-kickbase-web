@@ -1,4 +1,4 @@
-import{r as u,e as p,t as y,s as g,$ as m,i as s,o as d,n as b}from"./client-shim.48ed8262.js";import"./chunks/player-points.9962cfa7.js";const v=u`
+import{r as u,e as p,t as y,s as g,$ as m,i as s,o as d,n as b}from"./client-shim.48ed8262.js";import"./chunks/player-points.a865c4f1.js";const v=u`
   :root,
   * {
     --team-primary-color-15: #28a144;
