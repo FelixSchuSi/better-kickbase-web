@@ -16,13 +16,29 @@ export const tagName: string = 'bkb-bundesliga-table';
 export class BundesligaTablePage extends LitElement {
   static styles: CSSResultGroup = css``;
 
+  @property({ type: String, attribute: 'server-json-data' })
+  public serverJsonData: string;
+
+  @state()
+  private bundesligaTable?: BundesligaTable;
+
   protected async willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): Promise<void> {
-    const res: BundesligaTable = await bundesligaTableService.getData();
-    const teamIds: string[] = res.teams.map((team: BundesligaTableEntry) => team.teamId);
-    const x = await teamPlayerService.getData(teamIds[0]);
+    const isFirstUpdate: boolean = !this.bundesligaTable;
+
+    if (isFirstUpdate) {
+      this.bundesligaTable = JSON.parse(this.serverJsonData);
+    }
+
+    // if (import.meta.env.SSR === false && isFirstUpdate) {
+    //   this.bundesligaTable = await bundesligaTableService.getData();
+    // }
   }
 
   protected render(): TemplateResult {
-    return html`Hello`;
+    return html`
+      <ul>
+        ${this.bundesligaTable?.teams.map((team: BundesligaTableEntry) => html` <li>${team.teamName}</li> `)}
+      </ul>
+    `;
   }
 }

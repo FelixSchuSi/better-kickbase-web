@@ -1,8 +1,13 @@
 ---
 import favIcon from '../../../images/favicon-16.png';
 import { bundesligaTableService } from '../../services/bundesliga-table.service';
+import { BundesligaTable } from '../../models/bundesliga-table';
 import '../../components/bundesliga-table.page';
-// const result = bundesligaTableService.getData();
+import '../../styles/page.css';
+const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
+const props: Record<string, string> = {
+  'server-json-data': JSON.stringify(bundesligaTable)
+};
 ---
 
 <!DOCTYPE html>
@@ -14,6 +19,6 @@ import '../../components/bundesliga-table.page';
     <meta name="description" content="better-kickbase-web Bundesliga Tabelle" />
   </head>
   <body>
-    <bkb-bundesliga-table client:idle></bkb-bundesliga-table>
+    <bkb-bundesliga-table {...props} client:idle></bkb-bundesliga-table>
   </body>
 </html>
