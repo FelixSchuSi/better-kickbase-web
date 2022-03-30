@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { BASE_PATH } from './base-path';
 import dotenv from 'dotenv';
 dotenv.config();
 const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
@@ -36,6 +37,6 @@ export default defineConfig({
     }
   },
   buildOptions: {
-    site: 'https://felixschusi.github.io/better-kickbase-web/'
+    site: BASE_PATH
   }
 });

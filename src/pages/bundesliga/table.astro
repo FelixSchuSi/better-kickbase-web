@@ -3,7 +3,10 @@ import favIcon from '../../../images/favicon-16.png';
 import { bundesligaTableService } from '../../services/bundesliga-table.service';
 import { BundesligaTable } from '../../models/bundesliga-table';
 import '../../components/bundesliga-table.page';
-import '../../styles/page.css';
+
+// import basePage from '../../styles/default-page.css';
+import page from '../../styles/page.css';
+
 const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
 const props: Record<string, string> = {
   'server-json-data': JSON.stringify(bundesligaTable)
@@ -18,7 +21,7 @@ const props: Record<string, string> = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="better-kickbase-web Bundesliga Tabelle" />
   </head>
-  <body>
+  <body style="background-color: #e8edf1;  padding: 1rem;">
     <bkb-bundesliga-table {...props} client:idle></bkb-bundesliga-table>
   </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 import favIcon from '../../images/favicon-16.png';
+import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path';
 import { teamPlayerService, Player } from '../services/team-players.service';
 import { bundesligaTableService } from '../services/bundesliga-table.service';
 import { BundesligaTableEntry, BundesligaTable } from '../models/bundesliga-table';
@@ -27,7 +28,7 @@ Object.entries(playersGroupedByTeam).forEach(([team, players]) => {
   let playersString = '';
   players.forEach(
     player =>
-      (playersString += `<li><a href="/better-kickbase-web/player/${encodeURIComponent(
+      (playersString += `<li><a href="${BASE_PATH_WITHOUT_DOMAIN}/player/${encodeURIComponent(
         player.params.playerName
       )}/${encodeURIComponent(player.params.playerId)}">${player.params.playerName}</a></li>`)
   );
