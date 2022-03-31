@@ -1,8 +1,11 @@
-import { LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
+import { svg, LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { PlayerListItem } from '../models/player-list-item';
 import noProfilePicFallback from '../../images/no_profile_pic.png';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
+import { priceFormatter } from '../helpers/price-formatter';
+import { pointFormatter } from '../helpers/point-formatter';
+import { getPlayerPositionLabel, PlayerPosition } from '../models/player-position';
 export const tagName: string = 'bkb-player-list-item';
 @customElement(tagName)
 export class PlayerListItemWidget extends LitElement {
@@ -39,7 +42,6 @@ export class PlayerListItemWidget extends LitElement {
     .left,
     .player-img {
       height: 100%;
-      /* transform: scale(0.4); */
     }
     .player-img {
       clip-path: inset(0% 0% 0% 50px round 0.5rem);
@@ -47,6 +49,11 @@ export class PlayerListItemWidget extends LitElement {
     }
     .right {
       display: grid;
+      width: 100%;
+      justify-content: stretch;
+      align-content: stretch;
+      grid-template-columns: auto auto 1fr;
+      padding: 1rem 1rem 1rem 1rem;
       grid-template-areas:
         'badges badges .'
         'name name .'
@@ -59,6 +66,16 @@ export class PlayerListItemWidget extends LitElement {
     }
     .name {
       grid-area: name;
+      font-weight: 700;
+      font-size: x-large;
+      letter-spacing: 0.01rem;
+      padding-top: 0.2rem !important;
+    }
+    .value {
+      padding-top: 0.5rem;
+    }
+    .points {
+      padding-right: 1rem;
     }
     .points.value {
       grid-area: points-value;
@@ -68,6 +85,10 @@ export class PlayerListItemWidget extends LitElement {
     }
     .market-value.value {
       grid-area: market-value-value;
+      justify-self: end;
+    }
+    .points {
+      width: 2.5rem;
     }
     .points.label {
       grid-area: points-label;
@@ -77,6 +98,25 @@ export class PlayerListItemWidget extends LitElement {
     }
     .market-value.label {
       grid-area: market-value-label;
+      justify-self: end;
+    }
+    .badges {
+      display: flex;
+    }
+    .badge {
+      transform: skew(-10deg);
+      width: 32px;
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    .badge rect {
+      fill: #9cacb9;
+    }
+
+    .badge text {
+      font-size: 12px;
+      fill: white;
     }
   `;
 
@@ -95,16 +135,34 @@ export class PlayerListItemWidget extends LitElement {
         </div>
 
         <div class="right">
-          <div class="badges">badges</div>
+          <div class="badges">
+            ${this.data.number ? this.badgeTemplate(String(this.data.number)) : html``}
+            ${this.data.position
+              ? this.badgeTemplate(getPlayerPositionLabel(this.data.position as unknown as PlayerPosition))
+              : html``}
+            ${this.data.status ? this.badgeTemplate(String(this.data.status)) : html``}
+          </div>
           <div class="name value">${this.data.knownName ?? this.data.lastName}</div>
-          <div class="points value">${this.data.totalPoints}</div>
+          <div class="points value">${pointFormatter.format(this.data.totalPoints)}</div>
           <div class="points label">Pts.</div>
           <div class="avg-points value">${this.data.averagePoints}</div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value">${this.data.marketValue}</div>
+          <div class="market-value value">${priceFormatter.format(this.data.marketValue)}</div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
+    `;
+  }
+
+  private badgeTemplate(text: string = ''): TemplateResult {
+    if (text === '') return html``;
+    return html`
+      <svg class="badge">
+        ${svg`
+      <rect x="0" y="0" width="32" height="16"  />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="16" y="12" dy="1">${text}</text>
+  `}
+      </svg>
     `;
   }
 }

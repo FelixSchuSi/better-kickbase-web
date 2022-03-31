@@ -10,6 +10,7 @@ import { teamColors } from '../models/team-colors';
 import noProfilePicFallback from '../../images/no_profile_pic.png';
 import './player-badges.ts';
 import './player-points';
+import { priceFormatter } from '../helpers/price-formatter';
 
 export const tagName: string = 'bkb-player';
 @customElement(tagName)
@@ -34,12 +35,6 @@ export class PlayerPage extends LitElement {
 
   @state()
   public playerStats: PlayerStats;
-
-  private priceFormatter: Intl.NumberFormat = new Intl.NumberFormat('de', {
-    currency: 'EUR',
-    style: 'currency',
-    maximumFractionDigits: 0
-  });
 
   static styles: CSSResultGroup = [
     teamColors,
@@ -144,7 +139,7 @@ export class PlayerPage extends LitElement {
           >
             <div class="price-container">
               <h3 class="price-value">
-                ${this.priceFormatter.format(this.playerInfo.marketValue ?? 0)}&nbsp${this.priceTrendTemplate(
+                ${priceFormatter.format(this.playerInfo.marketValue ?? 0)}&nbsp${this.priceTrendTemplate(
                   this.playerInfo.marketValueTrend
                 )}
               </h3>

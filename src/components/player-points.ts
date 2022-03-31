@@ -1,5 +1,6 @@
 import { LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
 import { property, customElement, query, state } from 'lit/decorators.js';
+import { pointFormatter } from '../helpers/point-formatter';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
@@ -175,7 +176,7 @@ export class PlayerPage extends LitElement {
           <div class="season-summary-details">
             <div class="season-summary-details-value">${season.year}</div>
             <div class="season-summary-details-key">Saison Auswertung</div>
-            <div class="season-summary-details-value">${season.points}</div>
+            <div class="season-summary-details-value">${pointFormatter.format(season.points)}</div>
             <div class="season-summary-details-key">Punkte</div>
             <div class="season-summary-details-value">${avgPoints}</div>
             <div class="season-summary-details-key">∅ Punkte</div>
