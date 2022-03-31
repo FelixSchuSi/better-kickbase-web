@@ -4,8 +4,6 @@ import { BundesligaTable, BundesligaTableEntry } from '../models/bundesliga-tabl
 import './player-badges.ts';
 import './player-points.ts';
 import './bundesliga-table-list-item.ts';
-import { ListItemSlots } from './bundesliga-table-list-item';
-import { bundesligaTableService } from '../services/bundesliga-table.service';
 
 export const tagName: string = 'bkb-bundesliga-table';
 @customElement(tagName)

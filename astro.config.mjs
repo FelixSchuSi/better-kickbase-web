@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { BASE_PATH } from './base-path';
+import { BASE_PATH } from './base-path.mjs';
 import dotenv from 'dotenv';
 dotenv.config();
 const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
