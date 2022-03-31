@@ -2,6 +2,8 @@ import { LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { BundesligaTableEntry } from '../models/bundesliga-table';
 import { teamLogosSmall } from '../../images/teams/small';
+import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
+
 export const tagName: string = 'bkb-bundesliga-table-list-item';
 @customElement(tagName)
 export class BundesligaPlayerListItem extends LitElement {
@@ -16,6 +18,14 @@ export class BundesligaPlayerListItem extends LitElement {
       justify-content: space-between;
       padding: 0 1rem;
       cursor: pointer;
+      color: black;
+    }
+
+    .root:link,
+    .root:visited,
+    .root:hover,
+    .root:active {
+      text-decoration: none;
     }
 
     .team-name {
@@ -44,7 +54,7 @@ export class BundesligaPlayerListItem extends LitElement {
 
   protected render(): TemplateResult {
     return html`
-      <div class="root">
+      <a class="root" href=${`${BASE_PATH_WITHOUT_DOMAIN}/bundesliga/team/${this.data.teamName}`}>
         <div class="place">
           ${String(this.data.place).length === 1 ? html`<span class="invisible">1</span>` : ''}${this.data.place}
         </div>
@@ -64,7 +74,7 @@ export class BundesligaPlayerListItem extends LitElement {
           <div class="points value">${this.data.points}</div>
           <div class="points label">Pts.</div>
         </div>
-      </div>
+      </a>
     `;
   }
 }

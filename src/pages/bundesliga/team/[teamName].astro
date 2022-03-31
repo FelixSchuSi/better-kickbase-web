@@ -1,0 +1,44 @@
+---
+import { BASE_PATH_WITHOUT_DOMAIN } from '../../../../base-path.mjs';
+import favIcon from '../../../../images/favicon-16.png';
+import '../../../styles/page.css';
+import { teamPlayerService } from '../../../services/team-players.service';
+import { bundesligaTableService } from '../../../services/bundesliga-table.service';
+import { BundesligaTableEntry, BundesligaTable } from '../../../models/bundesliga-table';
+import { getTeamIdFromTeamName, TEAM_NAMES, TEAM_IDS } from '../../../models/teams';
+import { PlayerListItem } from '../../../models/player-list-item';
+import '../../../components/bundesliga-team.page';
+const { params } = Astro.request;
+
+export async function getStaticPaths() {
+  const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
+  const teams: { params: { teamName: string } }[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => {
+    return { params: { teamName: team.teamName } };
+  });
+  return teams;
+}
+
+const teamId: TEAM_IDS = getTeamIdFromTeamName(params.teamName as TEAM_NAMES);
+const serverJsonData: PlayerListItem[] = await teamPlayerService.getData(String(teamId));
+
+const props = {
+  'team-name': params.teamName,
+  'team-id': String(teamId),
+  'server-json-data': JSON.stringify(serverJsonData)
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preload" as="font" href={`${BASE_PATH_WITHOUT_DOMAIN}/fonts/roboto-condensed-v24-latin-700.woff2`} />
+    <link rel="preload" as="font" href={`${BASE_PATH_WITHOUT_DOMAIN}/fonts/roboto-condensed-v24-latin-regular.woff2`} />
+    <link rel="icon" type="image/x-icon" href={favIcon} />
+    <title>{params.teamName} - better-kickbase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={`${params.teamName} - better-kickbase-web`} />
+  </head>
+  <body style="background-color: #e8edf1;  padding: 1rem;">
+    <bkb-team {...props} client:idle></bkb-team>
+  </body>
+</html>

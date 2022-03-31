@@ -1,25 +1,25 @@
 ---
 import favIcon from '../../images/favicon-16.png';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
-import { teamPlayerService, Player } from '../services/team-players.service';
+import { teamPlayerService } from '../services/team-players.service';
 import { bundesligaTableService } from '../services/bundesliga-table.service';
 import { BundesligaTableEntry, BundesligaTable } from '../models/bundesliga-table';
+import { PlayerListItem } from '../models/player-list-item';
 const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
 const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
 teamIds.push('INACTIVE_PLAYERS');
 
-const deepPlayerData: Player[][] = await Promise.all(
+const deepPlayerData: PlayerListItem[][] = await Promise.all(
   teamIds.map((teamId: string) => teamPlayerService.getData(teamId))
 );
 
 const playerData = deepPlayerData.flat();
-
 const playersGroupedByTeam = {};
 playerData.forEach(player => {
-  if (player.metadata.team in playersGroupedByTeam) {
-    playersGroupedByTeam[player.metadata.team].push(player);
+  if (player.teamName in playersGroupedByTeam) {
+    playersGroupedByTeam[player.teamName].push(player);
   } else {
-    playersGroupedByTeam[player.metadata.team] = [player];
+    playersGroupedByTeam[player.teamName] = [player];
   }
 });
 
@@ -29,8 +29,8 @@ Object.entries(playersGroupedByTeam).forEach(([team, players]) => {
   players.forEach(
     player =>
       (playersString += `<li><a href="${BASE_PATH_WITHOUT_DOMAIN}/player/${encodeURIComponent(
-        player.params.playerName
-      )}/${encodeURIComponent(player.params.playerId)}">${player.params.playerName}</a></li>`)
+        player.playerName
+      )}/${encodeURIComponent(player.playerId)}">${player.playerName}</a></li>`)
   );
   sitecontent += `
         <h2>${team}</h2>
