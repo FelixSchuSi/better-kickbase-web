@@ -5,7 +5,7 @@ import { property, customElement, state } from 'lit/decorators.js';
 import { PlayerInfo } from '../services/playerdata/player-info.service';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
 import { PlayerStats } from '../services/playerdata/player-stats.service';
-import { PlayerData } from '../services/playerdata/playerdata.service';
+import { PlayerData, playerDataService } from '../services/playerdata/playerdata.service';
 import { teamColors } from '../models/team-colors';
 import noProfilePicFallback from '../../images/no_profile_pic.png';
 import './player-badges.ts';
@@ -103,12 +103,12 @@ export class PlayerPage extends LitElement {
       this.playerStats = playerStats;
     }
 
-    // if (import.meta.env.SSR === false && isFirstUpdate) {
-    //   const { playerInfo, playerPoints, playerStats }: PlayerData = await playerDataService.getData(this.playerId);
-    //   this.playerInfo = playerInfo;
-    //   this.playerPoints = playerPoints;
-    //   this.playerStats = playerStats;
-    // }
+    if (import.meta.env.SSR === false && isFirstUpdate) {
+      const { playerInfo, playerPoints, playerStats }: PlayerData = await playerDataService.getData(this.playerId);
+      this.playerInfo = playerInfo;
+      this.playerPoints = playerPoints;
+      this.playerStats = playerStats;
+    }
   }
 
   private get upperHalfStyles() {

@@ -15,7 +15,9 @@ export abstract class BaseService<T> {
   protected get default_opts() {
     return {
       headers: {
-        cookie: `kkstrauth=${this.token}`
+        'cookie': `kkstrauth=${this.token}`,
+        'credentials': 'include',
+        'x-bkb-cookie': this.token
       }
     };
   }

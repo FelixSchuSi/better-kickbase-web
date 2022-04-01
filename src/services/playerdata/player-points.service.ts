@@ -10,7 +10,8 @@ export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
     await this.ensureLogin();
     const url: string = import.meta.env.SSR
       ? `https://api.kickbase.com/players/${playerId}/points`
-      : `/api/players/${playerId}/points`;
+      : `https://api.better-kickbase.workers.dev/players/${playerId}/points`;
+
     const response: Response = await fetch(url, this.default_opts);
     const points: any = await response.json();
     return { seasons: points.s.map(playerSeasonFromApiResponse) };

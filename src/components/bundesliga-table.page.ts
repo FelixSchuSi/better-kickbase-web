@@ -4,6 +4,9 @@ import { BundesligaTable, BundesligaTableEntry } from '../models/bundesliga-tabl
 import './player-badges.ts';
 import './player-points.ts';
 import './bundesliga-table-list-item.ts';
+import { bundesligaTableService } from '../services/bundesliga-table.service';
+
+import { repeat } from 'lit/directives/repeat.js';
 
 export const tagName: string = 'bkb-bundesliga-table';
 @customElement(tagName)
@@ -20,14 +23,16 @@ export class BundesligaTablePage extends LitElement {
     const isFirstUpdate: boolean = !this.bundesligaTable;
 
     if (isFirstUpdate) {
-      this.bundesligaTable = JSON.parse(this.serverJsonData);
+      const result: BundesligaTable = JSON.parse(this.serverJsonData);
+      result.teams.sort((a: BundesligaTableEntry, b: BundesligaTableEntry) => a.place - b.place);
+      this.bundesligaTable = result;
     }
 
-    // if (import.meta.env.SSR === false && isFirstUpdate) {
-    //   this.bundesligaTable = await bundesligaTableService.getData();
-    // }
-
-    this.bundesligaTable?.teams.sort((a: BundesligaTableEntry, b: BundesligaTableEntry) => a.place - b.place);
+    if (import.meta.env.SSR === false && isFirstUpdate) {
+      const result: BundesligaTable = await bundesligaTableService.getData();
+      result.teams.sort((a: BundesligaTableEntry, b: BundesligaTableEntry) => a.place - b.place);
+      this.bundesligaTable = result;
+    }
   }
 
   protected render(): TemplateResult {

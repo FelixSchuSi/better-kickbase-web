@@ -28,7 +28,7 @@ export class PlayerInfoService extends BasePlayerService<PlayerInfo> {
 
     const url: string = import.meta.env.SSR
       ? `https://api.kickbase.com/leagues/${this.leagueId}/players/${playerId}/`
-      : `/api/leagues/${this.leagueId}/players/${playerId}/`;
+      : `https://api.better-kickbase.workers.dev/leagues/${this.leagueId}/players/${playerId}/`;
 
     const response: Response = await fetch(url, this.default_opts);
 

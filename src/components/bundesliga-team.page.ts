@@ -1,11 +1,9 @@
 import { LitElement, html, PropertyValueMap, CSSResultGroup, css, TemplateResult } from 'lit';
 import { property, customElement, state } from 'lit/decorators.js';
-import './player-badges.ts';
-import './player-points.ts';
-import './player-list-item.ts';
-
 import { TEAM_IDS, TEAM_NAMES } from '../models/teams';
 import { PlayerListItem } from '../models/player-list-item';
+import { teamPlayerService } from '../services/team-players.service';
+import './player-list-item.ts';
 
 export const tagName: string = 'bkb-team';
 @customElement(tagName)
@@ -28,14 +26,16 @@ export class BundesligaTablePage extends LitElement {
     const isFirstUpdate: boolean = !this.players;
 
     if (isFirstUpdate) {
-      this.players = JSON.parse(this.serverJsonData);
+      const result: PlayerListItem[] = JSON.parse(this.serverJsonData);
+      result.sort((a: PlayerListItem, b: PlayerListItem) => a.position - b.position);
+      this.players = result;
     }
 
-    // if (import.meta.env.SSR === false && isFirstUpdate) {
-    //   this.bundesligaTable = await bundesligaTableService.getData();
-    // }
-
-    this.players?.sort((a: PlayerListItem, b: PlayerListItem) => a.position - b.position);
+    if (import.meta.env.SSR === false && isFirstUpdate) {
+      const result: PlayerListItem[] = await teamPlayerService.getData(String(this.teamId));
+      result.sort((a: PlayerListItem, b: PlayerListItem) => a.position - b.position);
+      this.players = result;
+    }
   }
 
   protected render(): TemplateResult {
