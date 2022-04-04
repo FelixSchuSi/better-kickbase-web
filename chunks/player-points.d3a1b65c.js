@@ -1,4 +1,4 @@
-import{r as A,e as c,s as b,$ as l,y as h,n as v,i as u,t as w,a as y}from"../client-shim.48ed8262.js";import{g as R,p as x}from"./base.service.55de1ff6.js";var k=Object.defineProperty,M=Object.getOwnPropertyDescriptor,g=(e,t,a,i)=>{for(var s=i>1?void 0:i?M(t,a):t,o=e.length-1,n;o>=0;o--)(n=e[o])&&(s=(i?n(t,a,s):n(s))||s);return i&&s&&k(t,a,s),s};const S="bkb-player-badges";let m=class extends b{constructor(){super(...arguments);this.inverted=!1}render(){return l`
+import{r as A,e as c,s as b,$ as l,y as h,n as v,i as u,t as w,a as y}from"../client-shim.48ed8262.js";import{g as R,p as x}from"./base.service.069015bb.js";var k=Object.defineProperty,M=Object.getOwnPropertyDescriptor,g=(e,t,a,i)=>{for(var s=i>1?void 0:i?M(t,a):t,o=e.length-1,n;o>=0;o--)(n=e[o])&&(s=(i?n(t,a,s):n(s))||s);return i&&s&&k(t,a,s),s};const S="bkb-player-badges";let m=class extends b{constructor(){super(...arguments);this.inverted=!1}render(){return l`
       <div class="badges-container">
         ${this.singleBadge(String(this.number))}
         ${this.singleBadge(R(this.position))}
