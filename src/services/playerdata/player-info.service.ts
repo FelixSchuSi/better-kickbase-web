@@ -23,12 +23,14 @@ export interface PlayerInfo {
 }
 
 export class PlayerInfoService extends BasePlayerService<PlayerInfo> {
-  public override async getData(playerId: string): Promise<PlayerInfo> {
+  public override async getData(playerId: string, leagueId: string = '2335868'): Promise<PlayerInfo> {
     await this.ensureLogin();
 
-    const url: string = import.meta.env.SSR
-      ? `https://api.kickbase.com/leagues/${this.leagueId}/players/${playerId}/`
-      : `https://api.better-kickbase.workers.dev/leagues/${this.leagueId}/players/${playerId}/`;
+    // const url: string = import.meta.env.SSR
+    //   ? `https://api.kickbase.com/leagues/${this.leagueId}/players/${playerId}/`
+    //   : `https://api.better-kickbase.workers.dev/leagues/${this.leagueId}/players/${playerId}/`;
+
+    const url: string = `https://api.better-kickbase.workers.dev/leagues/${leagueId}/players/${playerId}/`;
 
     const response: Response = await fetch(url, this.default_opts);
 
