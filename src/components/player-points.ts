@@ -109,9 +109,6 @@ export class PlayerPage extends LitElement {
    */
   private maxPoints: number = 0;
 
-  @state()
-  private numberOfSeasonsToRender: number = 1;
-
   @query('.root > bkb-player-points-match')
   private firstUpcomingMatch!: HTMLDivElement;
 
@@ -132,13 +129,9 @@ export class PlayerPage extends LitElement {
   }
 
   protected render(): TemplateResult {
-    let seasonsToRender: PlayerSeason[] = [];
-    if (this.points?.seasons?.length > 0) {
-      seasonsToRender = this.points.seasons.slice(-this.numberOfSeasonsToRender);
-    }
     return html`
       <div class="root">
-        ${this.loadSeasonTemplate} ${seasonsToRender.map((season: PlayerSeason) => this.seasonTemplate(season))}
+        ${this.points.seasons.map((season: PlayerSeason) => this.seasonTemplate(season))}
         ${this.upcomingMatches.map(
           (upcomingMatch: PlayerUpcomingMatch) =>
             html`<bkb-player-points-match
@@ -187,23 +180,6 @@ export class PlayerPage extends LitElement {
           </div>
         </div>
       </div>
-    `;
-  }
-
-  private get loadSeasonTemplate(): TemplateResult {
-    if (this.numberOfSeasonsToRender >= this.points.seasons.length) return html``;
-    const year: string = this.points.seasons[this.points.seasons.length - this.numberOfSeasonsToRender - 1].year;
-    return html`
-      <button
-        class="load-season"
-        @click=${() => {
-          if (this.numberOfSeasonsToRender < this.points?.seasons.length) {
-            this.numberOfSeasonsToRender = this.numberOfSeasonsToRender + 1;
-          }
-        }}
-      >
-        Saison ${year} laden
-      </button>
     `;
   }
 }
