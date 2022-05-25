@@ -51,6 +51,7 @@ jobs:
           source-directory: "dist"
           destination-github-username: ${{ github.actor }}
           destination-repository-name: ${{ env.deployToRepo }}
-          user-email: ${{ env.githubEmail }}
+          user-email: auto@deploy.de
+          user-name: auto-deploy🤖
           commit-message: Deploy ORIGIN_COMMIT
           target-branch: gh-pages
