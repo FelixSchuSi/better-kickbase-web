@@ -1,5 +1,5 @@
 import { LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
-import { property, customElement, query, state } from 'lit/decorators.js';
+import { property, customElement, query } from 'lit/decorators.js';
 import { pointFormatter } from '../helpers/point-formatter';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';
@@ -112,10 +112,7 @@ export class PlayerPage extends LitElement {
   @query('.root > bkb-player-points-match')
   private firstUpcomingMatch!: HTMLDivElement;
 
-  @query('.root > .season > .season-summary')
-  private firstSeasonSummary!: HTMLDivElement;
-
-  @query('.season-summary:last-of-type')
+  @query('.season:last-of-type > .season-summary')
   private lastSeasonSummary!: HTMLDivElement;
 
   protected willUpdate(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
@@ -148,12 +145,6 @@ export class PlayerPage extends LitElement {
       this.firstUpcomingMatch?.scrollIntoView(false);
     } else {
       this.lastSeasonSummary?.scrollIntoView(false);
-    }
-  }
-
-  protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    if (_changedProperties.has('numberOfSeasonsToRender')) {
-      this.firstSeasonSummary?.scrollIntoView({ block: 'end', inline: 'start' });
     }
   }
 
