@@ -8,7 +8,7 @@ import { BundesligaTableEntry, BundesligaTable } from '../../../models/bundeslig
 import { getTeamIdFromTeamName, TEAM_NAMES, TEAM_IDS } from '../../../models/teams';
 import { PlayerListItem } from '../../../models/player-list-item';
 import '../../../components/bundesliga-team.page';
-const { params } = Astro.request;
+const { params } = Astro;
 
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();

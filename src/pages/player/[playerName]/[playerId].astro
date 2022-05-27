@@ -9,7 +9,7 @@ import { PlayerListItem } from '../../../models/player-list-item';
 import favIcon from '../../../../images/favicon-16.png';
 import '../../../styles/page.css';
 
-const { params } = Astro.request;
+const { params } = Astro;
 const serverJsonData: PlayerData = await playerDataService.getData(params.playerId);
 
 export async function getStaticPaths() {

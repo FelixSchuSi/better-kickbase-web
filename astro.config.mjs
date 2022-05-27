@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
-import { BASE_PATH } from './base-path.mjs';
+import { SITE, BASE_PATH_WITHOUT_DOMAIN } from './base-path.mjs';
 import dotenv from 'dotenv';
+import lit from '@astrojs/lit';
 dotenv.config();
 const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
 
@@ -15,7 +16,9 @@ const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
 // https://astro.build/config
 export default defineConfig({
   // Enable the lit renderer to support LitHTML components and templates.
-  renderers: ['@astrojs/renderer-lit'],
+  integrations: [lit()],
+  site: SITE,
+  base: BASE_PATH_WITHOUT_DOMAIN,
   vite: {
     define: {
       KB_PW: `'${KB_PW}'`,
@@ -35,8 +38,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  buildOptions: {
-    site: BASE_PATH
   }
 });
