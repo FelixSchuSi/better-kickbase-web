@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build --experimental-static-build",
+    "dev": "astro dev --experimental-integrations",
+    "start": "astro dev --experimental-integrations",
+    "build": "astro build --experimental-static-build --experimental-integrations",
     "preview": "astro preview"
   },
   "devDependencies": {
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@lit-labs/task": "^1.1.1",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "swup": "^2.0.14"
   }
 }

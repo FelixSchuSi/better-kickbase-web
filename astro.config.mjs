@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { SITE, BASE_PATH_WITHOUT_DOMAIN } from './base-path.mjs';
+import { swumpIntegration } from './astro-swump-integration.mjs';
 import dotenv from 'dotenv';
 import lit from '@astrojs/lit';
 dotenv.config();
@@ -16,7 +17,7 @@ const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
 // https://astro.build/config
 export default defineConfig({
   // Enable the lit renderer to support LitHTML components and templates.
-  integrations: [lit()],
+  integrations: [lit(), swumpIntegration],
   site: SITE,
   base: BASE_PATH_WITHOUT_DOMAIN,
   vite: {
