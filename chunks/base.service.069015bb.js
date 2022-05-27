@@ -1,1 +1,0 @@
-function t(e){switch(e){case 1:return"TW";case 2:return"ABW";case 3:return"MIT";case 4:return"ST";case 9999999999:default:return""}}const r=new Intl.NumberFormat("de",{maximumFractionDigits:0});class n{get default_opts(){return this.token?{headers:{"x-bkb-token":this.token}}:{}}async ensureLogin(){}}export{n as B,t as g,r as p};
