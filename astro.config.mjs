@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { SITE, BASE_PATH_WITHOUT_DOMAIN } from './base-path.mjs';
+import { SITE, BASE_PATH_WITHOUT_DOMAIN, PUBLIC_DIR } from './base-path.mjs';
 import dotenv from 'dotenv';
 import lit from '@astrojs/lit';
 dotenv.config();
@@ -19,6 +19,7 @@ export default defineConfig({
   integrations: [lit()],
   site: SITE,
   base: BASE_PATH_WITHOUT_DOMAIN,
+  publicDir: PUBLIC_DIR,
   vite: {
     define: {
       KB_PW: `'${KB_PW}'`,
