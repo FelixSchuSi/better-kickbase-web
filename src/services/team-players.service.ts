@@ -7,10 +7,6 @@ export class TeamPlayerService extends BaseService<PlayerListItem[]> {
     if (team_id === 'INACTIVE_PLAYERS') {
       return this.getInactivePlayers();
     }
-    await this.ensureLogin();
-    // const url: string = import.meta.env.SSR
-    //   ? `https://api.kickbase.com/competition/teams/${team_id}/players`
-    //   : `https://api.better-kickbase.workers.dev/competition/teams/${team_id}/players`;
     const url: string = `https://api.better-kickbase.workers.dev/competition/teams/${team_id}/players`;
     const response: Response = await fetch(url, this.default_opts);
     const rawPlayers: any = await response.json();

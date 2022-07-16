@@ -6,10 +6,7 @@ import './player-points.ts';
 import './bundesliga-table-list-item.ts';
 import { bundesligaTableService } from '../services/bundesliga-table.service';
 
-import { repeat } from 'lit/directives/repeat.js';
-
-export const tagName: string = 'bkb-bundesliga-table';
-@customElement(tagName)
+@customElement('bkb-bundesliga-table')
 export class BundesligaTablePage extends LitElement {
   static styles: CSSResultGroup = css``;
 

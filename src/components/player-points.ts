@@ -7,9 +7,8 @@ import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
 import './player-points-match';
 
-export const tagName: string = 'bkb-player-points';
-@customElement(tagName)
-export class PlayerPage extends LitElement {
+@customElement('bkb-player-points')
+export class PlayerPointsComponent extends LitElement {
   static styles: CSSResultGroup = css`
     .root {
       width: 100%;

@@ -8,6 +8,7 @@ import { BundesligaTableEntry, BundesligaTable } from '../../../models/bundeslig
 import { getTeamIdFromTeamName, TEAM_NAMES, TEAM_IDS } from '../../../models/teams';
 import { PlayerListItem } from '../../../models/player-list-item';
 import '../../../components/bundesliga-team.page';
+import { BundesligaTeamPage } from '../../../components/bundesliga-team.page';
 const { params } = Astro;
 
 export async function getStaticPaths() {
@@ -39,6 +40,6 @@ const props = {
     <meta name="description" content={`${params.teamName} - better-kickbase-web`} />
   </head>
   <body style="background-color: #e8edf1;  padding: 1rem;">
-    <bkb-team {...props} client:idle></bkb-team>
+    <BundesligaTeamPage {...props} client:idle />
   </body>
 </html>

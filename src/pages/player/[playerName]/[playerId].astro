@@ -8,9 +8,10 @@ import { BundesligaTableEntry, BundesligaTable } from '../../../models/bundeslig
 import { PlayerListItem } from '../../../models/player-list-item';
 import favIcon from '../../../../images/favicon-16.png';
 import '../../../styles/page.css';
+import { PlayerPage } from '../../../components/player.page';
 
 const { params } = Astro;
-const serverJsonData: PlayerData = await playerDataService.getData(params.playerId);
+const serverJsonData: PlayerData = await playerDataService.getData(String(params.playerId));
 
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
@@ -36,7 +37,7 @@ export async function getStaticPaths() {
   return deepPlayerData.flat();
 }
 
-const playerName: string = serverJsonData?.playerInfo?.knownName ?? params.playerName;
+const playerName: string = String(serverJsonData?.playerInfo?.knownName ?? params.playerName);
 const props = {
   'player-name': playerName,
   'player-id': params.playerId,
@@ -57,6 +58,6 @@ const props = {
     <meta name="description" content={`Spielerprofil von ${playerName} - better-kickbase-web`} />
   </head>
   <body style="padding:0 !important;">
-    <bkb-player {...props} client:idle></bkb-player>
+    <PlayerPage {...props} client:idle />
   </body>
 </html>

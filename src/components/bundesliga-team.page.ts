@@ -5,9 +5,8 @@ import { PlayerListItem } from '../models/player-list-item';
 import { teamPlayerService } from '../services/team-players.service';
 import './player-list-item.ts';
 
-export const tagName: string = 'bkb-team';
-@customElement(tagName)
-export class BundesligaTablePage extends LitElement {
+@customElement('bkb-team')
+export class BundesligaTeamPage extends LitElement {
   static styles: CSSResultGroup = css``;
 
   @property({ type: String, attribute: 'server-json-data' })

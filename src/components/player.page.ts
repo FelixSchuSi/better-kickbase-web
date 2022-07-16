@@ -12,8 +12,7 @@ import './player-badges.ts';
 import './player-points';
 import { priceFormatter } from '../helpers/price-formatter';
 
-export const tagName: string = 'bkb-player';
-@customElement(tagName)
+@customElement('bkb-player')
 export class PlayerPage extends LitElement {
   @property({ type: String, attribute: 'player-name' })
   public playerName: any;

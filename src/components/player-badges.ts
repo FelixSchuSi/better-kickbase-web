@@ -2,9 +2,8 @@ import { LitElement, html, CSSResultGroup, css, TemplateResult, svg } from 'lit'
 import { property, customElement } from 'lit/decorators.js';
 import { getPlayerPositionLabel, PlayerPosition } from '../models/player-position';
 
-export const tagName: string = 'bkb-player-badges';
-@customElement(tagName)
-export class PlayerPage extends LitElement {
+@customElement('bkb-player-badges')
+export class PlayerBadgesComponent extends LitElement {
   static styles: CSSResultGroup = css`
     .badges-container {
       display: flex;

@@ -4,9 +4,8 @@ import { BundesligaTableEntry } from '../models/bundesliga-table';
 import { teamLogosSmall } from '../../images/teams/small';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
 
-export const tagName: string = 'bkb-bundesliga-table-list-item';
-@customElement(tagName)
-export class BundesligaPlayerListItem extends LitElement {
+@customElement('bkb-bundesliga-table-list-item')
+export class BundesligaPlayerListItemComponent extends LitElement {
   static styles: CSSResultGroup = css`
     .root {
       display: flex;

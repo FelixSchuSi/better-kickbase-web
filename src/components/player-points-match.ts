@@ -5,9 +5,8 @@ import { PlayerMatch } from '../models/player-match';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
 import { teamLogosSmall } from '../../images/teams/small';
 
-export const tagName: string = 'bkb-player-points-match';
-@customElement(tagName)
-export class PlayerPointsMatch extends LitElement {
+@customElement('bkb-player-points-match')
+export class PlayerPointsMatchComponent extends LitElement {
   static styles: CSSResultGroup = css`
     .match {
       display: flex;

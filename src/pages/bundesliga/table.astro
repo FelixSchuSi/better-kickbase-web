@@ -5,6 +5,7 @@ import { BundesligaTable } from '../../models/bundesliga-table';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../../base-path.mjs';
 import '../../components/bundesliga-table.page';
 import '../../styles/page.css';
+import { BundesligaTablePage } from '../../components/bundesliga-table.page';
 
 const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
 const props: Record<string, string> = {
@@ -23,6 +24,6 @@ const props: Record<string, string> = {
     <meta name="description" content="better-kickbase-web Bundesliga Tabelle" />
   </head>
   <body style="background-color: #e8edf1;  padding: 1rem;">
-    <bkb-bundesliga-table {...props} client:idle></bkb-bundesliga-table>
+    <BundesligaTablePage {...props} client:idle />
   </body>
 </html>

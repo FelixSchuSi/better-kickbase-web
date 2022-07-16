@@ -3,7 +3,9 @@ import team_3 from './3.png';
 import team_4 from './4.png';
 import team_5 from './5.png';
 import team_7 from './7.png';
+import team_8 from './8.png';
 import team_9 from './9.png';
+import team_10 from './10.png';
 import team_11 from './11.png';
 import team_13 from './13.png';
 import team_14 from './14.png';
@@ -23,8 +25,10 @@ export const teamLogosSmall = {
   team_4,
   team_5,
   team_7,
+  team_8,
   team_9,
   team_11,
+  team_10,
   team_13,
   team_14,
   team_15,

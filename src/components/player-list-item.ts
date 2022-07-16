@@ -6,9 +6,9 @@ import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
 import { priceFormatter } from '../helpers/price-formatter';
 import { pointFormatter } from '../helpers/point-formatter';
 import { getPlayerPositionLabel, PlayerPosition } from '../models/player-position';
-export const tagName: string = 'bkb-player-list-item';
-@customElement(tagName)
-export class PlayerListItemWidget extends LitElement {
+
+@customElement('bkb-player-list-item')
+export class PlayerListItemComponent extends LitElement {
   static styles: CSSResultGroup = css`
     .root {
       display: flex;
@@ -137,9 +137,11 @@ export class PlayerListItemWidget extends LitElement {
         <div class="right">
           <div class="badges">
             ${this.data.number ? this.badgeTemplate(String(this.data.number)) : html``}
-            ${this.data.position
-              ? this.badgeTemplate(getPlayerPositionLabel(this.data.position as unknown as PlayerPosition))
-              : html``}
+            ${
+              this.data.position
+                ? this.badgeTemplate(getPlayerPositionLabel(this.data.position as unknown as PlayerPosition))
+                : html``
+            }
             ${this.data.status ? this.badgeTemplate(String(this.data.status)) : html``}
           </div>
           <div class="name value">${this.data.knownName ?? this.data.lastName}</div>

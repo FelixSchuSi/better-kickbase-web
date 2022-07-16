@@ -1,9 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { SITE, BASE_PATH_WITHOUT_DOMAIN } from './base-path.mjs';
-import dotenv from 'dotenv';
 import lit from '@astrojs/lit';
-dotenv.config();
-const { KB_EMAIL, KB_PW, KB_TOKEN, KB_LEAGUE_ID } = process.env;
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -18,25 +15,5 @@ export default defineConfig({
   // Enable the lit renderer to support LitHTML components and templates.
   integrations: [lit()],
   site: SITE,
-  base: BASE_PATH_WITHOUT_DOMAIN,
-  vite: {
-    define: {
-      KB_PW: `'${KB_PW}'`,
-      KB_EMAIL: `'${KB_EMAIL}'`,
-      KB_TOKEN: `'${KB_TOKEN}'`,
-      KB_LEAGUE_ID: `'${KB_LEAGUE_ID}'`
-    },
-    server: {
-      proxy: {
-        '^/api/.*': {
-          target: 'https://api.kickbase.com',
-          changeOrigin: true,
-          rewrite: path => path.replace(/^\/api/, ''),
-          headers: {
-            cookie: `kkstrauth=${KB_TOKEN}`
-          }
-        }
-      }
-    }
-  }
+  base: BASE_PATH_WITHOUT_DOMAIN
 });
