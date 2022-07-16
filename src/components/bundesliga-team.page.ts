@@ -1,4 +1,4 @@
-import { LitElement, html, PropertyValueMap, CSSResultGroup, css, TemplateResult } from 'lit';
+import { LitElement, html, PropertyValueMap, TemplateResult } from 'lit';
 import { property, customElement, state } from 'lit/decorators.js';
 import { TEAM_IDS, TEAM_NAMES } from '../models/teams';
 import { PlayerListItem } from '../models/player-list-item';
@@ -7,8 +7,6 @@ import './player-list-item.ts';
 
 @customElement('bkb-team')
 export class BundesligaTeamPage extends LitElement {
-  static styles: CSSResultGroup = css``;
-
   @property({ type: String, attribute: 'server-json-data' })
   public serverJsonData: string;
 

@@ -1,4 +1,4 @@
-import { LitElement, html, PropertyValueMap, CSSResultGroup, css, TemplateResult } from 'lit';
+import { LitElement, html, PropertyValueMap, TemplateResult } from 'lit';
 import { property, customElement, state } from 'lit/decorators.js';
 import { BundesligaTable, BundesligaTableEntry } from '../models/bundesliga-table';
 import './player-badges.ts';
@@ -8,8 +8,6 @@ import { bundesligaTableService } from '../services/bundesliga-table.service';
 
 @customElement('bkb-bundesliga-table')
 export class BundesligaTablePage extends LitElement {
-  static styles: CSSResultGroup = css``;
-
   @property({ type: String, attribute: 'server-json-data' })
   public serverJsonData: string;
 

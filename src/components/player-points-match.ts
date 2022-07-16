@@ -58,6 +58,7 @@ export class PlayerPointsMatchComponent extends LitElement {
     .home-team-logo,
     .away-team-logo {
       width: 40%;
+      object-fit: contain;
     }
 
     .match-team-logos {
