@@ -1,5 +1,6 @@
 import { LitElement, html, CSSResultGroup, css, TemplateResult, svg } from 'lit';
-import { property, customElement } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
 import { getPlayerPositionLabel, PlayerPosition } from '../models/player-position';
 
 @customElement('bkb-player-badges')

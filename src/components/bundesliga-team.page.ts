@@ -1,5 +1,7 @@
 import { LitElement, html, PropertyValueMap, TemplateResult } from 'lit';
-import { property, customElement, state } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
+import { state } from 'lit/decorators/state.js';
 import { TEAM_IDS, TEAM_NAMES } from '../models/teams';
 import { PlayerListItem } from '../models/player-list-item';
 import { teamPlayerService } from '../services/team-players.service';

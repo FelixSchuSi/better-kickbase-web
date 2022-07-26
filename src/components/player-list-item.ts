@@ -1,5 +1,6 @@
 import { svg, LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
 import { PlayerListItem } from '../models/player-list-item';
 import noProfilePicFallback from '../../images/no_profile_pic.png';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
@@ -137,11 +138,9 @@ export class PlayerListItemComponent extends LitElement {
         <div class="right">
           <div class="badges">
             ${this.data.number ? this.badgeTemplate(String(this.data.number)) : html``}
-            ${
-              this.data.position
-                ? this.badgeTemplate(getPlayerPositionLabel(this.data.position as unknown as PlayerPosition))
-                : html``
-            }
+            ${this.data.position
+              ? this.badgeTemplate(getPlayerPositionLabel(this.data.position as unknown as PlayerPosition))
+              : html``}
             ${this.data.status ? this.badgeTemplate(String(this.data.status)) : html``}
           </div>
           <div class="name value">${this.data.knownName ?? this.data.lastName}</div>

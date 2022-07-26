@@ -1,5 +1,4 @@
 ---
-import '../../../components/player.page.ts';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../../../base-path.mjs';
 import { playerDataService, PlayerData } from '../../../services/playerdata/playerdata.service';
 import { teamPlayerService } from '../../../services/team-players.service';
@@ -16,7 +15,7 @@ const serverJsonData: PlayerData = await playerDataService.getData(String(params
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
   const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
-  teamIds.push('INACTIVE_PLAYERS');
+  // teamIds.push('INACTIVE_PLAYERS');
   const deepPlayerData: { params: any; metadata: PlayerListItem }[][] = await Promise.all(
     teamIds.map(async (teamId: string) => {
       const result = await teamPlayerService.getData(teamId);
@@ -47,17 +46,17 @@ const props = {
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <link rel="preload" as="image" href={serverJsonData.playerInfo.profileBig} />
-    <link rel="preload" as="font" href={`${BASE_PATH_WITHOUT_DOMAIN}/fonts/roboto-condensed-v24-latin-700.woff2`} />
-    <link rel="preload" as="font" href={`${BASE_PATH_WITHOUT_DOMAIN}/fonts/roboto-condensed-v24-latin-regular.woff2`} />
-    <link rel="icon" type="image/x-icon" href={favIcon} />
+    <link rel='preload' as='image' href={serverJsonData.playerInfo.profileBig} />
+    <link rel='preload' as='font' href={`${BASE_PATH_WITHOUT_DOMAIN}/fonts/roboto-condensed-v24-latin-700.woff2`} />
+    <link rel='preload' as='font' href={`${BASE_PATH_WITHOUT_DOMAIN}/fonts/roboto-condensed-v24-latin-regular.woff2`} />
+    <link rel='icon' type='image/x-icon' href={favIcon} />
     <title>{playerName} - better-kickbase</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={`Spielerprofil von ${playerName} - better-kickbase-web`} />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='description' content={`Spielerprofil von ${playerName} - better-kickbase-web`} />
   </head>
-  <body style="padding:0 !important;">
+  <body style='padding:0 !important;'>
     <PlayerPage {...props} client:idle />
   </body>
 </html>

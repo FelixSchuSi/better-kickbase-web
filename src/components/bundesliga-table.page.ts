@@ -1,5 +1,7 @@
 import { LitElement, html, PropertyValueMap, TemplateResult } from 'lit';
-import { property, customElement, state } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
+import { state } from 'lit/decorators/state.js';
 import { BundesligaTable, BundesligaTableEntry } from '../models/bundesliga-table';
 import './player-badges.ts';
 import './player-points.ts';

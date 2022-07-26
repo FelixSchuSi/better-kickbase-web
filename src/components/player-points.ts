@@ -1,5 +1,7 @@
 import { LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
-import { property, customElement, query } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
+import { query } from 'lit/decorators/query.js';
 import { pointFormatter } from '../helpers/point-formatter';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerSeason } from '../models/player-season';

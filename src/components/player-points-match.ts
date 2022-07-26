@@ -1,6 +1,7 @@
-import { svg, LitElement, html, CSSResultGroup, css, TemplateResult, PropertyValueMap } from 'lit';
+import { svg, LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
 import { styleMap, StyleInfo } from 'lit/directives/style-map.js';
-import { property, customElement } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
 import { PlayerMatch } from '../models/player-match';
 import { PlayerUpcomingMatch } from '../models/player-upcoming-match';
 import { teamLogosSmall } from '../../images/teams/small';

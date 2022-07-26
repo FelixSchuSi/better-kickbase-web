@@ -1,7 +1,9 @@
 import { LitElement, html, PropertyValueMap, CSSResultGroup, css, TemplateResult } from 'lit';
 import { styleMap } from 'lit/directives/style-map.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, customElement, state } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
+import { state } from 'lit/decorators/state.js';
 import { PlayerInfo } from '../services/playerdata/player-info.service';
 import { PlayerPoints } from '../services/playerdata/player-points.service';
 import { PlayerStats } from '../services/playerdata/player-stats.service';
@@ -9,7 +11,7 @@ import { PlayerData, playerDataService } from '../services/playerdata/playerdata
 import { teamColors } from '../models/team-colors';
 import noProfilePicFallback from '../../images/no_profile_pic.png';
 import './player-badges.ts';
-import './player-points';
+import './player-points.ts';
 import { priceFormatter } from '../helpers/price-formatter';
 
 @customElement('bkb-player')

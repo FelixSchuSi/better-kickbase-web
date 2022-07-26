@@ -1,5 +1,6 @@
 import { LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators/custom-element.js';
+import { property } from 'lit/decorators/property.js';
 import { BundesligaTableEntry } from '../models/bundesliga-table';
 import { teamLogosSmall } from '../../images/teams/small';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';

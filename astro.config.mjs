@@ -15,5 +15,10 @@ export default defineConfig({
   // Enable the lit renderer to support LitHTML components and templates.
   integrations: [lit()],
   site: SITE,
-  base: BASE_PATH_WITHOUT_DOMAIN
+  base: BASE_PATH_WITHOUT_DOMAIN,
+  vite: {
+    ssr: {
+      noExternal: 'node_modules/lit'
+    }
+  }
 });

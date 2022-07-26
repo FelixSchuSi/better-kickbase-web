@@ -10,7 +10,16 @@ export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
     const url: string = `https://api.better-kickbase.workers.dev/players/${playerId}/points`;
 
     const response: Response = await fetch(url, this.default_opts);
+
+    if (!response.ok) {
+      console.log(`request was not successful: 
+      ${response.statusText}: ${response.status}
+      `);
+      return { seasons: [] };
+    }
+
     const points: any = await response.json();
+
     return { seasons: points.s.map(playerSeasonFromApiResponse) };
   }
 }
