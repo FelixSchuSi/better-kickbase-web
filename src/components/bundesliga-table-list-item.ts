@@ -2,8 +2,8 @@ import { LitElement, html, CSSResultGroup, css, TemplateResult } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
 import { property } from 'lit/decorators/property.js';
 import { BundesligaTableEntry } from '../models/bundesliga-table';
-import { teamLogosSmall } from '../../images/teams/small';
 import { BASE_PATH_WITHOUT_DOMAIN } from '../../base-path.mjs';
+import { teamLogosLarge } from '../../images/teams/large';
 
 @customElement('bkb-bundesliga-table-list-item')
 export class BundesligaPlayerListItemComponent extends LitElement {
@@ -35,6 +35,12 @@ export class BundesligaPlayerListItemComponent extends LitElement {
     .team-logo {
       display: flex;
       justify-content: center;
+      max-height: 70%;
+      width: 128px;
+    }
+
+    .team-logo > img {
+      object-fit: contain;
     }
 
     .root > *:not(:first-child) {
@@ -59,7 +65,7 @@ export class BundesligaPlayerListItemComponent extends LitElement {
           ${String(this.data.place).length === 1 ? html`<span class="invisible">1</span>` : ''}${this.data.place}
         </div>
         <div class="team-logo">
-          <img src="${teamLogosSmall[`team_${this.data.teamId}`]}" />
+          <img src="${teamLogosLarge[`team_${this.data.teamId}`]}" />
         </div>
         <div class="team-name">${this.data.teamName}</div>
         <div class="matches-played">
