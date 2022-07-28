@@ -1,15 +1,14 @@
 import { PlayerSeason, playerSeasonFromApiResponse } from '../../models/player-season';
-import { BasePlayerService } from './base-player.service';
 
 export interface PlayerPoints {
   seasons: PlayerSeason[];
 }
 
-export class PlayerPointsService extends BasePlayerService<PlayerPoints> {
-  public override async getData(playerId: string): Promise<PlayerPoints> {
+export class PlayerPointsService {
+  public async getData(playerId: string): Promise<PlayerPoints> {
     const url: string = `https://api.better-kickbase.workers.dev/players/${playerId}/points`;
 
-    const response: Response = await fetch(url, this.default_opts);
+    const response: Response = await fetch(url);
 
     if (!response.ok) {
       console.log(`request was not successful: 

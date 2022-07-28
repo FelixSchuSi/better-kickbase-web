@@ -3,7 +3,6 @@ import { PlayerSeasonSummary, playerSeasonSummaryFromApiResponse } from '../../m
 import { PlayerStatus } from '../../models/player-status';
 import { PlayerUpcomingMatch, playerUpcomingMatchFromApiResponse } from '../../models/player-upcoming-match';
 import { PlayerValueHistoryItem, playerValueHistoryItemFromApiResponse } from '../../models/player-value-history';
-import { BasePlayerService } from './base-player.service';
 
 export enum MarketValueTrend {
   UP = 1,
@@ -36,11 +35,11 @@ export interface PlayerStats {
   userFlags: 0; // TODO: What is this?
 }
 
-export class PlayerStatsService extends BasePlayerService<PlayerStats> {
-  public override async getData(playerId: string, leagueId: string = '2335868'): Promise<PlayerStats> {
+export class PlayerStatsService {
+  public async getData(playerId: string, leagueId: string = '2335868'): Promise<PlayerStats> {
     const url: string = `https://api.better-kickbase.workers.dev/leagues/${leagueId}/players/${playerId}/stats`;
 
-    const response: Response = await fetch(url, this.default_opts);
+    const response: Response = await fetch(url);
 
     const statsFromApi: any = await response.json();
 

@@ -1,6 +1,5 @@
 import { PlayerPosition } from '../../models/player-position';
 import { PlayerStatus } from '../../models/player-status';
-import { BasePlayerService } from './base-player.service';
 
 export interface PlayerInfo {
   id: string;
@@ -22,11 +21,11 @@ export interface PlayerInfo {
   marketValueTrend: number;
 }
 
-export class PlayerInfoService extends BasePlayerService<PlayerInfo> {
-  public override async getData(playerId: string, leagueId: string = '2335868'): Promise<PlayerInfo> {
+export class PlayerInfoService {
+  public async getData(playerId: string, leagueId: string = '2335868'): Promise<PlayerInfo> {
     const url: string = `https://api.better-kickbase.workers.dev/leagues/${leagueId}/players/${playerId}/`;
 
-    const response: Response = await fetch(url, this.default_opts);
+    const response: Response = await fetch(url);
 
     return await response.json();
   }

@@ -1,8 +1,7 @@
 import { BundesligaTable, BundesligaTableEntry, bundesligaTableEntryFromApiResponse } from '../models/bundesliga-table';
-import { BaseService } from './base.service';
 
-export class BundesligaTableService extends BaseService<any> {
-  public override async getData(): Promise<BundesligaTable> {
+export class BundesligaTableService {
+  public async getData(): Promise<BundesligaTable> {
     // TODO: The path `/competition/table` of the kickbase api doesnt work anymore.
     // TODO: This should be fixed but for now we just mock the responst.
     return this.mockData();
