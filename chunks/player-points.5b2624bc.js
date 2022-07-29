@@ -1,4 +1,4 @@
-import{r as c,e as o,s as h,g as z,n as f,p as b}from"./base.service.da5a4b6f.js";import{$ as i,y as p,b as M}from"./lit-html.154a0938.js";import{e as x,i as k,t as Q}from"./directive.7cba340f.js";var B=Object.defineProperty,q=Object.getOwnPropertyDescriptor,g=(A,t,e,s)=>{for(var a=s>1?void 0:s?q(t,e):t,r=A.length-1,n;r>=0;r--)(n=A[r])&&(a=(s?n(t,e,a):n(a))||a);return s&&a&&B(t,e,a),a};let l=class extends h{constructor(){super(...arguments),this.inverted=!1}render(){return i`
+import{r as c,e as o,s as h,g as z,n as f,p as b}from"./point-formatter.e755dd0c.js";import{$ as i,y as p,b as M}from"./lit-html.154a0938.js";import{e as x,i as k,t as Q}from"./directive.7cba340f.js";var B=Object.defineProperty,q=Object.getOwnPropertyDescriptor,g=(A,t,e,s)=>{for(var a=s>1?void 0:s?q(t,e):t,r=A.length-1,n;r>=0;r--)(n=A[r])&&(a=(s?n(t,e,a):n(a))||a);return s&&a&&B(t,e,a),a};let l=class extends h{constructor(){super(...arguments),this.inverted=!1}render(){return i`
       <div class="badges-container">
         ${this.singleBadge(String(this.number))}
         ${this.singleBadge(z(this.position))}
@@ -270,4 +270,4 @@ import{r as c,e as o,s as h,g as z,n as f,p as b}from"./base.service.da5a4b6f.js
     .load-season:hover {
       background-color: #efefef;
     }
-  `;d([o({type:Object})],v.prototype,"points",2);d([o({type:Array})],v.prototype,"upcomingMatches",2);d([D(".root > bkb-player-points-match")],v.prototype,"firstUpcomingMatch",2);d([D(".season:last-of-type > .season-summary")],v.prototype,"lastSeasonSummary",2);v=d([f("bkb-player-points")],v);export{T as i,y as t};
+  `;d([o({type:Object})],v.prototype,"points",2);d([o({type:Array})],v.prototype,"upcomingMatches",2);d([D(".root > bkb-player-points-match")],v.prototype,"firstUpcomingMatch",2);d([D(".season:last-of-type > .season-summary")],v.prototype,"lastSeasonSummary",2);v=d([f("bkb-player-points")],v);export{T as i};
