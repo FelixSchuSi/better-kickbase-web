@@ -95,7 +95,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="background-color: #e8edf1;  padding: 1rem;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="uh83R" component-url="/better-kickbase-web/bundesliga-team.page.442bc920.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;BundesligaTeamPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-team team-name="Hoffenheim" team-id="14" server-json-data="[{&quot;playerId&quot;:&quot;96&quot;,&quot;playerName&quot;:&quot;Kevin Akpoguma&quot;,&quot;firstName&quot;:&quot;Kevin&quot;,&quot;lastName&quot;:&quot;Akpoguma&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/96.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:25,&quot;averagePoints&quot;:48,&quot;totalPoints&quot;:572,&quot;marketValue&quot;:7551347,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;410&quot;,&quot;playerName&quot;:&quot;Sebastian Rudy&quot;,&quot;firstName&quot;:&quot;Sebastian&quot;,&quot;lastName&quot;:&quot;Rudy&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/410.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:16,&quot;averagePoints&quot;:21,&quot;totalPoints&quot;:209,&quot;marketValue&quot;:2005456,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;477&quot;,&quot;playerName&quot;:&quot;Kevin Vogt&quot;,&quot;firstName&quot;:&quot;Kevin&quot;,&quot;lastName&quot;:&quot;Vogt&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/477.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:22,&quot;averagePoints&quot;:72,&quot;totalPoints&quot;:935,&quot;marketValue&quot;:10029688,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;524&quot;,&quot;playerName&quot;:&quot;Oliver Baumann&quot;,&quot;firstName&quot;:&quot;Oliver&quot;,&quot;lastName&quot;:&quot;Baumann&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/524.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:1,&quot;averagePoints&quot;:97,&quot;totalPoints&quot;:1355,&quot;marketValue&quot;:14521124,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;717&quot;,&quot;playerName&quot;:&quot;Ermin Bicakcic&quot;,&quot;firstName&quot;:&quot;Ermin&quot;,&quot;lastName&quot;:&quot;Bicakcic&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/717.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:4,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;1308&quot;,&quot;playerName&quot;:&quot;Ihlas Bebou&quot;,&quot;firstName&quot;:&quot;Ihlas&quot;,&quot;lastName&quot;:&quot;Bebou&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1308.png&quot;,&quot;status&quot;:1,&quot;position&quot;:4,&quot;number&quot;:9,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:2231648,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1429&quot;,&quot;playerName&quot;:&quot;Benjamin Hübner&quot;,&quot;firstName&quot;:&quot;Benjamin&quot;,&quot;lastName&quot;:&quot;Hübner&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1429.png&quot;,&quot;status&quot;:4,&quot;position&quot;:2,&quot;number&quot;:21,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:2369494,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1671&quot;,&quot;playerName&quot;:&quot;Grischa Prömel&quot;,&quot;firstName&quot;:&quot;Grischa&quot;,&quot;lastName&quot;:&quot;Prömel&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1671.png&quot;,&quot;status&quot;:1,&quot;position&quot;:3,&quot;number&quot;:6,&quot;averagePoints&quot;:71,&quot;totalPoints&quot;:922,&quot;marketValue&quot;:12792376,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1726&quot;,&quot;playerName&quot;:&quot;Pavel Kaderábek&quot;,&quot;firstName&quot;:&quot;Pavel&quot;,&quot;lastName&quot;:&quot;Kaderábek&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1726.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:3,&quot;averagePoints&quot;:33,&quot;totalPoints&quot;:391,&quot;marketValue&quot;:4015245,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1781&quot;,&quot;playerName&quot;:&quot;Jacob Bruun Larsen&quot;,&quot;firstName&quot;:&quot;Jacob&quot;,&quot;lastName&quot;:&quot;Bruun Larsen&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1781.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:7,&quot;averagePoints&quot;:19,&quot;totalPoints&quot;:186,&quot;marketValue&quot;:4395290,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1815&quot;,&quot;playerName&quot;:&quot;Andrej Kramaric&quot;,&quot;firstName&quot;:&quot;Andrej&quot;,&quot;lastName&quot;:&quot;Kramaric&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1815.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:27,&quot;averagePoints&quot;:68,&quot;totalPoints&quot;:889,&quot;marketValue&quot;:20005804,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1990&quot;,&quot;playerName&quot;:&quot;Dennis Geiger&quot;,&quot;firstName&quot;:&quot;Dennis&quot;,&quot;lastName&quot;:&quot;Geiger&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1990.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:8,&quot;averagePoints&quot;:72,&quot;totalPoints&quot;:939,&quot;marketValue&quot;:12085764,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2275&quot;,&quot;playerName&quot;:&quot;Christoph Baumgartner&quot;,&quot;firstName&quot;:&quot;Christoph&quot;,&quot;lastName&quot;:&quot;Baumgartner&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2275.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:14,&quot;averagePoints&quot;:87,&quot;totalPoints&quot;:1218,&quot;marketValue&quot;:18737277,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2373&quot;,&quot;playerName&quot;:&quot;Ozan Kabak&quot;,&quot;firstName&quot;:&quot;Ozan&quot;,&quot;lastName&quot;:&quot;Kabak&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2373.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:5,&quot;averagePoints&quot;:111,&quot;totalPoints&quot;:1447,&quot;marketValue&quot;:13917597,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2532&quot;,&quot;playerName&quot;:&quot;Philipp Pentke&quot;,&quot;firstName&quot;:&quot;Philipp&quot;,&quot;lastName&quot;:&quot;Pentke&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2532.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:12,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;2596&quot;,&quot;playerName&quot;:&quot;Finn Becker&quot;,&quot;firstName&quot;:&quot;Finn&quot;,&quot;lastName&quot;:&quot;Becker&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2596.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:20,&quot;averagePoints&quot;:13,&quot;totalPoints&quot;:13,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;2694&quot;,&quot;playerName&quot;:&quot;Angelo Stiller&quot;,&quot;firstName&quot;:&quot;Angelo&quot;,&quot;lastName&quot;:&quot;Stiller&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2694.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:13,&quot;averagePoints&quot;:20,&quot;totalPoints&quot;:176,&quot;marketValue&quot;:1252034,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2717&quot;,&quot;playerName&quot;:&quot;Robert Skov&quot;,&quot;firstName&quot;:&quot;Robert&quot;,&quot;lastName&quot;:&quot;Skov&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2717.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:29,&quot;averagePoints&quot;:84,&quot;totalPoints&quot;:1094,&quot;marketValue&quot;:16323336,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2768&quot;,&quot;playerName&quot;:&quot;Munas Dabbur&quot;,&quot;firstName&quot;:&quot;Munas&quot;,&quot;lastName&quot;:&quot;Dabbur&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2768.png&quot;,&quot;status&quot;:1,&quot;position&quot;:4,&quot;number&quot;:10,&quot;averagePoints&quot;:65,&quot;totalPoints&quot;:653,&quot;marketValue&quot;:4920438,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2779&quot;,&quot;playerName&quot;:&quot;Angeliño&quot;,&quot;firstName&quot;:&quot;Jose Angel&quot;,&quot;lastName&quot;:&quot;Esmoris Tasende&quot;,&quot;knownName&quot;:&quot;Angeliño&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2779.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:11,&quot;averagePoints&quot;:76,&quot;totalPoints&quot;:987,&quot;marketValue&quot;:20461775,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2852&quot;,&quot;playerName&quot;:&quot;Luca Philipp&quot;,&quot;firstName&quot;:&quot;Luca&quot;,&quot;lastName&quot;:&quot;Philipp&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2852.png&quot;,&quot;status&quot;:1,&quot;position&quot;:1,&quot;number&quot;:37,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;2949&quot;,&quot;playerName&quot;:&quot;Georginio Rutter&quot;,&quot;firstName&quot;:&quot;Georginio&quot;,&quot;lastName&quot;:&quot;Rutter&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2949.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:33,&quot;averagePoints&quot;:60,&quot;totalPoints&quot;:836,&quot;marketValue&quot;:11498061,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;3186&quot;,&quot;playerName&quot;:&quot;Justin Isiah Che&quot;,&quot;firstName&quot;:&quot;Justin Isiah&quot;,&quot;lastName&quot;:&quot;Che&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3186.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:24,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;4351&quot;,&quot;playerName&quot;:&quot;Eduardo Quaresma&quot;,&quot;firstName&quot;:&quot;Eduardo&quot;,&quot;lastName&quot;:&quot;Quaresma&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4351.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:26,&quot;averagePoints&quot;:16,&quot;totalPoints&quot;:65,&quot;marketValue&quot;:1998437,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;4352&quot;,&quot;playerName&quot;:&quot;Stanley Nsoki&quot;,&quot;firstName&quot;:&quot;Stanley&quot;,&quot;lastName&quot;:&quot;Nsoki&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4352.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:34,&quot;averagePoints&quot;:47,&quot;totalPoints&quot;:423,&quot;marketValue&quot;:6690004,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;4358&quot;,&quot;playerName&quot;:&quot;Muhammed Damar&quot;,&quot;firstName&quot;:&quot;Muhammed&quot;,&quot;lastName&quot;:&quot;Damar&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4358.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:35,&quot;averagePoints&quot;:3,&quot;totalPoints&quot;:10,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0}]"><template shadowroot="open"><!--lit-part 2ZpZeWOl1O4=-->
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="25XH3J" component-url="/better-kickbase-web/bundesliga-team.page.442bc920.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;BundesligaTeamPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-team team-name="Hoffenheim" team-id="14" server-json-data="[{&quot;playerId&quot;:&quot;96&quot;,&quot;playerName&quot;:&quot;Kevin Akpoguma&quot;,&quot;firstName&quot;:&quot;Kevin&quot;,&quot;lastName&quot;:&quot;Akpoguma&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/96.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:25,&quot;averagePoints&quot;:48,&quot;totalPoints&quot;:571,&quot;marketValue&quot;:7303950,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;410&quot;,&quot;playerName&quot;:&quot;Sebastian Rudy&quot;,&quot;firstName&quot;:&quot;Sebastian&quot;,&quot;lastName&quot;:&quot;Rudy&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/410.png&quot;,&quot;status&quot;:2,&quot;position&quot;:3,&quot;number&quot;:16,&quot;averagePoints&quot;:21,&quot;totalPoints&quot;:209,&quot;marketValue&quot;:2646651,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;477&quot;,&quot;playerName&quot;:&quot;Kevin Vogt&quot;,&quot;firstName&quot;:&quot;Kevin&quot;,&quot;lastName&quot;:&quot;Vogt&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/477.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:22,&quot;averagePoints&quot;:71,&quot;totalPoints&quot;:927,&quot;marketValue&quot;:10153796,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;524&quot;,&quot;playerName&quot;:&quot;Oliver Baumann&quot;,&quot;firstName&quot;:&quot;Oliver&quot;,&quot;lastName&quot;:&quot;Baumann&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/524.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:1,&quot;averagePoints&quot;:97,&quot;totalPoints&quot;:1364,&quot;marketValue&quot;:14526727,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;717&quot;,&quot;playerName&quot;:&quot;Ermin Bicakcic&quot;,&quot;firstName&quot;:&quot;Ermin&quot;,&quot;lastName&quot;:&quot;Bicakcic&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/717.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:4,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;1308&quot;,&quot;playerName&quot;:&quot;Ihlas Bebou&quot;,&quot;firstName&quot;:&quot;Ihlas&quot;,&quot;lastName&quot;:&quot;Bebou&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1308.png&quot;,&quot;status&quot;:1,&quot;position&quot;:4,&quot;number&quot;:9,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:2147325,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1429&quot;,&quot;playerName&quot;:&quot;Benjamin Hübner&quot;,&quot;firstName&quot;:&quot;Benjamin&quot;,&quot;lastName&quot;:&quot;Hübner&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1429.png&quot;,&quot;status&quot;:4,&quot;position&quot;:2,&quot;number&quot;:21,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:2193825,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1671&quot;,&quot;playerName&quot;:&quot;Grischa Prömel&quot;,&quot;firstName&quot;:&quot;Grischa&quot;,&quot;lastName&quot;:&quot;Prömel&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1671.png&quot;,&quot;status&quot;:1,&quot;position&quot;:3,&quot;number&quot;:6,&quot;averagePoints&quot;:71,&quot;totalPoints&quot;:922,&quot;marketValue&quot;:11754094,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1726&quot;,&quot;playerName&quot;:&quot;Pavel Kaderábek&quot;,&quot;firstName&quot;:&quot;Pavel&quot;,&quot;lastName&quot;:&quot;Kaderábek&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1726.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:3,&quot;averagePoints&quot;:33,&quot;totalPoints&quot;:391,&quot;marketValue&quot;:3841799,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1781&quot;,&quot;playerName&quot;:&quot;Jacob Bruun Larsen&quot;,&quot;firstName&quot;:&quot;Jacob&quot;,&quot;lastName&quot;:&quot;Bruun Larsen&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1781.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:7,&quot;averagePoints&quot;:19,&quot;totalPoints&quot;:186,&quot;marketValue&quot;:4859813,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1815&quot;,&quot;playerName&quot;:&quot;Andrej Kramaric&quot;,&quot;firstName&quot;:&quot;Andrej&quot;,&quot;lastName&quot;:&quot;Kramaric&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1815.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:27,&quot;averagePoints&quot;:69,&quot;totalPoints&quot;:892,&quot;marketValue&quot;:20207769,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1990&quot;,&quot;playerName&quot;:&quot;Dennis Geiger&quot;,&quot;firstName&quot;:&quot;Dennis&quot;,&quot;lastName&quot;:&quot;Geiger&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1990.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:8,&quot;averagePoints&quot;:72,&quot;totalPoints&quot;:939,&quot;marketValue&quot;:11735292,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2275&quot;,&quot;playerName&quot;:&quot;Christoph Baumgartner&quot;,&quot;firstName&quot;:&quot;Christoph&quot;,&quot;lastName&quot;:&quot;Baumgartner&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2275.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:14,&quot;averagePoints&quot;:87,&quot;totalPoints&quot;:1220,&quot;marketValue&quot;:18432735,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2373&quot;,&quot;playerName&quot;:&quot;Ozan Kabak&quot;,&quot;firstName&quot;:&quot;Ozan&quot;,&quot;lastName&quot;:&quot;Kabak&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2373.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:5,&quot;averagePoints&quot;:111,&quot;totalPoints&quot;:1441,&quot;marketValue&quot;:13995653,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2532&quot;,&quot;playerName&quot;:&quot;Philipp Pentke&quot;,&quot;firstName&quot;:&quot;Philipp&quot;,&quot;lastName&quot;:&quot;Pentke&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2532.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:12,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;2596&quot;,&quot;playerName&quot;:&quot;Finn Becker&quot;,&quot;firstName&quot;:&quot;Finn&quot;,&quot;lastName&quot;:&quot;Becker&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2596.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:20,&quot;averagePoints&quot;:13,&quot;totalPoints&quot;:13,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;2694&quot;,&quot;playerName&quot;:&quot;Angelo Stiller&quot;,&quot;firstName&quot;:&quot;Angelo&quot;,&quot;lastName&quot;:&quot;Stiller&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2694.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:13,&quot;averagePoints&quot;:20,&quot;totalPoints&quot;:180,&quot;marketValue&quot;:1546095,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2717&quot;,&quot;playerName&quot;:&quot;Robert Skov&quot;,&quot;firstName&quot;:&quot;Robert&quot;,&quot;lastName&quot;:&quot;Skov&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2717.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:29,&quot;averagePoints&quot;:84,&quot;totalPoints&quot;:1093,&quot;marketValue&quot;:15931108,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2768&quot;,&quot;playerName&quot;:&quot;Munas Dabbur&quot;,&quot;firstName&quot;:&quot;Munas&quot;,&quot;lastName&quot;:&quot;Dabbur&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2768.png&quot;,&quot;status&quot;:1,&quot;position&quot;:4,&quot;number&quot;:10,&quot;averagePoints&quot;:65,&quot;totalPoints&quot;:653,&quot;marketValue&quot;:4743354,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2779&quot;,&quot;playerName&quot;:&quot;Angeliño&quot;,&quot;firstName&quot;:&quot;Jose Angel&quot;,&quot;lastName&quot;:&quot;Esmoris Tasende&quot;,&quot;knownName&quot;:&quot;Angeliño&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2779.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:11,&quot;averagePoints&quot;:76,&quot;totalPoints&quot;:986,&quot;marketValue&quot;:20496282,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2852&quot;,&quot;playerName&quot;:&quot;Luca Philipp&quot;,&quot;firstName&quot;:&quot;Luca&quot;,&quot;lastName&quot;:&quot;Philipp&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2852.png&quot;,&quot;status&quot;:1,&quot;position&quot;:1,&quot;number&quot;:37,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;2949&quot;,&quot;playerName&quot;:&quot;Georginio Rutter&quot;,&quot;firstName&quot;:&quot;Georginio&quot;,&quot;lastName&quot;:&quot;Rutter&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2949.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:33,&quot;averagePoints&quot;:60,&quot;totalPoints&quot;:836,&quot;marketValue&quot;:11513869,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;3186&quot;,&quot;playerName&quot;:&quot;Justin Isiah Che&quot;,&quot;firstName&quot;:&quot;Justin Isiah&quot;,&quot;lastName&quot;:&quot;Che&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3186.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:24,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;4351&quot;,&quot;playerName&quot;:&quot;Eduardo Quaresma&quot;,&quot;firstName&quot;:&quot;Eduardo&quot;,&quot;lastName&quot;:&quot;Quaresma&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4351.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:26,&quot;averagePoints&quot;:16,&quot;totalPoints&quot;:65,&quot;marketValue&quot;:2472606,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;4352&quot;,&quot;playerName&quot;:&quot;Stanley Nsoki&quot;,&quot;firstName&quot;:&quot;Stanley&quot;,&quot;lastName&quot;:&quot;Nsoki&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4352.png&quot;,&quot;status&quot;:2,&quot;position&quot;:2,&quot;number&quot;:34,&quot;averagePoints&quot;:47,&quot;totalPoints&quot;:423,&quot;marketValue&quot;:6233667,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;4358&quot;,&quot;playerName&quot;:&quot;Muhammed Damar&quot;,&quot;firstName&quot;:&quot;Muhammed&quot;,&quot;lastName&quot;:&quot;Damar&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4358.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:35,&quot;averagePoints&quot;:3,&quot;totalPoints&quot;:10,&quot;marketValue&quot;:626395,&quot;marketValueTrend&quot;:1}]"><template shadowroot="open"><!--lit-part 2ZpZeWOl1O4=-->
       <div class="root">
         <!--lit-part--><!--lit-part e+C2Kddy/zY=--> <bkb-player-list-item ><!--lit-node 0--><template shadowroot="open"><style>
     .root {
@@ -237,11 +237,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Baumann<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->1.355<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->1.364<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->97<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->14.521.124 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->14.526.727 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -688,11 +688,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Akpoguma<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->572<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->571<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->48<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->7.551.347 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->7.303.950 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -836,11 +836,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Vogt<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->935<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->927<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->72<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->71<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->10.029.688 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->10.153.796 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1143,7 +1143,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->0<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->2.369.494 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->2.193.825 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1291,7 +1291,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->33<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->4.015.245 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->3.841.799 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1435,11 +1435,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Kabak<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->1.447<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->1.441<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->111<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->13.917.597 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->13.995.653 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1583,11 +1583,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Angeliño<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->987<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->986<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->76<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->20.461.775 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->20.496.282 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1883,7 +1883,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->16<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->1.998.437 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->2.472.606 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2024,14 +2024,21 @@ var x = new DOMParser()
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-            <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
+            <!--lit-part S4XNynLHIOo=-->
+      <svg class="badge">
+        <!--lit-part u7oobe/qgkg=--><svg>
+      <rect x="0" y="0" width="32" height="16"  />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->2<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Nsoki<!--/lit-part--></div>
           <div class="points value"><!--lit-part-->423<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->47<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->6.690.004 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->6.233.667 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2172,14 +2179,21 @@ var x = new DOMParser()
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-            <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
+            <!--lit-part S4XNynLHIOo=-->
+      <svg class="badge">
+        <!--lit-part u7oobe/qgkg=--><svg>
+      <rect x="0" y="0" width="32" height="16"  />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->2<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Rudy<!--/lit-part--></div>
           <div class="points value"><!--lit-part-->209<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->21<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->2.005.456 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->2.646.651 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2334,7 +2348,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->71<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->12.792.376 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->11.754.094 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2482,7 +2496,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->19<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->4.395.290 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->4.859.813 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2630,7 +2644,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->72<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->12.085.764 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->11.735.292 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2774,11 +2788,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Baumgartner<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->1.218<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->1.220<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->87<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->18.737.277 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->18.432.735 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3070,11 +3084,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Stiller<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->176<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->180<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->20<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->1.252.034 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->1.546.095 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3218,11 +3232,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Skov<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->1.094<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->1.093<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->84<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->16.323.336 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->15.931.108 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3370,7 +3384,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->3<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->500.000 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->626.395 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3525,7 +3539,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->0<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->2.231.648 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->2.147.325 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3669,11 +3683,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Kramaric<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->889<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->892<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->68<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->69<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->20.005.804 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->20.207.769 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3828,7 +3842,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->65<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->4.920.438 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->4.743.354 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3976,7 +3990,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->60<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->11.498.061 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->11.513.869 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
