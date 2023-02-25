@@ -15,7 +15,7 @@ const serverJsonData: PlayerData = await playerDataService.getData(String(params
 export async function getStaticPaths() {
   const bundesligaTable: BundesligaTable = await bundesligaTableService.getData();
   const teamIds: string[] = bundesligaTable.teams.map((team: BundesligaTableEntry) => team.teamId);
-  // teamIds.push('INACTIVE_PLAYERS');
+  teamIds.push('INACTIVE_PLAYERS');
   const deepPlayerData: { params: any; metadata: PlayerListItem }[][] = await Promise.all(
     teamIds.map(async (teamId: string) => {
       const result = await teamPlayerService.getData(teamId);
