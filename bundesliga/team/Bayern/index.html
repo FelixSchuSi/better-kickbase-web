@@ -95,7 +95,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="background-color: #e8edf1;  padding: 1rem;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="faABh" component-url="/better-kickbase-web/bundesliga-team.page.442bc920.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;BundesligaTeamPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-team team-name="Bayern" team-id="2" server-json-data="[{&quot;playerId&quot;:&quot;237&quot;,&quot;playerName&quot;:&quot;Manuel Neuer&quot;,&quot;firstName&quot;:&quot;Manuel&quot;,&quot;lastName&quot;:&quot;Neuer&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/237.png&quot;,&quot;status&quot;:1,&quot;position&quot;:1,&quot;number&quot;:1,&quot;averagePoints&quot;:115,&quot;totalPoints&quot;:1382,&quot;marketValue&quot;:906639,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;336&quot;,&quot;playerName&quot;:&quot;Eric Maxim Choupo-Moting&quot;,&quot;firstName&quot;:&quot;Eric Maxim&quot;,&quot;lastName&quot;:&quot;Choupo-Moting&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/336.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:13,&quot;averagePoints&quot;:111,&quot;totalPoints&quot;:2002,&quot;marketValue&quot;:27088527,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;383&quot;,&quot;playerName&quot;:&quot;Sven Ulreich&quot;,&quot;firstName&quot;:&quot;Sven&quot;,&quot;lastName&quot;:&quot;Ulreich&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/383.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:26,&quot;averagePoints&quot;:89,&quot;totalPoints&quot;:356,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;450&quot;,&quot;playerName&quot;:&quot;T. Müller&quot;,&quot;firstName&quot;:&quot;Thomas&quot;,&quot;lastName&quot;:&quot;Müller&quot;,&quot;knownName&quot;:&quot;T. Müller&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/450.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:25,&quot;averagePoints&quot;:129,&quot;totalPoints&quot;:2705,&quot;marketValue&quot;:38148380,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;660&quot;,&quot;playerName&quot;:&quot;Leon Goretzka&quot;,&quot;firstName&quot;:&quot;Leon&quot;,&quot;lastName&quot;:&quot;Goretzka&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/660.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:8,&quot;averagePoints&quot;:112,&quot;totalPoints&quot;:2455,&quot;marketValue&quot;:32410873,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1222&quot;,&quot;playerName&quot;:&quot;Leroy Sané&quot;,&quot;firstName&quot;:&quot;Leroy&quot;,&quot;lastName&quot;:&quot;Sané&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1222.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:10,&quot;averagePoints&quot;:127,&quot;totalPoints&quot;:3311,&quot;marketValue&quot;:37907890,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1568&quot;,&quot;playerName&quot;:&quot;Yann Sommer&quot;,&quot;firstName&quot;:&quot;Yann&quot;,&quot;lastName&quot;:&quot;Sommer&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1568.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:27,&quot;averagePoints&quot;:100,&quot;totalPoints&quot;:2305,&quot;marketValue&quot;:21452404,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1685&quot;,&quot;playerName&quot;:&quot;Joshua Kimmich&quot;,&quot;firstName&quot;:&quot;Joshua&quot;,&quot;lastName&quot;:&quot;Kimmich&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1685.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:6,&quot;averagePoints&quot;:160,&quot;totalPoints&quot;:4318,&quot;marketValue&quot;:50310361,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1774&quot;,&quot;playerName&quot;:&quot;Kingsley Coman&quot;,&quot;firstName&quot;:&quot;Kingsley&quot;,&quot;lastName&quot;:&quot;Coman&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1774.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:11,&quot;averagePoints&quot;:130,&quot;totalPoints&quot;:2466,&quot;marketValue&quot;:33616726,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1961&quot;,&quot;playerName&quot;:&quot;Serge Gnabry&quot;,&quot;firstName&quot;:&quot;Serge&quot;,&quot;lastName&quot;:&quot;Gnabry&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1961.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:7,&quot;averagePoints&quot;:111,&quot;totalPoints&quot;:3118,&quot;marketValue&quot;:36601786,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1991&quot;,&quot;playerName&quot;:&quot;Dayotchanculle Upamecano&quot;,&quot;firstName&quot;:&quot;Dayotchanculle&quot;,&quot;lastName&quot;:&quot;Upamecano&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1991.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:2,&quot;averagePoints&quot;:98,&quot;totalPoints&quot;:2460,&quot;marketValue&quot;:30782897,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2054&quot;,&quot;playerName&quot;:&quot;Benjamin Pavard&quot;,&quot;firstName&quot;:&quot;Benjamin&quot;,&quot;lastName&quot;:&quot;Pavard&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2054.png&quot;,&quot;status&quot;:32,&quot;position&quot;:2,&quot;number&quot;:5,&quot;averagePoints&quot;:141,&quot;totalPoints&quot;:3535,&quot;marketValue&quot;:32766849,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2300&quot;,&quot;playerName&quot;:&quot;Josip Stanisic&quot;,&quot;firstName&quot;:&quot;Josip&quot;,&quot;lastName&quot;:&quot;Stanisic&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2300.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:44,&quot;averagePoints&quot;:52,&quot;totalPoints&quot;:621,&quot;marketValue&quot;:3557065,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2366&quot;,&quot;playerName&quot;:&quot;Alphonso Davies&quot;,&quot;firstName&quot;:&quot;Alphonso&quot;,&quot;lastName&quot;:&quot;Davies&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2366.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:19,&quot;averagePoints&quot;:117,&quot;totalPoints&quot;:2935,&quot;marketValue&quot;:36114874,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2647&quot;,&quot;playerName&quot;:&quot;Lucas Hernández&quot;,&quot;firstName&quot;:&quot;Lucas&quot;,&quot;lastName&quot;:&quot;Hernández&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2647.png&quot;,&quot;status&quot;:4,&quot;position&quot;:2,&quot;number&quot;:21,&quot;averagePoints&quot;:83,&quot;totalPoints&quot;:584,&quot;marketValue&quot;:4271752,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2804&quot;,&quot;playerName&quot;:&quot;Jamal Musiala&quot;,&quot;firstName&quot;:&quot;Jamal&quot;,&quot;lastName&quot;:&quot;Musiala&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2804.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:42,&quot;averagePoints&quot;:141,&quot;totalPoints&quot;:3804,&quot;marketValue&quot;:47354061,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2915&quot;,&quot;playerName&quot;:&quot;Bouna Sarr&quot;,&quot;firstName&quot;:&quot;Bouna&quot;,&quot;lastName&quot;:&quot;Sarr&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2915.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:20,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;3175&quot;,&quot;playerName&quot;:&quot;Paul Wanner&quot;,&quot;firstName&quot;:&quot;Paul&quot;,&quot;lastName&quot;:&quot;Wanner&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3175.png&quot;,&quot;status&quot;:2,&quot;position&quot;:3,&quot;number&quot;:14,&quot;averagePoints&quot;:25,&quot;totalPoints&quot;:50,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;3176&quot;,&quot;playerName&quot;:&quot;Arijon Ibrahimović&quot;,&quot;firstName&quot;:&quot;Arijon&quot;,&quot;lastName&quot;:&quot;Ibrahimović&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3176.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:46,&quot;averagePoints&quot;:31,&quot;totalPoints&quot;:31,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;3477&quot;,&quot;playerName&quot;:&quot;Noussair Mazraoui&quot;,&quot;firstName&quot;:&quot;Noussair&quot;,&quot;lastName&quot;:&quot;Mazraoui&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3477.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:40,&quot;averagePoints&quot;:78,&quot;totalPoints&quot;:1020,&quot;marketValue&quot;:6210996,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;3478&quot;,&quot;playerName&quot;:&quot;Sadio Mané&quot;,&quot;firstName&quot;:&quot;Sadio&quot;,&quot;lastName&quot;:&quot;Mané&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3478.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:17,&quot;averagePoints&quot;:95,&quot;totalPoints&quot;:1891,&quot;marketValue&quot;:29277620,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;3501&quot;,&quot;playerName&quot;:&quot;Ryan Gravenberch&quot;,&quot;firstName&quot;:&quot;Ryan&quot;,&quot;lastName&quot;:&quot;Gravenberch&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3501.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:38,&quot;averagePoints&quot;:31,&quot;totalPoints&quot;:550,&quot;marketValue&quot;:3549866,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;4284&quot;,&quot;playerName&quot;:&quot;Johannes Schenk&quot;,&quot;firstName&quot;:&quot;Johannes&quot;,&quot;lastName&quot;:&quot;Schenk&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4284.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:35,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;4286&quot;,&quot;playerName&quot;:&quot;Matthijs de Ligt&quot;,&quot;firstName&quot;:&quot;Matthijs&quot;,&quot;lastName&quot;:&quot;de Ligt&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4286.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:4,&quot;averagePoints&quot;:111,&quot;totalPoints&quot;:2772,&quot;marketValue&quot;:36336012,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;4314&quot;,&quot;playerName&quot;:&quot;Mathys Tel&quot;,&quot;firstName&quot;:&quot;Mathys&quot;,&quot;lastName&quot;:&quot;Tel&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4314.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:39,&quot;averagePoints&quot;:45,&quot;totalPoints&quot;:758,&quot;marketValue&quot;:4070850,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;4561&quot;,&quot;playerName&quot;:&quot;Daley Blind&quot;,&quot;firstName&quot;:&quot;Daley&quot;,&quot;lastName&quot;:&quot;Blind&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4561.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:23,&quot;averagePoints&quot;:42,&quot;totalPoints&quot;:167,&quot;marketValue&quot;:750140,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;4628&quot;,&quot;playerName&quot;:&quot;João Cancelo&quot;,&quot;firstName&quot;:&quot;João Pedro&quot;,&quot;lastName&quot;:&quot;Cavaco Cancelo&quot;,&quot;knownName&quot;:&quot;João Cancelo&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4628.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:22,&quot;averagePoints&quot;:107,&quot;totalPoints&quot;:965,&quot;marketValue&quot;:34298975,&quot;marketValueTrend&quot;:1}]"><template shadowroot="open"><!--lit-part 2ZpZeWOl1O4=-->
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z2gDQNg" component-url="/better-kickbase-web/bundesliga-team.page.442bc920.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;BundesligaTeamPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-team team-name="Bayern" team-id="2" server-json-data="[{&quot;playerId&quot;:&quot;237&quot;,&quot;playerName&quot;:&quot;Manuel Neuer&quot;,&quot;firstName&quot;:&quot;Manuel&quot;,&quot;lastName&quot;:&quot;Neuer&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/237.png&quot;,&quot;status&quot;:1,&quot;position&quot;:1,&quot;number&quot;:1,&quot;averagePoints&quot;:115,&quot;totalPoints&quot;:1382,&quot;marketValue&quot;:890315,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;336&quot;,&quot;playerName&quot;:&quot;Eric Maxim Choupo-Moting&quot;,&quot;firstName&quot;:&quot;Eric Maxim&quot;,&quot;lastName&quot;:&quot;Choupo-Moting&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/336.png&quot;,&quot;status&quot;:2,&quot;position&quot;:4,&quot;number&quot;:13,&quot;averagePoints&quot;:111,&quot;totalPoints&quot;:2002,&quot;marketValue&quot;:27126959,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;383&quot;,&quot;playerName&quot;:&quot;Sven Ulreich&quot;,&quot;firstName&quot;:&quot;Sven&quot;,&quot;lastName&quot;:&quot;Ulreich&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/383.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:26,&quot;averagePoints&quot;:89,&quot;totalPoints&quot;:356,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;450&quot;,&quot;playerName&quot;:&quot;T. Müller&quot;,&quot;firstName&quot;:&quot;Thomas&quot;,&quot;lastName&quot;:&quot;Müller&quot;,&quot;knownName&quot;:&quot;T. Müller&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/450.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:25,&quot;averagePoints&quot;:123,&quot;totalPoints&quot;:2708,&quot;marketValue&quot;:38201589,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;660&quot;,&quot;playerName&quot;:&quot;Leon Goretzka&quot;,&quot;firstName&quot;:&quot;Leon&quot;,&quot;lastName&quot;:&quot;Goretzka&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/660.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:8,&quot;averagePoints&quot;:110,&quot;totalPoints&quot;:2527,&quot;marketValue&quot;:32420136,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1222&quot;,&quot;playerName&quot;:&quot;Leroy Sané&quot;,&quot;firstName&quot;:&quot;Leroy&quot;,&quot;lastName&quot;:&quot;Sané&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1222.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:10,&quot;averagePoints&quot;:122,&quot;totalPoints&quot;:3298,&quot;marketValue&quot;:37951738,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1568&quot;,&quot;playerName&quot;:&quot;Yann Sommer&quot;,&quot;firstName&quot;:&quot;Yann&quot;,&quot;lastName&quot;:&quot;Sommer&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1568.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:27,&quot;averagePoints&quot;:96,&quot;totalPoints&quot;:2304,&quot;marketValue&quot;:21460675,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1685&quot;,&quot;playerName&quot;:&quot;Joshua Kimmich&quot;,&quot;firstName&quot;:&quot;Joshua&quot;,&quot;lastName&quot;:&quot;Kimmich&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1685.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:6,&quot;averagePoints&quot;:157,&quot;totalPoints&quot;:4393,&quot;marketValue&quot;:50311781,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;1774&quot;,&quot;playerName&quot;:&quot;Kingsley Coman&quot;,&quot;firstName&quot;:&quot;Kingsley&quot;,&quot;lastName&quot;:&quot;Coman&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1774.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:11,&quot;averagePoints&quot;:130,&quot;totalPoints&quot;:2466,&quot;marketValue&quot;:33656905,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1961&quot;,&quot;playerName&quot;:&quot;Serge Gnabry&quot;,&quot;firstName&quot;:&quot;Serge&quot;,&quot;lastName&quot;:&quot;Gnabry&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1961.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:7,&quot;averagePoints&quot;:107,&quot;totalPoints&quot;:3109,&quot;marketValue&quot;:36622022,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;1991&quot;,&quot;playerName&quot;:&quot;Dayotchanculle Upamecano&quot;,&quot;firstName&quot;:&quot;Dayotchanculle&quot;,&quot;lastName&quot;:&quot;Upamecano&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1991.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:2,&quot;averagePoints&quot;:96,&quot;totalPoints&quot;:2492,&quot;marketValue&quot;:30799707,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2054&quot;,&quot;playerName&quot;:&quot;Benjamin Pavard&quot;,&quot;firstName&quot;:&quot;Benjamin&quot;,&quot;lastName&quot;:&quot;Pavard&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2054.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:5,&quot;averagePoints&quot;:141,&quot;totalPoints&quot;:3535,&quot;marketValue&quot;:32811375,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2300&quot;,&quot;playerName&quot;:&quot;Josip Stanisic&quot;,&quot;firstName&quot;:&quot;Josip&quot;,&quot;lastName&quot;:&quot;Stanisic&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2300.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:44,&quot;averagePoints&quot;:51,&quot;totalPoints&quot;:662,&quot;marketValue&quot;:3489882,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2366&quot;,&quot;playerName&quot;:&quot;Alphonso Davies&quot;,&quot;firstName&quot;:&quot;Alphonso&quot;,&quot;lastName&quot;:&quot;Davies&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2366.png&quot;,&quot;status&quot;:2,&quot;position&quot;:2,&quot;number&quot;:19,&quot;averagePoints&quot;:113,&quot;totalPoints&quot;:2940,&quot;marketValue&quot;:35648411,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2647&quot;,&quot;playerName&quot;:&quot;Lucas Hernández&quot;,&quot;firstName&quot;:&quot;Lucas&quot;,&quot;lastName&quot;:&quot;Hernández&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2647.png&quot;,&quot;status&quot;:4,&quot;position&quot;:2,&quot;number&quot;:21,&quot;averagePoints&quot;:83,&quot;totalPoints&quot;:584,&quot;marketValue&quot;:4200449,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;2804&quot;,&quot;playerName&quot;:&quot;Jamal Musiala&quot;,&quot;firstName&quot;:&quot;Jamal&quot;,&quot;lastName&quot;:&quot;Musiala&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2804.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:42,&quot;averagePoints&quot;:137,&quot;totalPoints&quot;:3844,&quot;marketValue&quot;:47372102,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;2915&quot;,&quot;playerName&quot;:&quot;Bouna Sarr&quot;,&quot;firstName&quot;:&quot;Bouna&quot;,&quot;lastName&quot;:&quot;Sarr&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2915.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:20,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;3175&quot;,&quot;playerName&quot;:&quot;Paul Wanner&quot;,&quot;firstName&quot;:&quot;Paul&quot;,&quot;lastName&quot;:&quot;Wanner&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3175.png&quot;,&quot;status&quot;:2,&quot;position&quot;:3,&quot;number&quot;:14,&quot;averagePoints&quot;:25,&quot;totalPoints&quot;:50,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;3176&quot;,&quot;playerName&quot;:&quot;Arijon Ibrahimović&quot;,&quot;firstName&quot;:&quot;Arijon&quot;,&quot;lastName&quot;:&quot;Ibrahimović&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3176.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:46,&quot;averagePoints&quot;:31,&quot;totalPoints&quot;:31,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;3477&quot;,&quot;playerName&quot;:&quot;Noussair Mazraoui&quot;,&quot;firstName&quot;:&quot;Noussair&quot;,&quot;lastName&quot;:&quot;Mazraoui&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3477.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:40,&quot;averagePoints&quot;:81,&quot;totalPoints&quot;:1127,&quot;marketValue&quot;:6119314,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;3478&quot;,&quot;playerName&quot;:&quot;Sadio Mané&quot;,&quot;firstName&quot;:&quot;Sadio&quot;,&quot;lastName&quot;:&quot;Mané&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3478.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:17,&quot;averagePoints&quot;:97,&quot;totalPoints&quot;:2036,&quot;marketValue&quot;:29172228,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;3501&quot;,&quot;playerName&quot;:&quot;Ryan Gravenberch&quot;,&quot;firstName&quot;:&quot;Ryan&quot;,&quot;lastName&quot;:&quot;Gravenberch&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3501.png&quot;,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:38,&quot;averagePoints&quot;:29,&quot;totalPoints&quot;:547,&quot;marketValue&quot;:3496388,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;4284&quot;,&quot;playerName&quot;:&quot;Johannes Schenk&quot;,&quot;firstName&quot;:&quot;Johannes&quot;,&quot;lastName&quot;:&quot;Schenk&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4284.png&quot;,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:35,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},{&quot;playerId&quot;:&quot;4286&quot;,&quot;playerName&quot;:&quot;Matthijs de Ligt&quot;,&quot;firstName&quot;:&quot;Matthijs&quot;,&quot;lastName&quot;:&quot;de Ligt&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4286.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:4,&quot;averagePoints&quot;:110,&quot;totalPoints&quot;:2862,&quot;marketValue&quot;:36379194,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;4314&quot;,&quot;playerName&quot;:&quot;Mathys Tel&quot;,&quot;firstName&quot;:&quot;Mathys&quot;,&quot;lastName&quot;:&quot;Tel&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4314.png&quot;,&quot;status&quot;:0,&quot;position&quot;:4,&quot;number&quot;:39,&quot;averagePoints&quot;:41,&quot;totalPoints&quot;:738,&quot;marketValue&quot;:4209473,&quot;marketValueTrend&quot;:1},{&quot;playerId&quot;:&quot;4561&quot;,&quot;playerName&quot;:&quot;Daley Blind&quot;,&quot;firstName&quot;:&quot;Daley&quot;,&quot;lastName&quot;:&quot;Blind&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4561.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:23,&quot;averagePoints&quot;:42,&quot;totalPoints&quot;:167,&quot;marketValue&quot;:628616,&quot;marketValueTrend&quot;:2},{&quot;playerId&quot;:&quot;4628&quot;,&quot;playerName&quot;:&quot;João Cancelo&quot;,&quot;firstName&quot;:&quot;João Pedro&quot;,&quot;lastName&quot;:&quot;Cavaco Cancelo&quot;,&quot;knownName&quot;:&quot;João Cancelo&quot;,&quot;teamName&quot;:&quot;Bayern&quot;,&quot;teamId&quot;:&quot;2&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4628.png&quot;,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:22,&quot;averagePoints&quot;:110,&quot;totalPoints&quot;:1096,&quot;marketValue&quot;:34330712,&quot;marketValueTrend&quot;:1}]"><template shadowroot="open"><!--lit-part 2ZpZeWOl1O4=-->
       <div class="root">
         <!--lit-part--><!--lit-part e+C2Kddy/zY=--> <bkb-player-list-item ><!--lit-node 0--><template shadowroot="open"><style>
     .root {
@@ -248,7 +248,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->115<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->906.639 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->890.315 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -540,11 +540,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Sommer<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->2.305<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.304<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->100<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->96<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->21.452.404 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->21.460.675 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -836,11 +836,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Upamecano<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->2.460<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.492<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->98<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->96<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->30.782.897 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->30.799.707 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -981,21 +981,14 @@ var x = new DOMParser()
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-            <!--lit-part S4XNynLHIOo=-->
-      <svg class="badge">
-        <!--lit-part u7oobe/qgkg=--><svg>
-      <rect x="0" y="0" width="32" height="16"  />
-          <text fill="black" font-size="8pt" text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->32<!--/lit-part--></text>
-  </svg><!--/lit-part-->
-      </svg>
-    <!--/lit-part-->
+            <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Pavard<!--/lit-part--></div>
           <div class="points value"><!--lit-part-->3.535<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->141<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->32.766.849 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->32.811.375 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1139,11 +1132,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Stanisic<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->621<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->662<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->52<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->51<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->3.557.065 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->3.489.882 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1284,14 +1277,21 @@ var x = new DOMParser()
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-            <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
+            <!--lit-part S4XNynLHIOo=-->
+      <svg class="badge">
+        <!--lit-part u7oobe/qgkg=--><svg>
+      <rect x="0" y="0" width="32" height="16"  />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->2<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Davies<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->2.935<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.940<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->117<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->113<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->36.114.874 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->35.648.411 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1446,7 +1446,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->83<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->4.271.752 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->4.200.449 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1738,11 +1738,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Mazraoui<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->1.020<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->1.127<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->78<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->81<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->6.210.996 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->6.119.314 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -1886,11 +1886,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->de Ligt<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->2.772<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.862<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->111<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->110<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->36.336.012 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->36.379.194 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2038,7 +2038,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->42<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->750.140 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->628.616 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2182,11 +2182,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->João Cancelo<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->965<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->1.096<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->107<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->110<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->34.298.975 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->34.330.712 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2330,11 +2330,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->T. Müller<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->2.705<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.708<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->129<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->123<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->38.148.380 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->38.201.589 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2478,11 +2478,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Goretzka<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->2.455<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.527<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->112<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->110<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->32.410.873 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->32.420.136 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2626,11 +2626,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Sané<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->3.311<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->3.298<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->127<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->122<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->37.907.890 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->37.951.738 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2774,11 +2774,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Kimmich<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->4.318<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->4.393<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->160<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->157<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->50.310.361 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->50.311.781 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -2926,7 +2926,7 @@ var x = new DOMParser()
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->130<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->33.616.726 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->33.656.905 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3070,11 +3070,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Gnabry<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->3.118<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->3.109<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->111<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->107<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->36.601.786 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->36.622.022 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3218,11 +3218,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Musiala<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->3.804<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->3.844<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->141<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->137<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->47.354.061 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->47.372.102 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3669,11 +3669,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Gravenberch<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->550<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->547<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->31<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->29<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->3.549.866 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->3.496.388 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3814,14 +3814,21 @@ var x = new DOMParser()
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-            <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
+            <!--lit-part S4XNynLHIOo=-->
+      <svg class="badge">
+        <!--lit-part u7oobe/qgkg=--><svg>
+      <rect x="0" y="0" width="32" height="16"  />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->2<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Choupo-Moting<!--/lit-part--></div>
           <div class="points value"><!--lit-part-->2.002<!--/lit-part--></div>
           <div class="points label">Pts.</div>
           <div class="avg-points value"><!--lit-part-->111<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->27.088.527 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->27.126.959 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -3965,11 +3972,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Mané<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->1.891<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->2.036<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->95<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->97<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->29.277.620 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->29.172.228 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
@@ -4113,11 +4120,11 @@ var x = new DOMParser()
             <!--lit-part BRUAAAUVAAA=--><?><!--/lit-part-->
           </div>
           <div class="name value"><!--lit-part-->Tel<!--/lit-part--></div>
-          <div class="points value"><!--lit-part-->758<!--/lit-part--></div>
+          <div class="points value"><!--lit-part-->738<!--/lit-part--></div>
           <div class="points label">Pts.</div>
-          <div class="avg-points value"><!--lit-part-->45<!--/lit-part--></div>
+          <div class="avg-points value"><!--lit-part-->41<!--/lit-part--></div>
           <div class="avg-points label">∅ Pts.</div>
-          <div class="market-value value"><!--lit-part-->4.070.850 €<!--/lit-part--></div>
+          <div class="market-value value"><!--lit-part-->4.209.473 €<!--/lit-part--></div>
           <div class="market-value label">Market value</div>
         </div>
       </a>
