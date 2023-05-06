@@ -96,7 +96,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="padding:0 !important;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="95Yxc" component-url="/better-kickbase-web/player.page.64667e1b.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Luca Philipp" player-id="2852" team-id="14" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;2852&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamSymbol&quot;:&quot;TSG&quot;,&quot;firstName&quot;:&quot;Luca&quot;,&quot;lastName&quot;:&quot;Philipp&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2852.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/e2f816c2f6de4273945bcf96c70fcff7.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/c32a01c37a0c4625b4b90a9f496cfd33.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:37,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:0,&quot;appearances&quot;:0,&quot;startingEleven&quot;:0,&quot;matches&quot;:[{&quot;match&quot;:5,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:10,&quot;awayTeamId&quot;:14,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:24,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:14,&quot;awayTeamId&quot;:11,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:33,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:22,&quot;awayTeamId&quot;:14,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:34,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:14,&quot;awayTeamId&quot;:20,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1}],&quot;year&quot;:&quot;2020/2021&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Luca&quot;,&quot;id&quot;:&quot;2852&quot;,&quot;lastName&quot;:&quot;Philipp&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:1124340,&quot;mvHighDate&quot;:&quot;2022-07-07T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-01-10T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2023-05-06T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;14&quot;,&quot;homeTeamName&quot;:&quot;Hoffenheim&quot;,&quot;homeTeamNameShort&quot;:&quot;TSG&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:31,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-13T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;11&quot;,&quot;homeTeamName&quot;:&quot;Wolfsburg&quot;,&quot;homeTeamNameShort&quot;:&quot;WOB&quot;,&quot;awayTeamId&quot;:&quot;14&quot;,&quot;awayTeamName&quot;:&quot;Hoffenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;TSG&quot;,&quot;match&quot;:32,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-20T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;14&quot;,&quot;homeTeamName&quot;:&quot;Hoffenheim&quot;,&quot;homeTeamNameShort&quot;:&quot;TSG&quot;,&quot;awayTeamId&quot;:&quot;40&quot;,&quot;awayTeamName&quot;:&quot;Union&quot;,&quot;awayTeamNameShort&quot;:&quot;FCU&quot;,&quot;match&quot;:33,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:37,&quot;points&quot;:0,&quot;position&quot;:1,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;13&quot;,&quot;season&quot;:&quot;2020/2021&quot;,&quot;points&quot;:0,&quot;matches&quot;:0,&quot;startMatches&quot;:0,&quot;secondsPlayed&quot;:0,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:0,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:8,&quot;offensiveAverage&quot;:122,&quot;generalAverage&quot;:53,&quot;teamAverage&quot;:113,&quot;goalKeeperAverage&quot;:495},{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/c32a01c37a0c4625b4b90a9f496cfd33.png&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/e2f816c2f6de4273945bcf96c70fcff7.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="ZNjb0q" component-url="/better-kickbase-web/player.page.64667e1b.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Luca Philipp" player-id="2852" team-id="14" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;2852&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;teamName&quot;:&quot;Hoffenheim&quot;,&quot;teamSymbol&quot;:&quot;TSG&quot;,&quot;firstName&quot;:&quot;Luca&quot;,&quot;lastName&quot;:&quot;Philipp&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/2852.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/e2f816c2f6de4273945bcf96c70fcff7.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/c32a01c37a0c4625b4b90a9f496cfd33.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:37,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:0,&quot;appearances&quot;:0,&quot;startingEleven&quot;:0,&quot;matches&quot;:[{&quot;match&quot;:5,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:10,&quot;awayTeamId&quot;:14,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:24,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:14,&quot;awayTeamId&quot;:11,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:33,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:22,&quot;awayTeamId&quot;:14,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:34,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:14,&quot;awayTeamId&quot;:20,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1}],&quot;year&quot;:&quot;2020/2021&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Luca&quot;,&quot;id&quot;:&quot;2852&quot;,&quot;lastName&quot;:&quot;Philipp&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:1124340,&quot;mvHighDate&quot;:&quot;2022-07-07T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-01-10T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2023-05-13T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;11&quot;,&quot;homeTeamName&quot;:&quot;Wolfsburg&quot;,&quot;homeTeamNameShort&quot;:&quot;WOB&quot;,&quot;awayTeamId&quot;:&quot;14&quot;,&quot;awayTeamName&quot;:&quot;Hoffenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;TSG&quot;,&quot;match&quot;:32,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-20T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;14&quot;,&quot;homeTeamName&quot;:&quot;Hoffenheim&quot;,&quot;homeTeamNameShort&quot;:&quot;TSG&quot;,&quot;awayTeamId&quot;:&quot;40&quot;,&quot;awayTeamName&quot;:&quot;Union&quot;,&quot;awayTeamNameShort&quot;:&quot;FCU&quot;,&quot;match&quot;:33,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-27T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;9&quot;,&quot;homeTeamName&quot;:&quot;Stuttgart&quot;,&quot;homeTeamNameShort&quot;:&quot;VFB&quot;,&quot;awayTeamId&quot;:&quot;14&quot;,&quot;awayTeamName&quot;:&quot;Hoffenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;TSG&quot;,&quot;match&quot;:34,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:37,&quot;points&quot;:0,&quot;position&quot;:1,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;13&quot;,&quot;season&quot;:&quot;2020/2021&quot;,&quot;points&quot;:0,&quot;matches&quot;:0,&quot;startMatches&quot;:0,&quot;secondsPlayed&quot;:0,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:0,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:8,&quot;offensiveAverage&quot;:122,&quot;generalAverage&quot;:53,&quot;teamAverage&quot;:113,&quot;goalKeeperAverage&quot;:495},{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/c32a01c37a0c4625b4b90a9f496cfd33.png&quot;,&quot;teamId&quot;:&quot;14&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/e2f816c2f6de4273945bcf96c70fcff7.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -870,107 +870,6 @@ var x = new DOMParser()
   </style><!--lit-part 4tyMDKunH1E=-->
       <div class="match">
         <div class="match-day">
-          <small class="match-value"><!--lit-part-->31<!--/lit-part-->.</small>
-          <small class="match-label">Spieltag</small>
-        </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, NaN%, #f5f7f6, NaN%, #f5f7f6);"><!--lit-node 5-->
-          <!--lit-part--><!--/lit-part-->
-          <!--lit-part--><!--/lit-part-->
-        </div>
-        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
-        <div class="match-team-logos">
-          <img class="home-team-logo" src="data:image/png;base64,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" /><!--lit-node 11-->
-          <img class="away-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAADAFBMVEVHcEzMAADMAADNAADMAADNAADNBATLAADMAADMAADbT0/MAADMAADMAADNBQXMAwPMAADVLS3MAADMAADMAADMAgLVLy/NBQXQExPNCQnMAADMAADMAADMAgLMBQXMAADOAADNAADLAADNBgbMAADMAADPEhLMAADbTU3MAADPEhLRGRnRGxvSAADRGhrMAADMAADNBATOAADMAADOCgrIAADQFBTQGRnQGBjMAADMAAD////MAgLMAQH//v7MAwP++/v+/Pz//f3NBgb77OzOCQnNCAjPERHicXHso6PQFhbni4vmhob0yMjNBATTJCTPFBTPDQ3tqan31tbODg7PEhLPExPPEBDUKyv65eXRHh776+vVLi7209PNCQnWNzf99vb99/f65ub++PjmhIT++vrdWVnYPDz99fXmgoLgZGT99PT87u7SHR3UKSn76enODAzWMTH1zMzojY3qmZnXOzvojIzywMD0ycn87+/tqKjPDw/tpaX429vfYGD54eH88vLniYn43t7ql5f42trle3vnioreXFzRHBz98/Ppk5PeWlrurKzSIyPjdHTqmprSICDcUVH54uLtpqbqlpbaRUXYPz/xvLz43d3ZRETTJyf0x8frnJz++fnxubnzxMTicnLQFBT1zc3ibm7bTEzfY2Pmg4Pjc3PplZXRGhrlfn7hbGzrn5/vsLDrnZ3dV1fgZmbbT0/TJibWNTXYQEDXOTnsoqLxurrtp6flfX376urcUlLWMzPokZHzxcXbS0vXNzfTIiLeXV365OTNAwP21tb1z8/0y8vOCwvvsbHib2/319fRGRnsoKD64+PzwsLcUVH66OjokJDyvr7ZRkbcVVXaSEj32dnVLS3zxsbniIj88PD21dXurq7jd3f88/P54ODVMDDVLy/kenr10dHqmJjeX1/jdXXwuLj43NzQGBjaSkrgamrlf3/77e3ZQ0PcVFTaR0faSUngaWnyv7/+/f3pkpLfX1/wtrbws7PvtLTOExPxvr7keXnha2vYQUHhIDI5AAAAOXRSTlMAHWEPFhTQARMa/qmMis/Lc/xWiK3F/dHr2g6OWcjTsAEcHtKsX+pd/qjq8vMB8nFwzRAC3ALs8fHw0WTlAAAFHklEQVQYGXXBBViUdxwH8D8K3FAQEOzO6ez18/2973t9dAgHRzeSQxAQUJABCkcoYKCCAYjdiTlrJiqPOZXp7Jy9cOV2d/g4MD4f1prIrKONbSdT0062Nh3NROzDTEZbWi9xcMk9eGqei8Nxa8tRJuz9TMy/uunZUFSw+4RG7XjjaU7tj9OGmZuwd/Ud9ElOWN5uDm/wm5xz8wcPGsHe0n3okJmlK6En9i7b7+gKPc2yee3at2WtmHXIyYoCwCfsOKsQBBKaqi7v4wAkuDh16cdaMOu2vd4b4Of8IqP/HR4nBlTrPLoZsTe6d9h+RQVo1wqkkx69rLEpl/QuXQS4iR5d2rLXRENz6oOALWFk8NKdn3xDQQaFBQCX4tRexJp9PCTLGygPpWYhd+3tU+g12XJAntauDTP4aHB2FLAllJpFNp5Z9Z30moSayZYCZQ1djZmexeUUQBtGJI09TdLG89O3nuO9NsqIyH+KhChkM2DvZM50TL4OWwn+GBFN5ffQnweSC45ymJxBOrcRSESBKqhujTRmjI2+uQI4J/waSPN493VSxYyHYkAZ0USyNY7wpFsSWg2snmbFmMjSMwl8Gh1MzIucDsymhb5TALc1Aq0D/MJLE3MpWw7vWksRM7M+xMFHIGkqvz6P457+QDsLgAtEU8fx3G/F/OZIol3Asc79WMcle4BHRNR0ARp1Pme3iI4DAYKLOxfjqMH8DCKaBbyw78lsHMYBaRJFXKGiHHIHZ0fX+UqAm6P0WuYRhLqd3xb6R4ZxSMq0YLYuSRBnKNyVKrkrgoOnAHCrrHQDUBwcBbFcrvI6LWihWdyHdZrniBqBGmbMv6gFsHuDK2bOvbeTE99JBfBNwJwZh4iiwNX2Yqan1HAjopC5/yRBx83Jrza4Yapjsg90Au4uiiaiOuBIb2Y6MxGbohfsVQIQK6G3zSdiLfSU3wMIenY7rg5I78063a/Bicc+HKfe+iiiBnq/BzvFQs8uJiZKI+YS/P8Ff6QXs3XxgTxO6usbGn+Hh91YAHaKn1YCSPQGP84/PMxXQvuR2NiH2TiUA+lENLcMqKtXQgPEzAbsoLq3i4f2JRHFi5GQacE6HncGJlKIvRgnTioSsCG0EqrJKAtdArfxs7TgXsXRH8CB6p7MzDqdRyodfPh8diFluVdEXuGgw2+XznFvoOjSuufZtBTY1tmIjbAMnA5xIFGTwwL/6x4LPb1gMPnwwmM+pxecjCeKV+No1Zi+jI2aFgMcIIqvDa6JpVPTUf0EqLjK+12jV+6bax8TRQDFO6wYYybD7qvhmk5U6uf14O9nSJItB1YL+1DR6OjtV0Tkawdx2nBjpmOevwq4Hi1krv1rUsTeiz9L9gPahfYB8/MnPSiZJZVtBNZP7MH0TAZnbQKmyCikiMIVRdmzoLNm5mz/cMqLI3IGNOldjZnBoHaL5cBVgSREJKFpqXZjK2aQhIgkRAvE4B3K27Bmfds7pXDAhnAymOCw4kxJFRnInMXA8uSBIvZad1MPZw7Y6kkGUkGQkkFYOYClkwa0ZW/06+ZR5AoE2ftSCxnOXgBfPenz/qwFoy4T67UAgtaXjBdIr+llrAaAelvygP6slbbt23mulkNHXLZlY/kTN1focOfTdw38lL3lizZdnWpf2KEF5fqzyV+2+Yy9y7jHyB0TSmID1DzAH60sPnlp1fAexuz9jK3GdLbPbDziUuWSllndeYyVMfswkVFPiz69evfu1ceip5GItfIf+KsOVzjAj48AAAAASUVORK5CYII=" /><!--lit-node 12-->
-        </div>
-        <!--lit-part dxaWJauwdOI=-->
-      <svg class="score-badge">
-        <!--lit-part 3hI+Rt5zlmU=--><svg>
-      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
-          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
-  </svg><!--/lit-part-->
-      </svg>
-    <!--/lit-part-->
-        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
-      </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
-              
-              
-             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
-    .match {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 10px;
-      width: 48px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-
-    .match > *:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
-    .match > small {
-      display: inline-flex;
-      justify-content: center;
-    }
-
-    .match-day {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .match-value {
-      opacity: 87%;
-      font-weight: 700;
-    }
-    .match-value.points {
-      font-size: medium;
-    }
-
-    .match-label {
-      opacity: 60%;
-      font-size: smaller;
-    }
-
-    .match-bar {
-      height: 200px;
-      background-color: #f5f7f6;
-      width: 24px;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-
-    .home-team-logo,
-    .away-team-logo {
-      width: 40%;
-      object-fit: contain;
-    }
-
-    .match-team-logos {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    svg.score-badge {
-      transform: skew(-10deg);
-      width: 80%;
-      height: 16px;
-    }
-
-    svg.score-badge rect {
-      fill: #f4f6f5;
-    }
-
-    svg.score-badge text {
-      font-size: 12px;
-      opacity: 80%;
-    }
-  </style><!--lit-part 4tyMDKunH1E=-->
-      <div class="match">
-        <div class="match-day">
           <small class="match-value"><!--lit-part-->32<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
@@ -1083,6 +982,107 @@ var x = new DOMParser()
         <div class="match-team-logos">
           <img class="home-team-logo" src="data:image/png;base64,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" /><!--lit-node 11-->
           <img class="away-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAC/VBMVEVHcEz87A786g/86g/qhxX99Ir86w741RH98Wn76hD86w/kXhj76g/+6g742RHzuhL86Q/87A/76A/86Q7riRX87A/87Q/76RD96A/rjBXztxL76g/86w/ncxftkxX87Tj971/87CX970/86xnxrWz87lH53BH87A/402n41hHvoBT76RD76g/87g/98FvyshP87g/87A/ytBP52RH76BDumBT86g/86w/pfBb64hDqhxbumhT2yRLrjhXlaRf41RH86g7ncxbtlRX2xxL86hDXyg376g+8sQzpgBbrjBXwpRT68G33zxHoehbqhBb40hHxrBPvohT2xxLxrBP75xDmaxf0wBL0vhLtlxX75xDlZRj2yBLlYxjndBf76g/75xDsjhXzuhPpfxbVBh3UAR3UAh3gS1z86xDndYHUBB7ncn/jWmrlaXjfRljfQ1TUBB3vpa3XEinaIhvYGRzUAx3iUxjYHBzcMBrumqPrjJbcNUbncX7XEhzoeIbmbXrla3junKTVCiLYGzLcM0ftlqDkYnHcMETZITfjXmzfRRnXFSzlZ3SglwqKggnxrRTd0A7z5BC8sQy9sgzePhrjWBjdNhr35xAJCAHbLBvlbHftlZ753uHjWmHiVmXriZPumWnWDifytbzXFy798fLkZHPhU2Hma2bgSlnYGTHXFyzdOUzeQFL////la3nePE/voqrcNUnuoKjjXGnaKT7XGBzpg411cA/49+X98mzgT132zdLcMxr76hC7jQ/49KjTxxPAtQz9842VjQrVCB3fQxnunBVeWQZoZAfvyRHXFhyPiAldVBX3znvUAxuroQt9dgjskBXeOxrOww2knAt8ZQnjWxhsaQfYGzMuHgQaGQJfWwb03BDcNRreQRmpnwvodhcAAADskpzskXfpgYyMhQlOSgUQEAHhnxJ9dwjlzg/771O2pgzqxxDkYnBTUAXm1w/zuRNhVgczMQP40BJ6YQnmbxeEfQnePRrKpQ/hYhfgTxn51hHWDRzriRbhUBl6x8IuAAAAlXRSTlMADGkI3/VCh9ALPv48BYfPMQSUFeNWUXsC9qopX/XWy8qH4HX+uoZI8orQIg9l0NZ0gM+fd87lN/qF39Cx3/ykJvnym2z6TMvq3uX1zfLnkbj5ts50+KK97r3+lvz4P2TY9fX//////////////////////////////////////////////////////////////////jQOg+4AAAHQSURBVDjLY2AYBaOAeMDDx85uKQ4ksAE1RmSlXJ3JyY5spclYwWR1ZKXM+iJTp4r5pSaxQIEVCwLYmqA6gdcj2V8qVU4CxBZ2sbcRchPE6VyguvgibmlOTk6ZiPL81L5J7iA2CmCGKmUqi4njLo6VlU2MSim7f3TvuXRXb1ZUoMQLUeowpUgmIaWmeMbflMmfX57etuf8vVdvO7ofX9+1Kbdhxaq63OwKFQGIUgnPkrDofEmmyKI/v7+8vnG8Z2Jv+qOuh1kl2ctzsjI3FuaktixThrrAuUREtPyfQHjKr2k/Pj24dmzagUlnzhbs3Jy5NCO3LWtDRsq6PFWoUtEZpWyhNSHBKT+/fXw3/dalU+m9B9u3Vi1p76pfmdNWu7apcJEGNDKE7cp8AosDglK/p7+fOP3ZhMv9h/a1ru7OmLugOS8jc31zXmvKfDaosaYXO2u++oqX53948/TFzf4JPfu3FzRW1FXVZlbXN7YUZlVen6MIVaq55YJT6V0xr/zi509uXznRt2fHmsXZabNmzk6rqK5MS1s4r6BDAZYQtIyE+K2Z2CSTU+9cPXJ4ipkeBzqQZ0SNN3N+7qKTuy2MdYhIkoI8Boa62qNZcxRQDACPG7bxBK4SagAAAABJRU5ErkJggg==" /><!--lit-node 12-->
+        </div>
+        <!--lit-part dxaWJauwdOI=-->
+      <svg class="score-badge">
+        <!--lit-part 3hI+Rt5zlmU=--><svg>
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
+        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+      </div>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+              
+              
+             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    .match {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      width: 48px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .match > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .match > small {
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .match-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .match-value {
+      opacity: 87%;
+      font-weight: 700;
+    }
+    .match-value.points {
+      font-size: medium;
+    }
+
+    .match-label {
+      opacity: 60%;
+      font-size: smaller;
+    }
+
+    .match-bar {
+      height: 200px;
+      background-color: #f5f7f6;
+      width: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .home-team-logo,
+    .away-team-logo {
+      width: 40%;
+      object-fit: contain;
+    }
+
+    .match-team-logos {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    svg.score-badge {
+      transform: skew(-10deg);
+      width: 80%;
+      height: 16px;
+    }
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
+
+    svg.score-badge text {
+      font-size: 12px;
+      opacity: 80%;
+    }
+  </style><!--lit-part 4tyMDKunH1E=-->
+      <div class="match">
+        <div class="match-day">
+          <small class="match-value"><!--lit-part-->34<!--/lit-part-->.</small>
+          <small class="match-label">Spieltag</small>
+        </div>
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, NaN%, #f5f7f6, NaN%, #f5f7f6);"><!--lit-node 5-->
+          <!--lit-part--><!--/lit-part-->
+          <!--lit-part--><!--/lit-part-->
+        </div>
+        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <div class="match-team-logos">
+          <img class="home-team-logo" src="data:image/png;base64,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" /><!--lit-node 11-->
+          <img class="away-team-logo" src="data:image/png;base64,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" /><!--lit-node 12-->
         </div>
         <!--lit-part dxaWJauwdOI=-->
       <svg class="score-badge">

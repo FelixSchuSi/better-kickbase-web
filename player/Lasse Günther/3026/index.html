@@ -96,7 +96,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="padding:0 !important;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="2h4LcD" component-url="/better-kickbase-web/player.page.64667e1b.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Lasse Günther" player-id="3026" team-id="47" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;3026&quot;,&quot;teamId&quot;:&quot;47&quot;,&quot;teamName&quot;:&quot;Regensburg&quot;,&quot;teamSymbol&quot;:&quot;REG&quot;,&quot;firstName&quot;:&quot;Lasse&quot;,&quot;lastName&quot;:&quot;Günther&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3026.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:27,&quot;averagePoints&quot;:32,&quot;totalPoints&quot;:447,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:-17,&quot;appearances&quot;:5,&quot;startingEleven&quot;:1,&quot;matches&quot;:[{&quot;match&quot;:7,&quot;points&quot;:-2,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:473,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:3,&quot;awayTeamId&quot;:13,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:20,&quot;points&quot;:4,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:2712,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:7,&quot;awayTeamId&quot;:13,&quot;homeTeamGoals&quot;:5,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:23,&quot;points&quot;:1,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1419,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:13,&quot;awayTeamId&quot;:5,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:2},{&quot;match&quot;:24,&quot;points&quot;:-3,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:317,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:13,&quot;awayTeamId&quot;:3,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:33,&quot;points&quot;:-17,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5544,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:43,&quot;awayTeamId&quot;:13,&quot;homeTeamGoals&quot;:4,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2021/2022&quot;},{&quot;points&quot;:447,&quot;appearances&quot;:14,&quot;startingEleven&quot;:6,&quot;matches&quot;:[{&quot;match&quot;:10,&quot;points&quot;:31,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:2912,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:48,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:11,&quot;points&quot;:19,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:5631,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:19,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:2},{&quot;match&quot;:12,&quot;points&quot;:287,&quot;goals&quot;:0,&quot;assists&quot;:2,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5949,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:30,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:3},{&quot;match&quot;:13,&quot;points&quot;:33,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:3555,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:35,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:14,&quot;points&quot;:14,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:5020,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:23,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:3},{&quot;match&quot;:15,&quot;points&quot;:41,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5584,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:6,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:3,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:16,&quot;points&quot;:24,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:2910,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:21,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:19,&quot;points&quot;:-10,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:433,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:22,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:3},{&quot;match&quot;:20,&quot;points&quot;:-7,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:693,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:16,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:21,&quot;points&quot;:23,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1175,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:17,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:22,&quot;points&quot;:6,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:508,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:27,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:23,&quot;points&quot;:-20,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1500,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:12,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:25,&quot;points&quot;:20,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1265,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:29,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:26,&quot;points&quot;:-14,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:536,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:39,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2022/2023&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:32,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Lasse&quot;,&quot;id&quot;:&quot;3026&quot;,&quot;lastName&quot;:&quot;Günther&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:786490,&quot;mvHighDate&quot;:&quot;2022-07-03T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-01-10T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2023-05-06T11:00:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;23&quot;,&quot;homeTeamName&quot;:&quot;Hansa Rostock&quot;,&quot;homeTeamNameShort&quot;:&quot;HRO&quot;,&quot;awayTeamId&quot;:&quot;47&quot;,&quot;awayTeamName&quot;:&quot;Regensburg&quot;,&quot;awayTeamNameShort&quot;:&quot;REG&quot;,&quot;match&quot;:31,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-14T11:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;47&quot;,&quot;homeTeamName&quot;:&quot;Regensburg&quot;,&quot;homeTeamNameShort&quot;:&quot;REG&quot;,&quot;awayTeamId&quot;:&quot;6&quot;,&quot;awayTeamName&quot;:&quot;Hamburg&quot;,&quot;awayTeamNameShort&quot;:&quot;HSV&quot;,&quot;match&quot;:32,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-20T11:00:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;21&quot;,&quot;homeTeamName&quot;:&quot;Braunschw.&quot;,&quot;homeTeamNameShort&quot;:&quot;EBS&quot;,&quot;awayTeamId&quot;:&quot;47&quot;,&quot;awayTeamName&quot;:&quot;Regensburg&quot;,&quot;awayTeamNameShort&quot;:&quot;REG&quot;,&quot;match&quot;:33,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:27,&quot;points&quot;:447,&quot;position&quot;:3,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;14&quot;,&quot;season&quot;:&quot;2021/2022&quot;,&quot;points&quot;:-17,&quot;matches&quot;:5,&quot;startMatches&quot;:1,&quot;secondsPlayed&quot;:10465,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:1,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;17&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;points&quot;:447,&quot;matches&quot;:14,&quot;startMatches&quot;:6,&quot;secondsPlayed&quot;:37671,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:2,&quot;redCards&quot;:0,&quot;yellowCards&quot;:2,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamId&quot;:&quot;47&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="MYQFW" component-url="/better-kickbase-web/player.page.64667e1b.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Lasse Günther" player-id="3026" team-id="47" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;3026&quot;,&quot;teamId&quot;:&quot;47&quot;,&quot;teamName&quot;:&quot;Regensburg&quot;,&quot;teamSymbol&quot;:&quot;REG&quot;,&quot;firstName&quot;:&quot;Lasse&quot;,&quot;lastName&quot;:&quot;Günther&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/3026.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:3,&quot;number&quot;:27,&quot;averagePoints&quot;:31,&quot;totalPoints&quot;:470,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:-17,&quot;appearances&quot;:5,&quot;startingEleven&quot;:1,&quot;matches&quot;:[{&quot;match&quot;:7,&quot;points&quot;:-2,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:473,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:3,&quot;awayTeamId&quot;:13,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:20,&quot;points&quot;:4,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:2712,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:7,&quot;awayTeamId&quot;:13,&quot;homeTeamGoals&quot;:5,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:23,&quot;points&quot;:1,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1419,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:13,&quot;awayTeamId&quot;:5,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:2},{&quot;match&quot;:24,&quot;points&quot;:-3,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:317,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:13,&quot;awayTeamId&quot;:3,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:33,&quot;points&quot;:-17,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5544,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:43,&quot;awayTeamId&quot;:13,&quot;homeTeamGoals&quot;:4,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2021/2022&quot;},{&quot;points&quot;:470,&quot;appearances&quot;:15,&quot;startingEleven&quot;:7,&quot;matches&quot;:[{&quot;match&quot;:10,&quot;points&quot;:31,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:2912,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:48,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:11,&quot;points&quot;:19,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:5631,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:19,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:2},{&quot;match&quot;:12,&quot;points&quot;:287,&quot;goals&quot;:0,&quot;assists&quot;:2,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5949,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:30,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:3},{&quot;match&quot;:13,&quot;points&quot;:33,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:3555,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:35,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:14,&quot;points&quot;:14,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:5020,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:23,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:3},{&quot;match&quot;:15,&quot;points&quot;:41,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5584,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:6,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:3,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:16,&quot;points&quot;:24,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:2910,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:21,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:19,&quot;points&quot;:-10,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:433,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:22,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:3},{&quot;match&quot;:20,&quot;points&quot;:-7,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:693,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:16,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:21,&quot;points&quot;:23,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1175,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:17,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:22,&quot;points&quot;:6,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:508,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:27,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:23,&quot;points&quot;:-20,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1500,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:12,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:25,&quot;points&quot;:20,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:1265,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:47,&quot;awayTeamId&quot;:29,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:26,&quot;points&quot;:-14,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:536,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:39,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0},{&quot;match&quot;:31,&quot;points&quot;:23,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:4341,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:23,&quot;awayTeamId&quot;:47,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2022/2023&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:31,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Lasse&quot;,&quot;id&quot;:&quot;3026&quot;,&quot;lastName&quot;:&quot;Günther&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:786490,&quot;mvHighDate&quot;:&quot;2022-07-03T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-01-10T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2023-05-14T11:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;47&quot;,&quot;homeTeamName&quot;:&quot;Regensburg&quot;,&quot;homeTeamNameShort&quot;:&quot;REG&quot;,&quot;awayTeamId&quot;:&quot;6&quot;,&quot;awayTeamName&quot;:&quot;Hamburg&quot;,&quot;awayTeamNameShort&quot;:&quot;HSV&quot;,&quot;match&quot;:32,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-20T11:00:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;21&quot;,&quot;homeTeamName&quot;:&quot;Braunschw.&quot;,&quot;homeTeamNameShort&quot;:&quot;EBS&quot;,&quot;awayTeamId&quot;:&quot;47&quot;,&quot;awayTeamName&quot;:&quot;Regensburg&quot;,&quot;awayTeamNameShort&quot;:&quot;REG&quot;,&quot;match&quot;:33,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-05-28T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;47&quot;,&quot;homeTeamName&quot;:&quot;Regensburg&quot;,&quot;homeTeamNameShort&quot;:&quot;REG&quot;,&quot;awayTeamId&quot;:&quot;50&quot;,&quot;awayTeamName&quot;:&quot;Heidenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;HDH&quot;,&quot;match&quot;:34,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:27,&quot;points&quot;:470,&quot;position&quot;:3,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;14&quot;,&quot;season&quot;:&quot;2021/2022&quot;,&quot;points&quot;:-17,&quot;matches&quot;:5,&quot;startMatches&quot;:1,&quot;secondsPlayed&quot;:10465,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:1,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;17&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;points&quot;:470,&quot;matches&quot;:15,&quot;startMatches&quot;:7,&quot;secondsPlayed&quot;:42012,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:2,&quot;redCards&quot;:0,&quot;yellowCards&quot;:2,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamId&quot;:&quot;47&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -2272,27 +2272,7 @@ var x = new DOMParser()
     <!--/lit-part-->
         <small class="match-value"><!--lit-part-->9<!--/lit-part-->'</small>
       </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--/lit-part-->
-        <div class="season-summary">
-          <div class="season-summary-details">
-            <div class="season-summary-details-value"><!--lit-part-->2022/2023<!--/lit-part--></div>
-            <div class="season-summary-details-key">Saison Auswertung</div>
-            <div class="season-summary-details-value"><!--lit-part-->447<!--/lit-part--></div>
-            <div class="season-summary-details-key">Punkte</div>
-            <div class="season-summary-details-value"><!--lit-part-->32<!--/lit-part--></div>
-            <div class="season-summary-details-key">∅ Punkte</div>
-            <div class="season-summary-details-value"><!--lit-part-->14<!--/lit-part--></div>
-            <div class="season-summary-details-key">Einsätze</div>
-            <div class="season-summary-details-value"><!--lit-part-->6<!--/lit-part--></div>
-            <div class="season-summary-details-key">Startelf</div>
-          </div>
-        </div>
-      </div>
-    <!--/lit-part--><!--/lit-part-->
-        <!--lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
-              
-              
-             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part 4BvMYJeDH1k=--><bkb-player-points-match   defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
     .match {
       display: flex;
       flex-direction: column;
@@ -2371,11 +2351,11 @@ var x = new DOMParser()
           <small class="match-value"><!--lit-part-->31<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 8%, #f5f7f6, 8%, #f5f7f6);"><!--lit-node 5-->
           <!--lit-part--><!--/lit-part-->
           <!--lit-part--><!--/lit-part-->
         </div>
-        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <small class="match-value points"><!--lit-part-->23<!--/lit-part--></small>
         <div class="match-team-logos">
           <img class="home-team-logo" src="" /><!--lit-node 11-->
           <img class="away-team-logo" src="" /><!--lit-node 12-->
@@ -2384,13 +2364,30 @@ var x = new DOMParser()
       <svg class="score-badge">
         <!--lit-part 3hI+Rt5zlmU=--><svg>
       <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
-          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->2<!--/lit-part--> : <!--lit-part-->0<!--/lit-part--></text>
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+        <small class="match-value"><!--lit-part-->72<!--/lit-part-->'</small>
       </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--/lit-part-->
+        <div class="season-summary">
+          <div class="season-summary-details">
+            <div class="season-summary-details-value"><!--lit-part-->2022/2023<!--/lit-part--></div>
+            <div class="season-summary-details-key">Saison Auswertung</div>
+            <div class="season-summary-details-value"><!--lit-part-->470<!--/lit-part--></div>
+            <div class="season-summary-details-key">Punkte</div>
+            <div class="season-summary-details-value"><!--lit-part-->31<!--/lit-part--></div>
+            <div class="season-summary-details-key">∅ Punkte</div>
+            <div class="season-summary-details-value"><!--lit-part-->15<!--/lit-part--></div>
+            <div class="season-summary-details-key">Einsätze</div>
+            <div class="season-summary-details-value"><!--lit-part-->7<!--/lit-part--></div>
+            <div class="season-summary-details-key">Startelf</div>
+          </div>
+        </div>
+      </div>
+    <!--/lit-part--><!--/lit-part-->
+        <!--lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
               
               
              defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
@@ -2571,6 +2568,107 @@ var x = new DOMParser()
       <div class="match">
         <div class="match-day">
           <small class="match-value"><!--lit-part-->33<!--/lit-part-->.</small>
+          <small class="match-label">Spieltag</small>
+        </div>
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
+          <!--lit-part--><!--/lit-part-->
+          <!--lit-part--><!--/lit-part-->
+        </div>
+        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <div class="match-team-logos">
+          <img class="home-team-logo" src="" /><!--lit-node 11-->
+          <img class="away-team-logo" src="" /><!--lit-node 12-->
+        </div>
+        <!--lit-part dxaWJauwdOI=-->
+      <svg class="score-badge">
+        <!--lit-part 3hI+Rt5zlmU=--><svg>
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
+        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+      </div>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+              
+              
+             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    .match {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      width: 48px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .match > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .match > small {
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .match-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .match-value {
+      opacity: 87%;
+      font-weight: 700;
+    }
+    .match-value.points {
+      font-size: medium;
+    }
+
+    .match-label {
+      opacity: 60%;
+      font-size: smaller;
+    }
+
+    .match-bar {
+      height: 200px;
+      background-color: #f5f7f6;
+      width: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .home-team-logo,
+    .away-team-logo {
+      width: 40%;
+      object-fit: contain;
+    }
+
+    .match-team-logos {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    svg.score-badge {
+      transform: skew(-10deg);
+      width: 80%;
+      height: 16px;
+    }
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
+
+    svg.score-badge text {
+      font-size: 12px;
+      opacity: 80%;
+    }
+  </style><!--lit-part 4tyMDKunH1E=-->
+      <div class="match">
+        <div class="match-day">
+          <small class="match-value"><!--lit-part-->34<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
         <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
