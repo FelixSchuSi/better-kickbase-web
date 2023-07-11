@@ -24,7 +24,8 @@ export class BundesligaTableService {
       { goadDifference: 0, matches: 0, points: 0, place: 4, teamId: '43', teamName: 'Leipzig', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 17, teamId: '10', teamName: 'Bremen', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 14, teamId: '13', teamName: 'Augsburg', trend: 0 },
-      { goadDifference: 0, matches: 0, points: 0, place: 18, teamId: '8', teamName: 'Schalke', trend: 0 },
+      // { goadDifference: 0, matches: 0, points: 0, place: 18, teamId: '8', teamName: 'Schalke', trend: 0 },
+      { goadDifference: 0, matches: 0, points: 0, place: 18, teamId: '42', teamName: 'Darmstadt', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 8, teamId: '18', teamName: 'Mainz 05', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 11, teamId: '4', teamName: 'Frankfurt', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 15, teamId: '9', teamName: 'Stuttgart', trend: 0 },
@@ -38,7 +39,8 @@ export class BundesligaTableService {
       { goadDifference: 0, matches: 0, points: 0, place: 12, teamId: '11', teamName: 'Wolfsburg', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 1, teamId: '2', teamName: 'Bayern', trend: 0 },
       { goadDifference: 0, matches: 0, points: 0, place: 2, teamId: '3', teamName: 'Dortmund', trend: 0 },
-      { goadDifference: 0, matches: 0, points: 0, place: 16, teamId: '20', teamName: 'Hertha', trend: 0 }
+      // { goadDifference: 0, matches: 0, points: 0, place: 16, teamId: '20', teamName: 'Hertha', trend: 0 }
+      { goadDifference: 0, matches: 0, points: 0, place: 16, teamId: '50', teamName: 'Heidenheim', trend: 0 }
     ];
     const bundesligaTable: BundesligaTable = {
       matchDay: 1,

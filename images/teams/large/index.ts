@@ -18,6 +18,8 @@ import team_24 from './24.png';
 import team_28 from './28.png';
 import team_40 from './40.png';
 import team_43 from './43.png';
+import team_50 from './50.png';
+import team_42 from './42.png';
 
 export const teamLogosLarge = {
   team_2,
@@ -39,5 +41,7 @@ export const teamLogosLarge = {
   team_24,
   team_28,
   team_40,
-  team_43
+  team_43,
+  team_50,
+  team_42
 };

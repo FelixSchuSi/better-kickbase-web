@@ -19,6 +19,8 @@ export enum TEAM_NAMES {
   DORTMUND = 'Dortmund',
   BREMEN = 'Bremen',
   SCHALKE = 'Schalke',
+  HEIDENHEIM = 'Heidenheim',
+  DARMSTADT = 'Darmstadt',
   INACTIVE_PLAYERS = 'Inaktive Spieler'
 }
 // Bochum 24
@@ -61,6 +63,8 @@ export enum TEAM_IDS {
   DORTMUND = 3,
   BREMEN = 10,
   SCHALKE = 8,
+  HEIDENHEIM = 50,
+  DARMSTADT = 42,
   INACTIVE_PLAYERS = -1
 }
 
@@ -106,6 +110,10 @@ export function getTeamIdFromTeamName(team: TEAM_NAMES): TEAM_IDS {
       return TEAM_IDS.SCHALKE;
     case TEAM_NAMES.BREMEN:
       return TEAM_IDS.BREMEN;
+    case TEAM_NAMES.HEIDENHEIM:
+      return TEAM_IDS.HEIDENHEIM;
+    case TEAM_NAMES.DARMSTADT:
+      return TEAM_IDS.DARMSTADT;
     default:
     case TEAM_NAMES.INACTIVE_PLAYERS:
       return TEAM_IDS.INACTIVE_PLAYERS;

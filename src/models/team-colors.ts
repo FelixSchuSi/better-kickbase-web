@@ -41,6 +41,8 @@ export const teamColors = css`
     --team-primary-color-9: #e32219;
     --team-primary-color-18: #e30713;
     --team-primary-color-4: #e10010;
+    --team-primary-color-50: #e10016;
+    --team-primary-color-42: #014d9e;
   }
   .team-primary-color-4 {
     background-color: var(--team-primary-color-4);
@@ -95,5 +97,11 @@ export const teamColors = css`
   }
   .team-primary-color-18 {
     background-color: var(--team-primary-color-18);
+  }
+  .team-primary-color-50 {
+    background-color: var(--team-primary-color-50);
+  }
+  .team-primary-color-42 {
+    background-color: var(--team-primary-color-42);
   }
 `;
