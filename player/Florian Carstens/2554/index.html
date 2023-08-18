@@ -96,7 +96,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="padding:0 !important;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z1iIOmp" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Florian Carstens" player-id="2554" team-id="75" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;2554&quot;,&quot;teamId&quot;:&quot;75&quot;,&quot;teamName&quot;:&quot;Wiesbaden&quot;,&quot;teamSymbol&quot;:&quot;WEH&quot;,&quot;firstName&quot;:&quot;Florian&quot;,&quot;lastName&quot;:&quot;Carstens&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/teamsdummies/75.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/f1211e91b26e4dc0bc4787058acdc8ca.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:17,&quot;averagePoints&quot;:74,&quot;totalPoints&quot;:147,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:147,&quot;appearances&quot;:2,&quot;startingEleven&quot;:1,&quot;matches&quot;:[{&quot;match&quot;:1,&quot;points&quot;:33,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:2191,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:75,&quot;awayTeamId&quot;:48,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:2,&quot;points&quot;:114,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5817,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:20,&quot;awayTeamId&quot;:75,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:1}],&quot;year&quot;:&quot;2023/2024&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:74,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Florian&quot;,&quot;id&quot;:&quot;2554&quot;,&quot;lastName&quot;:&quot;Carstens&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:500000,&quot;mvHighDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2023-08-18T16:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;75&quot;,&quot;homeTeamName&quot;:&quot;Wiesbaden&quot;,&quot;homeTeamNameShort&quot;:&quot;WEH&quot;,&quot;awayTeamId&quot;:&quot;27&quot;,&quot;awayTeamName&quot;:&quot;Karlsruher SC&quot;,&quot;awayTeamNameShort&quot;:&quot;KSC&quot;,&quot;match&quot;:3,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-08-27T11:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;16&quot;,&quot;homeTeamName&quot;:&quot;Nürnberg&quot;,&quot;homeTeamNameShort&quot;:&quot;FCN&quot;,&quot;awayTeamId&quot;:&quot;75&quot;,&quot;awayTeamName&quot;:&quot;Wiesbaden&quot;,&quot;awayTeamNameShort&quot;:&quot;WEH&quot;,&quot;match&quot;:4,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-09-02T11:00:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;75&quot;,&quot;homeTeamName&quot;:&quot;Wiesbaden&quot;,&quot;homeTeamNameShort&quot;:&quot;WEH&quot;,&quot;awayTeamId&quot;:&quot;8&quot;,&quot;awayTeamName&quot;:&quot;Schalke&quot;,&quot;awayTeamNameShort&quot;:&quot;S04&quot;,&quot;match&quot;:5,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:17,&quot;points&quot;:147,&quot;position&quot;:2,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;12&quot;,&quot;season&quot;:&quot;2019/2020&quot;,&quot;defensiveAverage&quot;:488,&quot;offensiveAverage&quot;:658,&quot;generalAverage&quot;:115,&quot;teamAverage&quot;:94,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;21&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;points&quot;:147,&quot;matches&quot;:2,&quot;startMatches&quot;:1,&quot;secondsPlayed&quot;:8008,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:1,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamId&quot;:&quot;75&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/f1211e91b26e4dc0bc4787058acdc8ca.png&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="ZNUxH6" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Florian Carstens" player-id="2554" team-id="75" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;2554&quot;,&quot;teamId&quot;:&quot;75&quot;,&quot;teamName&quot;:&quot;Wiesbaden&quot;,&quot;teamSymbol&quot;:&quot;WEH&quot;,&quot;firstName&quot;:&quot;Florian&quot;,&quot;lastName&quot;:&quot;Carstens&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/teamsdummies/75.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/f1211e91b26e4dc0bc4787058acdc8ca.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:2,&quot;number&quot;:17,&quot;averagePoints&quot;:102,&quot;totalPoints&quot;:307,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:307,&quot;appearances&quot;:3,&quot;startingEleven&quot;:2,&quot;matches&quot;:[{&quot;match&quot;:1,&quot;points&quot;:33,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:2191,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:75,&quot;awayTeamId&quot;:48,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:2,&quot;points&quot;:114,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:0,&quot;playtimeSeconds&quot;:5817,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:20,&quot;awayTeamId&quot;:75,&quot;homeTeamGoals&quot;:0,&quot;awayTeamGoals&quot;:1},{&quot;match&quot;:3,&quot;points&quot;:160,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:6020,&quot;startingEleven&quot;:true,&quot;homeTeamId&quot;:75,&quot;awayTeamId&quot;:27,&quot;homeTeamGoals&quot;:1,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2023/2024&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:102,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Florian&quot;,&quot;id&quot;:&quot;2554&quot;,&quot;lastName&quot;:&quot;Carstens&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:500000,&quot;mvHighDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2023-08-27T11:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;16&quot;,&quot;homeTeamName&quot;:&quot;Nürnberg&quot;,&quot;homeTeamNameShort&quot;:&quot;FCN&quot;,&quot;awayTeamId&quot;:&quot;75&quot;,&quot;awayTeamName&quot;:&quot;Wiesbaden&quot;,&quot;awayTeamNameShort&quot;:&quot;WEH&quot;,&quot;match&quot;:4,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-09-02T11:00:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;75&quot;,&quot;homeTeamName&quot;:&quot;Wiesbaden&quot;,&quot;homeTeamNameShort&quot;:&quot;WEH&quot;,&quot;awayTeamId&quot;:&quot;8&quot;,&quot;awayTeamName&quot;:&quot;Schalke&quot;,&quot;awayTeamNameShort&quot;:&quot;S04&quot;,&quot;match&quot;:5,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2023-09-15T16:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;29&quot;,&quot;homeTeamName&quot;:&quot;Paderborn&quot;,&quot;homeTeamNameShort&quot;:&quot;SCP&quot;,&quot;awayTeamId&quot;:&quot;75&quot;,&quot;awayTeamName&quot;:&quot;Wiesbaden&quot;,&quot;awayTeamNameShort&quot;:&quot;WEH&quot;,&quot;match&quot;:6,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:17,&quot;points&quot;:307,&quot;position&quot;:2,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;12&quot;,&quot;season&quot;:&quot;2019/2020&quot;,&quot;defensiveAverage&quot;:488,&quot;offensiveAverage&quot;:658,&quot;generalAverage&quot;:115,&quot;teamAverage&quot;:94,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;21&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;points&quot;:307,&quot;matches&quot;:3,&quot;startMatches&quot;:2,&quot;secondsPlayed&quot;:14028,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:1,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamId&quot;:&quot;75&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/f1211e91b26e4dc0bc4787058acdc8ca.png&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -469,7 +469,7 @@ var x = new DOMParser()
           <small class="match-value"><!--lit-part-->1<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 29%, #f5f7f6, 29%, #f5f7f6);"><!--lit-node 5-->
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 21%, #f5f7f6, 21%, #f5f7f6);"><!--lit-node 5-->
           <!--lit-part--><!--/lit-part-->
           <!--lit-part--><!--/lit-part-->
         </div>
@@ -567,7 +567,7 @@ var x = new DOMParser()
           <small class="match-value"><!--lit-part-->2<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #25c28b, #25c28b, 100%, #f5f7f6, 100%, #f5f7f6);"><!--lit-node 5-->
+        <div class="match-bar" style="background:linear-gradient(to top, #25c28b, #25c28b, 71%, #f5f7f6, 71%, #f5f7f6);"><!--lit-node 5-->
           <!--lit-part--><!--/lit-part-->
           <!--lit-part--><!--/lit-part-->
         </div>
@@ -586,27 +586,7 @@ var x = new DOMParser()
     <!--/lit-part-->
         <small class="match-value"><!--lit-part-->97<!--/lit-part-->'</small>
       </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--/lit-part-->
-        <div class="season-summary">
-          <div class="season-summary-details">
-            <div class="season-summary-details-value"><!--lit-part-->2023/2024<!--/lit-part--></div>
-            <div class="season-summary-details-key">Saison Auswertung</div>
-            <div class="season-summary-details-value"><!--lit-part-->147<!--/lit-part--></div>
-            <div class="season-summary-details-key">Punkte</div>
-            <div class="season-summary-details-value"><!--lit-part-->74<!--/lit-part--></div>
-            <div class="season-summary-details-key">∅ Punkte</div>
-            <div class="season-summary-details-value"><!--lit-part-->2<!--/lit-part--></div>
-            <div class="season-summary-details-key">Einsätze</div>
-            <div class="season-summary-details-value"><!--lit-part-->1<!--/lit-part--></div>
-            <div class="season-summary-details-key">Startelf</div>
-          </div>
-        </div>
-      </div>
-    <!--/lit-part--><!--/lit-part-->
-        <!--lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
-              
-              
-             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part 4BvMYJeDH1k=--><bkb-player-points-match   defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
     .match {
       display: flex;
       flex-direction: column;
@@ -685,11 +665,11 @@ var x = new DOMParser()
           <small class="match-value"><!--lit-part-->3<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
+        <div class="match-bar" style="background:linear-gradient(to top, #25c28b, #25c28b, 100%, #f5f7f6, 100%, #f5f7f6);"><!--lit-node 5-->
           <!--lit-part--><!--/lit-part-->
           <!--lit-part--><!--/lit-part-->
         </div>
-        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <small class="match-value points"><!--lit-part-->160<!--/lit-part--></small>
         <div class="match-team-logos">
           <img class="home-team-logo" src="" /><!--lit-node 11-->
           <img class="away-team-logo" src="" /><!--lit-node 12-->
@@ -698,13 +678,30 @@ var x = new DOMParser()
       <svg class="score-badge">
         <!--lit-part 3hI+Rt5zlmU=--><svg>
       <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
-          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->1<!--/lit-part--> : <!--lit-part-->0<!--/lit-part--></text>
   </svg><!--/lit-part-->
       </svg>
     <!--/lit-part-->
-        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+        <small class="match-value"><!--lit-part-->100<!--/lit-part-->'</small>
       </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--/lit-part-->
+        <div class="season-summary">
+          <div class="season-summary-details">
+            <div class="season-summary-details-value"><!--lit-part-->2023/2024<!--/lit-part--></div>
+            <div class="season-summary-details-key">Saison Auswertung</div>
+            <div class="season-summary-details-value"><!--lit-part-->307<!--/lit-part--></div>
+            <div class="season-summary-details-key">Punkte</div>
+            <div class="season-summary-details-value"><!--lit-part-->102<!--/lit-part--></div>
+            <div class="season-summary-details-key">∅ Punkte</div>
+            <div class="season-summary-details-value"><!--lit-part-->3<!--/lit-part--></div>
+            <div class="season-summary-details-key">Einsätze</div>
+            <div class="season-summary-details-value"><!--lit-part-->2<!--/lit-part--></div>
+            <div class="season-summary-details-key">Startelf</div>
+          </div>
+        </div>
+      </div>
+    <!--/lit-part--><!--/lit-part-->
+        <!--lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
               
               
              defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
@@ -895,6 +892,107 @@ var x = new DOMParser()
         <div class="match-team-logos">
           <img class="home-team-logo" src="" /><!--lit-node 11-->
           <img class="away-team-logo" src="data:image/png;base64,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" /><!--lit-node 12-->
+        </div>
+        <!--lit-part dxaWJauwdOI=-->
+      <svg class="score-badge">
+        <!--lit-part 3hI+Rt5zlmU=--><svg>
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
+        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+      </div>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+              
+              
+             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    .match {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      width: 48px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .match > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .match > small {
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .match-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .match-value {
+      opacity: 87%;
+      font-weight: 700;
+    }
+    .match-value.points {
+      font-size: medium;
+    }
+
+    .match-label {
+      opacity: 60%;
+      font-size: smaller;
+    }
+
+    .match-bar {
+      height: 200px;
+      background-color: #f5f7f6;
+      width: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .home-team-logo,
+    .away-team-logo {
+      width: 40%;
+      object-fit: contain;
+    }
+
+    .match-team-logos {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    svg.score-badge {
+      transform: skew(-10deg);
+      width: 80%;
+      height: 16px;
+    }
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
+
+    svg.score-badge text {
+      font-size: 12px;
+      opacity: 80%;
+    }
+  </style><!--lit-part 4tyMDKunH1E=-->
+      <div class="match">
+        <div class="match-day">
+          <small class="match-value"><!--lit-part-->6<!--/lit-part-->.</small>
+          <small class="match-label">Spieltag</small>
+        </div>
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
+          <!--lit-part--><!--/lit-part-->
+          <!--lit-part--><!--/lit-part-->
+        </div>
+        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <div class="match-team-logos">
+          <img class="home-team-logo" src="" /><!--lit-node 11-->
+          <img class="away-team-logo" src="" /><!--lit-node 12-->
         </div>
         <!--lit-part dxaWJauwdOI=-->
       <svg class="score-badge">
