@@ -96,7 +96,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="padding:0 !important;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="FsmYG" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Simon Simoni" player-id="4546" team-id="4" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;4546&quot;,&quot;teamId&quot;:&quot;4&quot;,&quot;teamName&quot;:&quot;Frankfurt&quot;,&quot;teamSymbol&quot;:&quot;SGE&quot;,&quot;firstName&quot;:&quot;Simon&quot;,&quot;lastName&quot;:&quot;Simoni&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4546.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/80fe7ac3b0f643e2af669f6f77f4a5a6.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/5310f4354cbf4abd82c9a23495c812c6.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:41,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Simon&quot;,&quot;id&quot;:&quot;4546&quot;,&quot;lastName&quot;:&quot;Simoni&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:1803647,&quot;mvHighDate&quot;:&quot;2023-08-20T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2023-01-02T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2024-01-13T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;43&quot;,&quot;homeTeamName&quot;:&quot;Leipzig&quot;,&quot;homeTeamNameShort&quot;:&quot;RBL&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:17,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-01-20T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;42&quot;,&quot;homeTeamName&quot;:&quot;Darmstadt&quot;,&quot;homeTeamNameShort&quot;:&quot;D98&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:18,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-01-26T19:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;4&quot;,&quot;homeTeamName&quot;:&quot;Frankfurt&quot;,&quot;homeTeamNameShort&quot;:&quot;SGE&quot;,&quot;awayTeamId&quot;:&quot;18&quot;,&quot;awayTeamName&quot;:&quot;Mainz 05&quot;,&quot;awayTeamNameShort&quot;:&quot;M05&quot;,&quot;match&quot;:19,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:41,&quot;points&quot;:0,&quot;position&quot;:1,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;20&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/5310f4354cbf4abd82c9a23495c812c6.png&quot;,&quot;teamId&quot;:&quot;4&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/80fe7ac3b0f643e2af669f6f77f4a5a6.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z1TjO90" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Simon Simoni" player-id="4546" team-id="4" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;4546&quot;,&quot;teamId&quot;:&quot;4&quot;,&quot;teamName&quot;:&quot;Frankfurt&quot;,&quot;teamSymbol&quot;:&quot;SGE&quot;,&quot;firstName&quot;:&quot;Simon&quot;,&quot;lastName&quot;:&quot;Simoni&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/4546.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/80fe7ac3b0f643e2af669f6f77f4a5a6.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/5310f4354cbf4abd82c9a23495c812c6.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:41,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Simon&quot;,&quot;id&quot;:&quot;4546&quot;,&quot;lastName&quot;:&quot;Simoni&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:1803647,&quot;mvHighDate&quot;:&quot;2023-08-20T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2023-01-02T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2024-01-20T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;42&quot;,&quot;homeTeamName&quot;:&quot;Darmstadt&quot;,&quot;homeTeamNameShort&quot;:&quot;D98&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:18,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-01-26T19:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;4&quot;,&quot;homeTeamName&quot;:&quot;Frankfurt&quot;,&quot;homeTeamNameShort&quot;:&quot;SGE&quot;,&quot;awayTeamId&quot;:&quot;18&quot;,&quot;awayTeamName&quot;:&quot;Mainz 05&quot;,&quot;awayTeamNameShort&quot;:&quot;M05&quot;,&quot;match&quot;:19,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-02-03T17:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;28&quot;,&quot;homeTeamName&quot;:&quot;Köln&quot;,&quot;homeTeamNameShort&quot;:&quot;KOE&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:20,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:41,&quot;points&quot;:0,&quot;position&quot;:1,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;20&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/5310f4354cbf4abd82c9a23495c812c6.png&quot;,&quot;teamId&quot;:&quot;4&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/80fe7ac3b0f643e2af669f6f77f4a5a6.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -468,107 +468,6 @@ var x = new DOMParser()
   </style><!--lit-part 4tyMDKunH1E=-->
       <div class="match">
         <div class="match-day">
-          <small class="match-value"><!--lit-part-->17<!--/lit-part-->.</small>
-          <small class="match-label">Spieltag</small>
-        </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
-          <!--lit-part--><!--/lit-part-->
-          <!--lit-part--><!--/lit-part-->
-        </div>
-        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
-        <div class="match-team-logos">
-          <img class="home-team-logo" src="data:image/png;base64,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" /><!--lit-node 11-->
-          <img class="away-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAADAFBMVEVHcEzMAADMAADNAADMAADNAADNBATLAADMAADMAADbT0/MAADMAADMAADNBQXMAwPMAADVLS3MAADMAADMAADMAgLVLy/NBQXQExPNCQnMAADMAADMAADMAgLMBQXMAADOAADNAADLAADNBgbMAADMAADPEhLMAADbTU3MAADPEhLRGRnRGxvSAADRGhrMAADMAADNBATOAADMAADOCgrIAADQFBTQGRnQGBjMAADMAAD////MAgLMAQH//v7MAwP++/v+/Pz//f3NBgb77OzOCQnNCAjPERHicXHso6PQFhbni4vmhob0yMjNBATTJCTPFBTPDQ3tqan31tbODg7PEhLPExPPEBDUKyv65eXRHh776+vVLi7209PNCQnWNzf99vb99/f65ub++PjmhIT++vrdWVnYPDz99fXmgoLgZGT99PT87u7SHR3UKSn76enODAzWMTH1zMzojY3qmZnXOzvojIzywMD0ycn87+/tqKjPDw/tpaX429vfYGD54eH88vLniYn43t7ql5f42trle3vnioreXFzRHBz98/Ppk5PeWlrurKzSIyPjdHTqmprSICDcUVH54uLtpqbqlpbaRUXYPz/xvLz43d3ZRETTJyf0x8frnJz++fnxubnzxMTicnLQFBT1zc3ibm7bTEzfY2Pmg4Pjc3PplZXRGhrlfn7hbGzrn5/vsLDrnZ3dV1fgZmbbT0/TJibWNTXYQEDXOTnsoqLxurrtp6flfX376urcUlLWMzPokZHzxcXbS0vXNzfTIiLeXV365OTNAwP21tb1z8/0y8vOCwvvsbHib2/319fRGRnsoKD64+PzwsLcUVH66OjokJDyvr7ZRkbcVVXaSEj32dnVLS3zxsbniIj88PD21dXurq7jd3f88/P54ODVMDDVLy/kenr10dHqmJjeX1/jdXXwuLj43NzQGBjaSkrgamrlf3/77e3ZQ0PcVFTaR0faSUngaWnyv7/+/f3pkpLfX1/wtrbws7PvtLTOExPxvr7keXnha2vYQUHhIDI5AAAAOXRSTlMAHWEPFhTQARMa/qmMis/Lc/xWiK3F/dHr2g6OWcjTsAEcHtKsX+pd/qjq8vMB8nFwzRAC3ALs8fHw0WTlAAAFHklEQVQYGXXBBViUdxwH8D8K3FAQEOzO6ez18/2973t9dAgHRzeSQxAQUJABCkcoYKCCAYjdiTlrJiqPOZXp7Jy9cOV2d/g4MD4f1prIrKONbSdT0062Nh3NROzDTEZbWi9xcMk9eGqei8Nxa8tRJuz9TMy/uunZUFSw+4RG7XjjaU7tj9OGmZuwd/Ud9ElOWN5uDm/wm5xz8wcPGsHe0n3okJmlK6En9i7b7+gKPc2yee3at2WtmHXIyYoCwCfsOKsQBBKaqi7v4wAkuDh16cdaMOu2vd4b4Of8IqP/HR4nBlTrPLoZsTe6d9h+RQVo1wqkkx69rLEpl/QuXQS4iR5d2rLXRENz6oOALWFk8NKdn3xDQQaFBQCX4tRexJp9PCTLGygPpWYhd+3tU+g12XJAntauDTP4aHB2FLAllJpFNp5Z9Z30moSayZYCZQ1djZmexeUUQBtGJI09TdLG89O3nuO9NsqIyH+KhChkM2DvZM50TL4OWwn+GBFN5ffQnweSC45ymJxBOrcRSESBKqhujTRmjI2+uQI4J/waSPN493VSxYyHYkAZ0USyNY7wpFsSWg2snmbFmMjSMwl8Gh1MzIucDsymhb5TALc1Aq0D/MJLE3MpWw7vWksRM7M+xMFHIGkqvz6P457+QDsLgAtEU8fx3G/F/OZIol3Asc79WMcle4BHRNR0ARp1Pme3iI4DAYKLOxfjqMH8DCKaBbyw78lsHMYBaRJFXKGiHHIHZ0fX+UqAm6P0WuYRhLqd3xb6R4ZxSMq0YLYuSRBnKNyVKrkrgoOnAHCrrHQDUBwcBbFcrvI6LWihWdyHdZrniBqBGmbMv6gFsHuDK2bOvbeTE99JBfBNwJwZh4iiwNX2Yqan1HAjopC5/yRBx83Jrza4Yapjsg90Au4uiiaiOuBIb2Y6MxGbohfsVQIQK6G3zSdiLfSU3wMIenY7rg5I78063a/Bicc+HKfe+iiiBnq/BzvFQs8uJiZKI+YS/P8Ff6QXs3XxgTxO6usbGn+Hh91YAHaKn1YCSPQGP84/PMxXQvuR2NiH2TiUA+lENLcMqKtXQgPEzAbsoLq3i4f2JRHFi5GQacE6HncGJlKIvRgnTioSsCG0EqrJKAtdArfxs7TgXsXRH8CB6p7MzDqdRyodfPh8diFluVdEXuGgw2+XznFvoOjSuufZtBTY1tmIjbAMnA5xIFGTwwL/6x4LPb1gMPnwwmM+pxecjCeKV+No1Zi+jI2aFgMcIIqvDa6JpVPTUf0EqLjK+12jV+6bax8TRQDFO6wYYybD7qvhmk5U6uf14O9nSJItB1YL+1DR6OjtV0Tkawdx2nBjpmOevwq4Hi1krv1rUsTeiz9L9gPahfYB8/MnPSiZJZVtBNZP7MH0TAZnbQKmyCikiMIVRdmzoLNm5mz/cMqLI3IGNOldjZnBoHaL5cBVgSREJKFpqXZjK2aQhIgkRAvE4B3K27Bmfds7pXDAhnAymOCw4kxJFRnInMXA8uSBIvZad1MPZw7Y6kkGUkGQkkFYOYClkwa0ZW/06+ZR5AoE2ftSCxnOXgBfPenz/qwFoy4T67UAgtaXjBdIr+llrAaAelvygP6slbbt23mulkNHXLZlY/kTN1focOfTdw38lL3lizZdnWpf2KEF5fqzyV+2+Yy9y7jHyB0TSmID1DzAH60sPnlp1fAexuz9jK3GdLbPbDziUuWSllndeYyVMfswkVFPiz69evfu1ceip5GItfIf+KsOVzjAj48AAAAASUVORK5CYII=" /><!--lit-node 12-->
-        </div>
-        <!--lit-part dxaWJauwdOI=-->
-      <svg class="score-badge">
-        <!--lit-part 3hI+Rt5zlmU=--><svg>
-      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
-          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
-  </svg><!--/lit-part-->
-      </svg>
-    <!--/lit-part-->
-        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
-      </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
-              
-              
-             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
-    .match {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 10px;
-      width: 48px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-
-    .match > *:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
-    .match > small {
-      display: inline-flex;
-      justify-content: center;
-    }
-
-    .match-day {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .match-value {
-      opacity: 87%;
-      font-weight: 700;
-    }
-    .match-value.points {
-      font-size: medium;
-    }
-
-    .match-label {
-      opacity: 60%;
-      font-size: smaller;
-    }
-
-    .match-bar {
-      height: 200px;
-      background-color: #f5f7f6;
-      width: 24px;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-
-    .home-team-logo,
-    .away-team-logo {
-      width: 40%;
-      object-fit: contain;
-    }
-
-    .match-team-logos {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    svg.score-badge {
-      transform: skew(-10deg);
-      width: 80%;
-      height: 16px;
-    }
-
-    svg.score-badge rect {
-      fill: #f4f6f5;
-    }
-
-    svg.score-badge text {
-      font-size: 12px;
-      opacity: 80%;
-    }
-  </style><!--lit-part 4tyMDKunH1E=-->
-      <div class="match">
-        <div class="match-day">
           <small class="match-value"><!--lit-part-->18<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
@@ -681,6 +580,107 @@ var x = new DOMParser()
         <div class="match-team-logos">
           <img class="home-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAADAFBMVEVHcEzMAADMAADNAADMAADNAADNBATLAADMAADMAADbT0/MAADMAADMAADNBQXMAwPMAADVLS3MAADMAADMAADMAgLVLy/NBQXQExPNCQnMAADMAADMAADMAgLMBQXMAADOAADNAADLAADNBgbMAADMAADPEhLMAADbTU3MAADPEhLRGRnRGxvSAADRGhrMAADMAADNBATOAADMAADOCgrIAADQFBTQGRnQGBjMAADMAAD////MAgLMAQH//v7MAwP++/v+/Pz//f3NBgb77OzOCQnNCAjPERHicXHso6PQFhbni4vmhob0yMjNBATTJCTPFBTPDQ3tqan31tbODg7PEhLPExPPEBDUKyv65eXRHh776+vVLi7209PNCQnWNzf99vb99/f65ub++PjmhIT++vrdWVnYPDz99fXmgoLgZGT99PT87u7SHR3UKSn76enODAzWMTH1zMzojY3qmZnXOzvojIzywMD0ycn87+/tqKjPDw/tpaX429vfYGD54eH88vLniYn43t7ql5f42trle3vnioreXFzRHBz98/Ppk5PeWlrurKzSIyPjdHTqmprSICDcUVH54uLtpqbqlpbaRUXYPz/xvLz43d3ZRETTJyf0x8frnJz++fnxubnzxMTicnLQFBT1zc3ibm7bTEzfY2Pmg4Pjc3PplZXRGhrlfn7hbGzrn5/vsLDrnZ3dV1fgZmbbT0/TJibWNTXYQEDXOTnsoqLxurrtp6flfX376urcUlLWMzPokZHzxcXbS0vXNzfTIiLeXV365OTNAwP21tb1z8/0y8vOCwvvsbHib2/319fRGRnsoKD64+PzwsLcUVH66OjokJDyvr7ZRkbcVVXaSEj32dnVLS3zxsbniIj88PD21dXurq7jd3f88/P54ODVMDDVLy/kenr10dHqmJjeX1/jdXXwuLj43NzQGBjaSkrgamrlf3/77e3ZQ0PcVFTaR0faSUngaWnyv7/+/f3pkpLfX1/wtrbws7PvtLTOExPxvr7keXnha2vYQUHhIDI5AAAAOXRSTlMAHWEPFhTQARMa/qmMis/Lc/xWiK3F/dHr2g6OWcjTsAEcHtKsX+pd/qjq8vMB8nFwzRAC3ALs8fHw0WTlAAAFHklEQVQYGXXBBViUdxwH8D8K3FAQEOzO6ez18/2973t9dAgHRzeSQxAQUJABCkcoYKCCAYjdiTlrJiqPOZXp7Jy9cOV2d/g4MD4f1prIrKONbSdT0062Nh3NROzDTEZbWi9xcMk9eGqei8Nxa8tRJuz9TMy/uunZUFSw+4RG7XjjaU7tj9OGmZuwd/Ud9ElOWN5uDm/wm5xz8wcPGsHe0n3okJmlK6En9i7b7+gKPc2yee3at2WtmHXIyYoCwCfsOKsQBBKaqi7v4wAkuDh16cdaMOu2vd4b4Of8IqP/HR4nBlTrPLoZsTe6d9h+RQVo1wqkkx69rLEpl/QuXQS4iR5d2rLXRENz6oOALWFk8NKdn3xDQQaFBQCX4tRexJp9PCTLGygPpWYhd+3tU+g12XJAntauDTP4aHB2FLAllJpFNp5Z9Z30moSayZYCZQ1djZmexeUUQBtGJI09TdLG89O3nuO9NsqIyH+KhChkM2DvZM50TL4OWwn+GBFN5ffQnweSC45ymJxBOrcRSESBKqhujTRmjI2+uQI4J/waSPN493VSxYyHYkAZ0USyNY7wpFsSWg2snmbFmMjSMwl8Gh1MzIucDsymhb5TALc1Aq0D/MJLE3MpWw7vWksRM7M+xMFHIGkqvz6P457+QDsLgAtEU8fx3G/F/OZIol3Asc79WMcle4BHRNR0ARp1Pme3iI4DAYKLOxfjqMH8DCKaBbyw78lsHMYBaRJFXKGiHHIHZ0fX+UqAm6P0WuYRhLqd3xb6R4ZxSMq0YLYuSRBnKNyVKrkrgoOnAHCrrHQDUBwcBbFcrvI6LWihWdyHdZrniBqBGmbMv6gFsHuDK2bOvbeTE99JBfBNwJwZh4iiwNX2Yqan1HAjopC5/yRBx83Jrza4Yapjsg90Au4uiiaiOuBIb2Y6MxGbohfsVQIQK6G3zSdiLfSU3wMIenY7rg5I78063a/Bicc+HKfe+iiiBnq/BzvFQs8uJiZKI+YS/P8Ff6QXs3XxgTxO6usbGn+Hh91YAHaKn1YCSPQGP84/PMxXQvuR2NiH2TiUA+lENLcMqKtXQgPEzAbsoLq3i4f2JRHFi5GQacE6HncGJlKIvRgnTioSsCG0EqrJKAtdArfxs7TgXsXRH8CB6p7MzDqdRyodfPh8diFluVdEXuGgw2+XznFvoOjSuufZtBTY1tmIjbAMnA5xIFGTwwL/6x4LPb1gMPnwwmM+pxecjCeKV+No1Zi+jI2aFgMcIIqvDa6JpVPTUf0EqLjK+12jV+6bax8TRQDFO6wYYybD7qvhmk5U6uf14O9nSJItB1YL+1DR6OjtV0Tkawdx2nBjpmOevwq4Hi1krv1rUsTeiz9L9gPahfYB8/MnPSiZJZVtBNZP7MH0TAZnbQKmyCikiMIVRdmzoLNm5mz/cMqLI3IGNOldjZnBoHaL5cBVgSREJKFpqXZjK2aQhIgkRAvE4B3K27Bmfds7pXDAhnAymOCw4kxJFRnInMXA8uSBIvZad1MPZw7Y6kkGUkGQkkFYOYClkwa0ZW/06+ZR5AoE2ftSCxnOXgBfPenz/qwFoy4T67UAgtaXjBdIr+llrAaAelvygP6slbbt23mulkNHXLZlY/kTN1focOfTdw38lL3lizZdnWpf2KEF5fqzyV+2+Yy9y7jHyB0TSmID1DzAH60sPnlp1fAexuz9jK3GdLbPbDziUuWSllndeYyVMfswkVFPiz69evfu1ceip5GItfIf+KsOVzjAj48AAAAASUVORK5CYII=" /><!--lit-node 11-->
           <img class="away-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAqCAMAAAAQwSIQAAAC/VBMVEVHcEz+/v7////////+/v7+/v7////////+/v7+/v7////////++fn////////+/v7//////////v7////////////////////////////////////////+/v7//Pz////////////+/v7////////////////////++/v//////////////////f3////////////////////////////////+8vP73t/////+9fX////+9vb////////////85+j//////////v7////////+/v7++fn//f3++/v////////////////////////+9/f+/v7////+/v7//////////////v7////////////jBhP0oabzlJr4wsXlGSTkDhrjBRHjBxT3t7r5zM73vsD60tPkERz//f7kEx7jBxP97u74vsH85uf61df2tLf4v8L73+D4wsT//v7yiY7+9fXkDBj+9vb98vL3trn84uPpPUbnLTf4wMP3tbjwfYL4w8bmHin72tvmICvjChbkCxfmIi35zc/+9/jlGybtYmnrT1f4wMLlFB/86er609TjCBX3ubz96uv+9/fsVl773t/72Nn3vL/3uLv0m5/+9PTnJjH72dr60NLnKDP5ysz5x8n85eb61dbsWWHjCRb2sbPlFSH//Pz4xMb7293sUlr2r7LzlJnoMz3zmZ361NXtXmbnLDb1q67uZ27qQ0z73d7uaXHyiI397+/pOkP2s7bpOEHtXWTvbnX2rLDpPUfrSlP96+zsVF3tYGjmIy7++fn+8vP5xsjmISzxgojpQEjvdXvoMDv619noNT/5z9H0nqPqRE33ur373N31panxh4zuZGz4xcf5ycv++vr61tfqR1DqQUr5y83wd33vcHb5y8zweYD1o6f72dv96+zwfoX0oKTzlpr2rrHuaG/yj5T2sbTubHPrTVbqSVH98PHxg4nxgIX++frpO0Tzlpvzl5z2tbj3t7n++Pj1ra/yjJHrTFXoMjv1qKzoMDr74OEHXL+9AAAAWXRSTlMABKy3Aw2/AQUKpJb2i0oGgNnmO7X6ETBVr/tR8Bv6JMmGGLne8pv27rPhgp/ozj93dfjqqHr6/nL4Z/dvLML/KVrT5FwV/Ozz1NZGM5Cp+CBCCUSPxfw3zYJ4vmkAAATTSURBVDjLfdV3WJVlGMfxR0VFU9O00tTKMldT25P23vv3tXPwHOFwAJElCAIKooiUgJCACnoc4EZTzJxdinugWEkkbi0nmi2bV3+8RyQ17z+f93M977qf323Mf8v3g973fXhvn/f73HvXffe0vdpcoZq27XbNuPz8SFt4aLgtMjs/7M477m76f7bVexGVzp3/zN4qSZr5Q8SnzsqdN3f0uRy+6db46ZkRp7c4+GSwpBw7wQlndoYd/7TJk5du/EiL44GBsxwAQ9ZKKtkBEHyy/5Tpjz520eNc3e3BgX5HUyFrx/ayIElSUETfU1mQNdrza0rzZvVxsw4Vk3dNAOyTVL8qkoGRofv6N2p8ATdo2L/wL38ApubUw7/NByDmSFhVO9863XJKWl8HDFkIbAqpwyG7gTWLIHheYMVV53GrQwFJqfDd+KhoBySUeXFZAjjOBMVmwLSVNr/2Fr6u17kyO2xZIumAPwyvkiRNHg4xBZIGL4Pi6nN33mKMMabL5DGnICZQkpRXDO44SUtd4EpSyfdBmugPm0IiXzPGmFteXLoSGOq9f+lwSC3QR1mQnqZRy0dGSZ8DfZNavGmMaT1jyQIorpU8C1ft9cgzF4KHAAkRGruKCVHSIDuU1ya2NKZpm7hQ4IQUMRJInqKQLwFYNEbVRTBakvYAS5N6+Zrrx1atAWzSagCK1mnUauCPQUq0M21jiSSlAbmFnramd8C6dHDnaJwD+gHRUl/gI5XGUJxkvcy3dnAPrmxtGjoz+8EyKRpyxw50YV/r1YmwWGXznFGSdgCTnY3MS6GfAbOkXFyHpDkQ59Ufw5r9I+BzScuBA4ldTSfbHGCqtIlVkpb4s/+CjgFIDpK+AaJt3c21w74GMqRt5ErSWWZ5dShWZYVIU4GhkTd49d/SEL6UpNVsq9PugsR0GLFOOuvVnWw/A/61ymBDkKTvSPDqgPJS6TAskGLdwO+27ubl0NkAS7WZ4GFSjr1u78wUScdgs6yH+iuyl+ngPAgwVQNhbq1+ggyvliSdZFqpNBrol+a81dyTF7sBiInPsUPybgcMracrgzkqjfEH7LHZt5tXx9ScAJivod5vMOOCTkunPERaDDA6M/5u49M1rgYgOO7QBgC+iDqvS7a7cddI4Q6AyKRnfI3pErnuLED6zF0uwJV2vk+UDZ8ESPHJAH8OCn/XGNO5xcDwYICi+LCM5EX9VafHu4sypQEJACQ537jJGGNazghZDsDwGlnBM8dqRRUskQrLAZg1ONQ69c9dc27sBAD8o600WQzMlyStPeayNvKsfKGzdeg7+kVOshZZ8NWPkuYCRUFSyWdbrGV/23rPs+cD5arCwjwrqnDVSgNSAUeEFFtsLY74pXrfHXXJ6duuqnqYHYBcSQcAmCfrH0JxXsr6JvXGRONGNTUpq6x+kaxTvElSAMCysIqqJtf9J2SbT3QOinaTniMdnAaAo1D6thzXxvHZ1Q0bX5T2Dz08e6vf5j2S9no7YKGkwys8M2c/cP+lw+fxJ2YeT5EUH+PVqRMllU2fePP1lxs8Pu3v2lqZ78lZf+T0im9WbNw+I9YvuzLs6aca/M9U83mleY9CZ6UtMS80L9FW6Uzr8XqrBlcamW+/1bpnm9tufP7G29r0vP2dZhdd/RdZcaGwWgNDCgAAAABJRU5ErkJggg==" /><!--lit-node 12-->
+        </div>
+        <!--lit-part dxaWJauwdOI=-->
+      <svg class="score-badge">
+        <!--lit-part 3hI+Rt5zlmU=--><svg>
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
+        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+      </div>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+              
+              
+             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    .match {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      width: 48px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .match > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .match > small {
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .match-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .match-value {
+      opacity: 87%;
+      font-weight: 700;
+    }
+    .match-value.points {
+      font-size: medium;
+    }
+
+    .match-label {
+      opacity: 60%;
+      font-size: smaller;
+    }
+
+    .match-bar {
+      height: 200px;
+      background-color: #f5f7f6;
+      width: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .home-team-logo,
+    .away-team-logo {
+      width: 40%;
+      object-fit: contain;
+    }
+
+    .match-team-logos {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    svg.score-badge {
+      transform: skew(-10deg);
+      width: 80%;
+      height: 16px;
+    }
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
+
+    svg.score-badge text {
+      font-size: 12px;
+      opacity: 80%;
+    }
+  </style><!--lit-part 4tyMDKunH1E=-->
+      <div class="match">
+        <div class="match-day">
+          <small class="match-value"><!--lit-part-->20<!--/lit-part-->.</small>
+          <small class="match-label">Spieltag</small>
+        </div>
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, 0%, #f5f7f6, 0%, #f5f7f6);"><!--lit-node 5-->
+          <!--lit-part--><!--/lit-part-->
+          <!--lit-part--><!--/lit-part-->
+        </div>
+        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <div class="match-team-logos">
+          <img class="home-team-logo" src="data:image/png;base64,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" /><!--lit-node 11-->
+          <img class="away-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAADAFBMVEVHcEzMAADMAADNAADMAADNAADNBATLAADMAADMAADbT0/MAADMAADMAADNBQXMAwPMAADVLS3MAADMAADMAADMAgLVLy/NBQXQExPNCQnMAADMAADMAADMAgLMBQXMAADOAADNAADLAADNBgbMAADMAADPEhLMAADbTU3MAADPEhLRGRnRGxvSAADRGhrMAADMAADNBATOAADMAADOCgrIAADQFBTQGRnQGBjMAADMAAD////MAgLMAQH//v7MAwP++/v+/Pz//f3NBgb77OzOCQnNCAjPERHicXHso6PQFhbni4vmhob0yMjNBATTJCTPFBTPDQ3tqan31tbODg7PEhLPExPPEBDUKyv65eXRHh776+vVLi7209PNCQnWNzf99vb99/f65ub++PjmhIT++vrdWVnYPDz99fXmgoLgZGT99PT87u7SHR3UKSn76enODAzWMTH1zMzojY3qmZnXOzvojIzywMD0ycn87+/tqKjPDw/tpaX429vfYGD54eH88vLniYn43t7ql5f42trle3vnioreXFzRHBz98/Ppk5PeWlrurKzSIyPjdHTqmprSICDcUVH54uLtpqbqlpbaRUXYPz/xvLz43d3ZRETTJyf0x8frnJz++fnxubnzxMTicnLQFBT1zc3ibm7bTEzfY2Pmg4Pjc3PplZXRGhrlfn7hbGzrn5/vsLDrnZ3dV1fgZmbbT0/TJibWNTXYQEDXOTnsoqLxurrtp6flfX376urcUlLWMzPokZHzxcXbS0vXNzfTIiLeXV365OTNAwP21tb1z8/0y8vOCwvvsbHib2/319fRGRnsoKD64+PzwsLcUVH66OjokJDyvr7ZRkbcVVXaSEj32dnVLS3zxsbniIj88PD21dXurq7jd3f88/P54ODVMDDVLy/kenr10dHqmJjeX1/jdXXwuLj43NzQGBjaSkrgamrlf3/77e3ZQ0PcVFTaR0faSUngaWnyv7/+/f3pkpLfX1/wtrbws7PvtLTOExPxvr7keXnha2vYQUHhIDI5AAAAOXRSTlMAHWEPFhTQARMa/qmMis/Lc/xWiK3F/dHr2g6OWcjTsAEcHtKsX+pd/qjq8vMB8nFwzRAC3ALs8fHw0WTlAAAFHklEQVQYGXXBBViUdxwH8D8K3FAQEOzO6ez18/2973t9dAgHRzeSQxAQUJABCkcoYKCCAYjdiTlrJiqPOZXp7Jy9cOV2d/g4MD4f1prIrKONbSdT0062Nh3NROzDTEZbWi9xcMk9eGqei8Nxa8tRJuz9TMy/uunZUFSw+4RG7XjjaU7tj9OGmZuwd/Ud9ElOWN5uDm/wm5xz8wcPGsHe0n3okJmlK6En9i7b7+gKPc2yee3at2WtmHXIyYoCwCfsOKsQBBKaqi7v4wAkuDh16cdaMOu2vd4b4Of8IqP/HR4nBlTrPLoZsTe6d9h+RQVo1wqkkx69rLEpl/QuXQS4iR5d2rLXRENz6oOALWFk8NKdn3xDQQaFBQCX4tRexJp9PCTLGygPpWYhd+3tU+g12XJAntauDTP4aHB2FLAllJpFNp5Z9Z30moSayZYCZQ1djZmexeUUQBtGJI09TdLG89O3nuO9NsqIyH+KhChkM2DvZM50TL4OWwn+GBFN5ffQnweSC45ymJxBOrcRSESBKqhujTRmjI2+uQI4J/waSPN493VSxYyHYkAZ0USyNY7wpFsSWg2snmbFmMjSMwl8Gh1MzIucDsymhb5TALc1Aq0D/MJLE3MpWw7vWksRM7M+xMFHIGkqvz6P457+QDsLgAtEU8fx3G/F/OZIol3Asc79WMcle4BHRNR0ARp1Pme3iI4DAYKLOxfjqMH8DCKaBbyw78lsHMYBaRJFXKGiHHIHZ0fX+UqAm6P0WuYRhLqd3xb6R4ZxSMq0YLYuSRBnKNyVKrkrgoOnAHCrrHQDUBwcBbFcrvI6LWihWdyHdZrniBqBGmbMv6gFsHuDK2bOvbeTE99JBfBNwJwZh4iiwNX2Yqan1HAjopC5/yRBx83Jrza4Yapjsg90Au4uiiaiOuBIb2Y6MxGbohfsVQIQK6G3zSdiLfSU3wMIenY7rg5I78063a/Bicc+HKfe+iiiBnq/BzvFQs8uJiZKI+YS/P8Ff6QXs3XxgTxO6usbGn+Hh91YAHaKn1YCSPQGP84/PMxXQvuR2NiH2TiUA+lENLcMqKtXQgPEzAbsoLq3i4f2JRHFi5GQacE6HncGJlKIvRgnTioSsCG0EqrJKAtdArfxs7TgXsXRH8CB6p7MzDqdRyodfPh8diFluVdEXuGgw2+XznFvoOjSuufZtBTY1tmIjbAMnA5xIFGTwwL/6x4LPb1gMPnwwmM+pxecjCeKV+No1Zi+jI2aFgMcIIqvDa6JpVPTUf0EqLjK+12jV+6bax8TRQDFO6wYYybD7qvhmk5U6uf14O9nSJItB1YL+1DR6OjtV0Tkawdx2nBjpmOevwq4Hi1krv1rUsTeiz9L9gPahfYB8/MnPSiZJZVtBNZP7MH0TAZnbQKmyCikiMIVRdmzoLNm5mz/cMqLI3IGNOldjZnBoHaL5cBVgSREJKFpqXZjK2aQhIgkRAvE4B3K27Bmfds7pXDAhnAymOCw4kxJFRnInMXA8uSBIvZad1MPZw7Y6kkGUkGQkkFYOYClkwa0ZW/06+ZR5AoE2ftSCxnOXgBfPenz/qwFoy4T67UAgtaXjBdIr+llrAaAelvygP6slbbt23mulkNHXLZlY/kTN1focOfTdw38lL3lizZdnWpf2KEF5fqzyV+2+Yy9y7jHyB0TSmID1DzAH60sPnlp1fAexuz9jK3GdLbPbDziUuWSllndeYyVMfswkVFPiz69evfu1ceip5GItfIf+KsOVzjAj48AAAAASUVORK5CYII=" /><!--lit-node 12-->
         </div>
         <!--lit-part dxaWJauwdOI=-->
       <svg class="score-badge">
