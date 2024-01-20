@@ -96,7 +96,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="padding:0 !important;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="1xCDtQ" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Niklas Klinger" player-id="1829" team-id="11" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;1829&quot;,&quot;teamId&quot;:&quot;11&quot;,&quot;teamName&quot;:&quot;Wolfsburg&quot;,&quot;teamSymbol&quot;:&quot;WOB&quot;,&quot;firstName&quot;:&quot;Niklas&quot;,&quot;lastName&quot;:&quot;Klinger&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1829.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/aaea46b304994c1694bda4880791b280.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/38b06c22c3dc46898b3735335cd4b875.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:30,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:0,&quot;appearances&quot;:0,&quot;startingEleven&quot;:0,&quot;matches&quot;:[{&quot;match&quot;:23,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:11,&quot;awayTeamId&quot;:18,&quot;homeTeamGoals&quot;:4,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2019/2020&quot;},{&quot;points&quot;:0,&quot;appearances&quot;:0,&quot;startingEleven&quot;:0,&quot;matches&quot;:[{&quot;match&quot;:34,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:11,&quot;awayTeamId&quot;:18,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:3}],&quot;year&quot;:&quot;2020/2021&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Niklas&quot;,&quot;id&quot;:&quot;1829&quot;,&quot;lastName&quot;:&quot;Klinger&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:1519510,&quot;mvHighDate&quot;:&quot;2023-07-12T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-07-15T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2024-01-20T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;50&quot;,&quot;homeTeamName&quot;:&quot;Heidenheim&quot;,&quot;homeTeamNameShort&quot;:&quot;HDH&quot;,&quot;awayTeamId&quot;:&quot;11&quot;,&quot;awayTeamName&quot;:&quot;Wolfsburg&quot;,&quot;awayTeamNameShort&quot;:&quot;WOB&quot;,&quot;match&quot;:18,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-01-27T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;11&quot;,&quot;homeTeamName&quot;:&quot;Wolfsburg&quot;,&quot;homeTeamNameShort&quot;:&quot;WOB&quot;,&quot;awayTeamId&quot;:&quot;28&quot;,&quot;awayTeamName&quot;:&quot;Köln&quot;,&quot;awayTeamNameShort&quot;:&quot;KOE&quot;,&quot;match&quot;:19,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-02-04T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;11&quot;,&quot;homeTeamName&quot;:&quot;Wolfsburg&quot;,&quot;homeTeamNameShort&quot;:&quot;WOB&quot;,&quot;awayTeamId&quot;:&quot;14&quot;,&quot;awayTeamName&quot;:&quot;Hoffenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;TSG&quot;,&quot;match&quot;:20,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:30,&quot;points&quot;:0,&quot;position&quot;:1,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;13&quot;,&quot;season&quot;:&quot;2020/2021&quot;,&quot;points&quot;:0,&quot;matches&quot;:0,&quot;startMatches&quot;:0,&quot;secondsPlayed&quot;:0,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:0,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:8,&quot;offensiveAverage&quot;:122,&quot;generalAverage&quot;:53,&quot;teamAverage&quot;:113,&quot;goalKeeperAverage&quot;:495},{&quot;seasonId&quot;:&quot;12&quot;,&quot;season&quot;:&quot;2019/2020&quot;,&quot;points&quot;:0,&quot;matches&quot;:0,&quot;startMatches&quot;:0,&quot;secondsPlayed&quot;:0,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:0,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:3,&quot;offensiveAverage&quot;:56,&quot;generalAverage&quot;:125,&quot;teamAverage&quot;:113,&quot;goalKeeperAverage&quot;:520},{&quot;seasonId&quot;:&quot;8&quot;,&quot;season&quot;:&quot;2015/2016&quot;,&quot;defensiveAverage&quot;:-12,&quot;offensiveAverage&quot;:79,&quot;generalAverage&quot;:154,&quot;teamAverage&quot;:131,&quot;goalKeeperAverage&quot;:494},{&quot;seasonId&quot;:&quot;20&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/38b06c22c3dc46898b3735335cd4b875.png&quot;,&quot;teamId&quot;:&quot;11&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/aaea46b304994c1694bda4880791b280.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z1N2iAF" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Niklas Klinger" player-id="1829" team-id="11" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;1829&quot;,&quot;teamId&quot;:&quot;11&quot;,&quot;teamName&quot;:&quot;Wolfsburg&quot;,&quot;teamSymbol&quot;:&quot;WOB&quot;,&quot;firstName&quot;:&quot;Niklas&quot;,&quot;lastName&quot;:&quot;Klinger&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/playersbig/1829.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/aaea46b304994c1694bda4880791b280.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/38b06c22c3dc46898b3735335cd4b875.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:0,&quot;position&quot;:1,&quot;number&quot;:30,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[{&quot;points&quot;:0,&quot;appearances&quot;:0,&quot;startingEleven&quot;:0,&quot;matches&quot;:[{&quot;match&quot;:23,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:11,&quot;awayTeamId&quot;:18,&quot;homeTeamGoals&quot;:4,&quot;awayTeamGoals&quot;:0}],&quot;year&quot;:&quot;2019/2020&quot;},{&quot;points&quot;:0,&quot;appearances&quot;:0,&quot;startingEleven&quot;:0,&quot;matches&quot;:[{&quot;match&quot;:34,&quot;points&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;home&quot;:1,&quot;playtimeSeconds&quot;:0,&quot;startingEleven&quot;:false,&quot;homeTeamId&quot;:11,&quot;awayTeamId&quot;:18,&quot;homeTeamGoals&quot;:2,&quot;awayTeamGoals&quot;:3}],&quot;year&quot;:&quot;2020/2021&quot;}]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Niklas&quot;,&quot;id&quot;:&quot;1829&quot;,&quot;lastName&quot;:&quot;Klinger&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:1519510,&quot;mvHighDate&quot;:&quot;2023-07-12T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-07-15T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2024-01-27T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;11&quot;,&quot;homeTeamName&quot;:&quot;Wolfsburg&quot;,&quot;homeTeamNameShort&quot;:&quot;WOB&quot;,&quot;awayTeamId&quot;:&quot;28&quot;,&quot;awayTeamName&quot;:&quot;Köln&quot;,&quot;awayTeamNameShort&quot;:&quot;KOE&quot;,&quot;match&quot;:19,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-02-04T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;11&quot;,&quot;homeTeamName&quot;:&quot;Wolfsburg&quot;,&quot;homeTeamNameShort&quot;:&quot;WOB&quot;,&quot;awayTeamId&quot;:&quot;14&quot;,&quot;awayTeamName&quot;:&quot;Hoffenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;TSG&quot;,&quot;match&quot;:20,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-02-10T14:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;40&quot;,&quot;homeTeamName&quot;:&quot;Union&quot;,&quot;homeTeamNameShort&quot;:&quot;FCU&quot;,&quot;awayTeamId&quot;:&quot;11&quot;,&quot;awayTeamName&quot;:&quot;Wolfsburg&quot;,&quot;awayTeamNameShort&quot;:&quot;WOB&quot;,&quot;match&quot;:21,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:30,&quot;points&quot;:0,&quot;position&quot;:1,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;15&quot;,&quot;season&quot;:&quot;2022/2023&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;13&quot;,&quot;season&quot;:&quot;2020/2021&quot;,&quot;points&quot;:0,&quot;matches&quot;:0,&quot;startMatches&quot;:0,&quot;secondsPlayed&quot;:0,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:0,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:8,&quot;offensiveAverage&quot;:122,&quot;generalAverage&quot;:53,&quot;teamAverage&quot;:113,&quot;goalKeeperAverage&quot;:495},{&quot;seasonId&quot;:&quot;12&quot;,&quot;season&quot;:&quot;2019/2020&quot;,&quot;points&quot;:0,&quot;matches&quot;:0,&quot;startMatches&quot;:0,&quot;secondsPlayed&quot;:0,&quot;secondsPerGoal&quot;:0,&quot;goals&quot;:0,&quot;assists&quot;:0,&quot;redCards&quot;:0,&quot;yellowCards&quot;:0,&quot;goalFree&quot;:0,&quot;defensivePoints&quot;:0,&quot;offensivePoints&quot;:0,&quot;generalPoints&quot;:0,&quot;teamPoints&quot;:0,&quot;goalKeeperPoints&quot;:0,&quot;defensiveAverage&quot;:3,&quot;offensiveAverage&quot;:56,&quot;generalAverage&quot;:125,&quot;teamAverage&quot;:113,&quot;goalKeeperAverage&quot;:520},{&quot;seasonId&quot;:&quot;8&quot;,&quot;season&quot;:&quot;2015/2016&quot;,&quot;defensiveAverage&quot;:-12,&quot;offensiveAverage&quot;:79,&quot;generalAverage&quot;:154,&quot;teamAverage&quot;:131,&quot;goalKeeperAverage&quot;:494},{&quot;seasonId&quot;:&quot;20&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:0,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/38b06c22c3dc46898b3735335cd4b875.png&quot;,&quot;teamId&quot;:&quot;11&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/aaea46b304994c1694bda4880791b280.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -700,107 +700,6 @@ var x = new DOMParser()
   </style><!--lit-part 4tyMDKunH1E=-->
       <div class="match">
         <div class="match-day">
-          <small class="match-value"><!--lit-part-->18<!--/lit-part-->.</small>
-          <small class="match-label">Spieltag</small>
-        </div>
-        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, NaN%, #f5f7f6, NaN%, #f5f7f6);"><!--lit-node 5-->
-          <!--lit-part--><!--/lit-part-->
-          <!--lit-part--><!--/lit-part-->
-        </div>
-        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
-        <div class="match-team-logos">
-          <img class="home-team-logo" src="/better-kickbase-web/assets/50.8e95cb6b.png" /><!--lit-node 11-->
-          <img class="away-team-logo" src="data:image/png;base64,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" /><!--lit-node 12-->
-        </div>
-        <!--lit-part dxaWJauwdOI=-->
-      <svg class="score-badge">
-        <!--lit-part 3hI+Rt5zlmU=--><svg>
-      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
-          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
-  </svg><!--/lit-part-->
-      </svg>
-    <!--/lit-part-->
-        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
-      </div>
-    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
-              
-              
-             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
-    .match {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 10px;
-      width: 48px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-
-    .match > *:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
-    .match > small {
-      display: inline-flex;
-      justify-content: center;
-    }
-
-    .match-day {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .match-value {
-      opacity: 87%;
-      font-weight: 700;
-    }
-    .match-value.points {
-      font-size: medium;
-    }
-
-    .match-label {
-      opacity: 60%;
-      font-size: smaller;
-    }
-
-    .match-bar {
-      height: 200px;
-      background-color: #f5f7f6;
-      width: 24px;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-
-    .home-team-logo,
-    .away-team-logo {
-      width: 40%;
-      object-fit: contain;
-    }
-
-    .match-team-logos {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    svg.score-badge {
-      transform: skew(-10deg);
-      width: 80%;
-      height: 16px;
-    }
-
-    svg.score-badge rect {
-      fill: #f4f6f5;
-    }
-
-    svg.score-badge text {
-      font-size: 12px;
-      opacity: 80%;
-    }
-  </style><!--lit-part 4tyMDKunH1E=-->
-      <div class="match">
-        <div class="match-day">
           <small class="match-value"><!--lit-part-->19<!--/lit-part-->.</small>
           <small class="match-label">Spieltag</small>
         </div>
@@ -913,6 +812,107 @@ var x = new DOMParser()
         <div class="match-team-logos">
           <img class="home-team-logo" src="data:image/png;base64,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" /><!--lit-node 11-->
           <img class="away-team-logo" src="data:image/png;base64,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" /><!--lit-node 12-->
+        </div>
+        <!--lit-part dxaWJauwdOI=-->
+      <svg class="score-badge">
+        <!--lit-part 3hI+Rt5zlmU=--><svg>
+      <rect x="0" y="0" width="50" height="16" fill="%23#f4f6f5" />
+          <text fill="black" font-size="8pt" text-anchor="middle" x="18" y="12" dy="1"><!--lit-part-->-<!--/lit-part--> : <!--lit-part-->-<!--/lit-part--></text>
+  </svg><!--/lit-part-->
+      </svg>
+    <!--/lit-part-->
+        <small class="match-value"><!--lit-part-->0<!--/lit-part-->'</small>
+      </div>
+    <!--/lit-part--></template></bkb-player-points-match><!--/lit-part--><!--lit-part QNzkNJ18zKs=--><bkb-player-points-match
+              
+              
+             defer-hydration><!--lit-node 0--><template shadowroot="open"><style>
+    .match {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+      width: 48px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .match > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    .match > small {
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .match-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .match-value {
+      opacity: 87%;
+      font-weight: 700;
+    }
+    .match-value.points {
+      font-size: medium;
+    }
+
+    .match-label {
+      opacity: 60%;
+      font-size: smaller;
+    }
+
+    .match-bar {
+      height: 200px;
+      background-color: #f5f7f6;
+      width: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .home-team-logo,
+    .away-team-logo {
+      width: 40%;
+      object-fit: contain;
+    }
+
+    .match-team-logos {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    svg.score-badge {
+      transform: skew(-10deg);
+      width: 80%;
+      height: 16px;
+    }
+
+    svg.score-badge rect {
+      fill: #f4f6f5;
+    }
+
+    svg.score-badge text {
+      font-size: 12px;
+      opacity: 80%;
+    }
+  </style><!--lit-part 4tyMDKunH1E=-->
+      <div class="match">
+        <div class="match-day">
+          <small class="match-value"><!--lit-part-->21<!--/lit-part-->.</small>
+          <small class="match-label">Spieltag</small>
+        </div>
+        <div class="match-bar" style="background:linear-gradient(to top, #ea5f42, #ea5f42, NaN%, #f5f7f6, NaN%, #f5f7f6);"><!--lit-node 5-->
+          <!--lit-part--><!--/lit-part-->
+          <!--lit-part--><!--/lit-part-->
+        </div>
+        <small class="match-value points"><!--lit-part-->0<!--/lit-part--></small>
+        <div class="match-team-logos">
+          <img class="home-team-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAC/VBMVEVHcEz87A786g/86g/qhxX99Ir86w741RH98Wn76hD86w/kXhj76g/+6g742RHzuhL86Q/87A/76A/86Q7riRX87A/87Q/76RD96A/rjBXztxL76g/86w/ncxftkxX87Tj971/87CX970/86xnxrWz87lH53BH87A/402n41hHvoBT76RD76g/87g/98FvyshP87g/87A/ytBP52RH76BDumBT86g/86w/pfBb64hDqhxbumhT2yRLrjhXlaRf41RH86g7ncxbtlRX2xxL86hDXyg376g+8sQzpgBbrjBXwpRT68G33zxHoehbqhBb40hHxrBPvohT2xxLxrBP75xDmaxf0wBL0vhLtlxX75xDlZRj2yBLlYxjndBf76g/75xDsjhXzuhPpfxbVBh3UAR3UAh3gS1z86xDndYHUBB7ncn/jWmrlaXjfRljfQ1TUBB3vpa3XEinaIhvYGRzUAx3iUxjYHBzcMBrumqPrjJbcNUbncX7XEhzoeIbmbXrla3junKTVCiLYGzLcM0ftlqDkYnHcMETZITfjXmzfRRnXFSzlZ3SglwqKggnxrRTd0A7z5BC8sQy9sgzePhrjWBjdNhr35xAJCAHbLBvlbHftlZ753uHjWmHiVmXriZPumWnWDifytbzXFy798fLkZHPhU2Hma2bgSlnYGTHXFyzdOUzeQFL////la3nePE/voqrcNUnuoKjjXGnaKT7XGBzpg411cA/49+X98mzgT132zdLcMxr76hC7jQ/49KjTxxPAtQz9842VjQrVCB3fQxnunBVeWQZoZAfvyRHXFhyPiAldVBX3znvUAxuroQt9dgjskBXeOxrOww2knAt8ZQnjWxhsaQfYGzMuHgQaGQJfWwb03BDcNRreQRmpnwvodhcAAADskpzskXfpgYyMhQlOSgUQEAHhnxJ9dwjlzg/771O2pgzqxxDkYnBTUAXm1w/zuRNhVgczMQP40BJ6YQnmbxeEfQnePRrKpQ/hYhfgTxn51hHWDRzriRbhUBl6x8IuAAAAlXRSTlMADGkI3/VCh9ALPv48BYfPMQSUFeNWUXsC9qopX/XWy8qH4HX+uoZI8orQIg9l0NZ0gM+fd87lN/qF39Cx3/ykJvnym2z6TMvq3uX1zfLnkbj5ts50+KK97r3+lvz4P2TY9fX//////////////////////////////////////////////////////////////////jQOg+4AAAHQSURBVDjLY2AYBaOAeMDDx85uKQ4ksAE1RmSlXJ3JyY5spclYwWR1ZKXM+iJTp4r5pSaxQIEVCwLYmqA6gdcj2V8qVU4CxBZ2sbcRchPE6VyguvgibmlOTk6ZiPL81L5J7iA2CmCGKmUqi4njLo6VlU2MSim7f3TvuXRXb1ZUoMQLUeowpUgmIaWmeMbflMmfX57etuf8vVdvO7ofX9+1Kbdhxaq63OwKFQGIUgnPkrDofEmmyKI/v7+8vnG8Z2Jv+qOuh1kl2ctzsjI3FuaktixThrrAuUREtPyfQHjKr2k/Pj24dmzagUlnzhbs3Jy5NCO3LWtDRsq6PFWoUtEZpWyhNSHBKT+/fXw3/dalU+m9B9u3Vi1p76pfmdNWu7apcJEGNDKE7cp8AosDglK/p7+fOP3ZhMv9h/a1ru7OmLugOS8jc31zXmvKfDaosaYXO2u++oqX53948/TFzf4JPfu3FzRW1FXVZlbXN7YUZlVen6MIVaq55YJT6V0xr/zi509uXznRt2fHmsXZabNmzk6rqK5MS1s4r6BDAZYQtIyE+K2Z2CSTU+9cPXJ4ipkeBzqQZ0SNN3N+7qKTuy2MdYhIkoI8Boa62qNZcxRQDACPG7bxBK4SagAAAABJRU5ErkJggg==" /><!--lit-node 11-->
+          <img class="away-team-logo" src="data:image/png;base64,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" /><!--lit-node 12-->
         </div>
         <!--lit-part dxaWJauwdOI=-->
       <svg class="score-badge">
