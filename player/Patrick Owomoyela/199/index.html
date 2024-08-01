@@ -96,7 +96,7 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
   <body style="padding:0 !important;">
-    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z26tNso" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Patrick Owomoyela" player-id="199" team-id="3" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;199&quot;,&quot;teamId&quot;:&quot;3&quot;,&quot;teamName&quot;:&quot;Dortmund&quot;,&quot;teamSymbol&quot;:&quot;BVB&quot;,&quot;firstName&quot;:&quot;Patrick&quot;,&quot;lastName&quot;:&quot;Owomoyela&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/teamsdummies/3.png&quot;,&quot;team&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/0abbc3334029438b9ffc564f2923886b.jpg&quot;,&quot;teamCover&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/6fc51ad048cf43a18486ee9c215e3a2b.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:128,&quot;position&quot;:2,&quot;number&quot;:0,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Patrick&quot;,&quot;id&quot;:&quot;199&quot;,&quot;lastName&quot;:&quot;Owomoyela&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:500000,&quot;mvHighDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2024-08-24T16:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;3&quot;,&quot;homeTeamName&quot;:&quot;Dortmund&quot;,&quot;homeTeamNameShort&quot;:&quot;BVB&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:1,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-08-31T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;10&quot;,&quot;homeTeamName&quot;:&quot;Bremen&quot;,&quot;homeTeamNameShort&quot;:&quot;BRE&quot;,&quot;awayTeamId&quot;:&quot;3&quot;,&quot;awayTeamName&quot;:&quot;Dortmund&quot;,&quot;awayTeamNameShort&quot;:&quot;BVB&quot;,&quot;match&quot;:2,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-09-13T18:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;3&quot;,&quot;homeTeamName&quot;:&quot;Dortmund&quot;,&quot;homeTeamNameShort&quot;:&quot;BVB&quot;,&quot;awayTeamId&quot;:&quot;50&quot;,&quot;awayTeamName&quot;:&quot;Heidenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;HDH&quot;,&quot;match&quot;:3,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:0,&quot;points&quot;:0,&quot;position&quot;:2,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;7&quot;,&quot;season&quot;:&quot;2014/2015&quot;,&quot;defensiveAverage&quot;:488,&quot;offensiveAverage&quot;:580,&quot;generalAverage&quot;:232,&quot;teamAverage&quot;:138,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;5&quot;,&quot;season&quot;:&quot;2013/2014&quot;,&quot;defensiveAverage&quot;:475,&quot;offensiveAverage&quot;:578,&quot;generalAverage&quot;:247,&quot;teamAverage&quot;:99,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;20&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:128,&quot;teamCoverUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/08/01/6fc51ad048cf43a18486ee9c215e3a2b.png&quot;,&quot;teamId&quot;:&quot;3&quot;,&quot;teamUrl&quot;:&quot;https://kickbase.b-cdn.net/team/2013/07/30/0abbc3334029438b9ffc564f2923886b.jpg&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="ZHqNG7" component-url="/better-kickbase-web/player.page.f182c147.js" ssr="" client="idle" before-hydration-url="/better-kickbase-web/chunks/astro_scripts/before-hydration.js.faae8adf.js" opts="{&quot;name&quot;:&quot;PlayerPage&quot;,&quot;value&quot;:true}" await-children=""><bkb-player player-name="Patrick Owomoyela" player-id="199" team-id="3" server-json-data="{&quot;playerInfo&quot;:{&quot;iposl&quot;:false,&quot;id&quot;:&quot;199&quot;,&quot;teamId&quot;:&quot;3&quot;,&quot;teamName&quot;:&quot;Borussia Dortmund&quot;,&quot;teamSymbol&quot;:&quot;BVB&quot;,&quot;firstName&quot;:&quot;Patrick&quot;,&quot;lastName&quot;:&quot;Owomoyela&quot;,&quot;profileBig&quot;:&quot;https://kickbase.b-cdn.net/pool/teamsdummies/3.png&quot;,&quot;stlas&quot;:false,&quot;status&quot;:128,&quot;position&quot;:2,&quot;number&quot;:0,&quot;averagePoints&quot;:0,&quot;totalPoints&quot;:0,&quot;marketValue&quot;:500000,&quot;marketValueTrend&quot;:0},&quot;playerPoints&quot;:{&quot;seasons&quot;:[]},&quot;playerStats&quot;:{&quot;averagePoints&quot;:0,&quot;f&quot;:false,&quot;firstName&quot;:&quot;Patrick&quot;,&quot;id&quot;:&quot;199&quot;,&quot;lastName&quot;:&quot;Owomoyela&quot;,&quot;marketValue&quot;:500000,&quot;mvHigh&quot;:500000,&quot;mvHighDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvLow&quot;:500000,&quot;mvLowDate&quot;:&quot;2022-05-16T00:00:00.000Z&quot;,&quot;mvTrend&quot;:0,&quot;upcomingMatches&quot;:[{&quot;day&quot;:&quot;2024-08-24T16:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;3&quot;,&quot;homeTeamName&quot;:&quot;Borussia Dortmund&quot;,&quot;homeTeamNameShort&quot;:&quot;BVB&quot;,&quot;awayTeamId&quot;:&quot;4&quot;,&quot;awayTeamName&quot;:&quot;Eintracht Frankfurt&quot;,&quot;awayTeamNameShort&quot;:&quot;SGE&quot;,&quot;match&quot;:1,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-08-31T13:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;10&quot;,&quot;homeTeamName&quot;:&quot;SV Werder Bremen&quot;,&quot;homeTeamNameShort&quot;:&quot;SVW&quot;,&quot;awayTeamId&quot;:&quot;3&quot;,&quot;awayTeamName&quot;:&quot;Borussia Dortmund&quot;,&quot;awayTeamNameShort&quot;:&quot;BVB&quot;,&quot;match&quot;:2,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1},{&quot;day&quot;:&quot;2024-09-13T18:30:00.000Z&quot;,&quot;homeTeamId&quot;:&quot;3&quot;,&quot;homeTeamName&quot;:&quot;Borussia Dortmund&quot;,&quot;homeTeamNameShort&quot;:&quot;BVB&quot;,&quot;awayTeamId&quot;:&quot;50&quot;,&quot;awayTeamName&quot;:&quot;1. FC Heidenheim&quot;,&quot;awayTeamNameShort&quot;:&quot;FCH&quot;,&quot;match&quot;:3,&quot;points&quot;:0,&quot;playtimeSeconds&quot;:0,&quot;homeTeamGoals&quot;:-1,&quot;awayTeamGoals&quot;:-1}],&quot;number&quot;:0,&quot;points&quot;:0,&quot;position&quot;:2,&quot;seasons&quot;:[{&quot;seasonId&quot;:&quot;7&quot;,&quot;season&quot;:&quot;2014/2015&quot;,&quot;defensiveAverage&quot;:488,&quot;offensiveAverage&quot;:580,&quot;generalAverage&quot;:232,&quot;teamAverage&quot;:138,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;5&quot;,&quot;season&quot;:&quot;2013/2014&quot;,&quot;defensiveAverage&quot;:475,&quot;offensiveAverage&quot;:578,&quot;generalAverage&quot;:247,&quot;teamAverage&quot;:99,&quot;goalKeeperAverage&quot;:0},{&quot;seasonId&quot;:&quot;20&quot;,&quot;season&quot;:&quot;2023/2024&quot;,&quot;defensiveAverage&quot;:0,&quot;offensiveAverage&quot;:0,&quot;generalAverage&quot;:0,&quot;teamAverage&quot;:0,&quot;goalKeeperAverage&quot;:0}],&quot;status&quot;:128,&quot;teamId&quot;:&quot;3&quot;,&quot;userFlags&quot;:0}}"><template shadowroot="open"><style>
   :root,
   * {
     --team-primary-color-15: #28a144;
@@ -242,7 +242,7 @@ var x = new DOMParser()
         <div class="player-color-fade" style="background:linear-gradient(to bottom, transparent, var(--team-primary-color-3, gray));;"><!--lit-node 2--></div>
         <div class="player-summary">
           <div
-            class=" bottom-container inverted "
+            class=" bottom-container "
           ><!--lit-node 4-->
             <div class="price-container">
               <h3 class="price-value">
@@ -251,7 +251,7 @@ var x = new DOMParser()
             </div>
           </div>
           <h1
-            class=" player-name inverted "
+            class=" player-name "
           ><!--lit-node 9-->
             <!--lit-part-->Patrick Owomoyela<!--/lit-part-->
           </h1>
@@ -260,7 +260,7 @@ var x = new DOMParser()
             
             
             
-           inverted><!--lit-node 11--><template shadowroot="open"><style>
+          ><!--lit-node 11--><template shadowroot="open"><style>
     .badges-container {
       display: flex;
     }
@@ -281,28 +281,18 @@ var x = new DOMParser()
     }
   </style><!--lit-part ZzxzuAdydj0=-->
       <div class="badges-container">
-        <!--lit-part hX5/UoXXqQU=-->
-      <!--lit-part 7v/KSJ2LZhw=--><svg>
-      <defs>
-        <mask id="mask-0" x="0" y="0" ><!--lit-node 2-->
-          <rect x="0" y="0" width="32" height="16" fill="#fff" />
-          <text text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->0<!--/lit-part--></text>
-        </mask>
-      </defs>
-      <rect x="0" y="0" width="32" height="16" mask="url(#mask-0)" fill-opacity="1" /><!--lit-node 6-->
-      </svg><!--/lit-part-->
-    <!--/lit-part-->
-        <!--lit-part hX5/UoXXqQU=-->
-      <!--lit-part 7v/KSJ2LZhw=--><svg>
-      <defs>
-        <mask id="mask-ABW" x="0" y="0" ><!--lit-node 2-->
-          <rect x="0" y="0" width="32" height="16" fill="#fff" />
-          <text text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->ABW<!--/lit-part--></text>
-        </mask>
-      </defs>
-      <rect x="0" y="0" width="32" height="16" mask="url(#mask-ABW)" fill-opacity="1" /><!--lit-node 6-->
-      </svg><!--/lit-part-->
-    <!--/lit-part-->
+        <!--lit-part BUVd84XIfRc=-->
+        <!--lit-part +FWxwJaMdBE=--><svg>
+        <rect x="0" y="0" width="32" height="16" fill="white" />
+        <text text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->0<!--/lit-part--></text>
+    </svg><!--/lit-part-->
+      <!--/lit-part-->
+        <!--lit-part BUVd84XIfRc=-->
+        <!--lit-part +FWxwJaMdBE=--><svg>
+        <rect x="0" y="0" width="32" height="16" fill="white" />
+        <text text-anchor="middle" x="16" y="12" dy="1"><!--lit-part-->ABW<!--/lit-part--></text>
+    </svg><!--/lit-part-->
+      <!--/lit-part-->
         <!--lit-part--><!--/lit-part-->
       </div>
     <!--/lit-part--></template></bkb-player-badges>
